@@ -1,13 +1,14 @@
 package com.shopping.shopping_protal_web.controller;
 
 
-import com.shopping.shopping_protal_web.bean.UserMembers;
-import com.shopping.shopping_protal_web.service.UserService;
+import com.alibaba.shopping.shopping_bean.bean.UserMembers;
+import com.shopping.shopping_protal_service.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -19,7 +20,7 @@ import java.util.List;
 public class HelloController {
 
 	@Autowired
-	private UserService userService;
+	UserService userService;
 
 	@RequestMapping(value = "/getAllUser")
 	@ResponseBody
