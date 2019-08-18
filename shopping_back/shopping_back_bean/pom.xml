@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.alibaba.shopping</groupId>
-        <artifactId>shopping_protal</artifactId>
+        <artifactId>shopping_parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.alibaba.shopping</groupId>
-    <artifactId>shopping_bean</artifactId>
+    <artifactId>shopping_back_bean</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>shopping_bean</name>
+    <name>shopping_back_bean</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -24,5 +24,7 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
+
+
 
 </project>

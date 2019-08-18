@@ -18,6 +18,8 @@
         <option value="$PROJECT_DIR$/../shopping_back/shopping_back_service/pom.xml" />
         <option value="$PROJECT_DIR$/../shopping_back/shopping_back_web/pom.xml" />
         <option value="$PROJECT_DIR$/../shopping_protal/shopping_bean/pom.xml" />
+        <option value="$PROJECT_DIR$/../shopping_common/pom.xml" />
+        <option value="$PROJECT_DIR$/../shopping_back/shopping_back_bean/pom.xml" />
       </list>
     </option>
   </component>

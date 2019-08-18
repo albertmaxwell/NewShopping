@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="shopping_protal_dao" />
+        <module name="shopping_back_dao" />
         <module name="shopping_back_web" />
         <module name="shopping_back_service" />
+        <module name="shopping_back_bean" />
         <module name="shopping_protal_service" />
-        <module name="shopping_back_dao" />
+        <module name="shopping_protal_dao" />
+        <module name="shopping_common" />
         <module name="shopping_bean" />
         <module name="shopping_protal_web" />
       </profile>
@@ -19,10 +21,12 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="shopping_back" options="-parameters" />
+      <module name="shopping_back_bean" options="-parameters" />
       <module name="shopping_back_dao" options="-parameters" />
       <module name="shopping_back_service" options="-parameters" />
       <module name="shopping_back_web" options="-parameters" />
       <module name="shopping_bean" options="-parameters" />
+      <module name="shopping_common" options="-parameters" />
       <module name="shopping_protal" options="" />
       <module name="shopping_protal_dao" options="-parameters" />
       <module name="shopping_protal_service" options="-parameters" />
