@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>服务监控系统</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link href="css/alert.css" rel="stylesheet">
+</head>
+<body>
+<style>
+
+
+</style>
+<div id="app" style="background:rgba(226, 223, 226, 0.26);">
+    <div class="header">
+        <div class="header-left">
+            <img class="img" src="img/KHCFDC_监控.png" alt="">
+            <span>服务监控中心</span>
+        </div>
+        <div class="header-right">
+            <!--<el-menu text-color="white"  class="el-menu-demo" mode="horizontal" @select="handleSelect">-->
+                <!--<el-menu-item index="1">处理中心</el-menu-item>-->
+                <!--<el-menu-item index="3">应用预警配置</el-menu-item>-->
+                <!--<el-menu-item index="4">消息中心</el-menu-item>-->
+            <!--</el-menu>-->
+            <div class="right-last">
+                <div class="line"></div>
+                <img class="img2" src="img/no.png" alt="">
+                <img class="img2" src="img/tou.png" alt="">
+                <span class="people" @click="exit">{{people}}</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="out">
+        <div class="content">
+            <div class="content-left">
+                <el-menu
+                        text-color="black"
+                        default-active="2"
+                        class="el-menu-vertical-demo"
+                        @open="handleOpen"
+                        :default-openeds="openeds"
+                        @close="handleClose">
+                    <div class="otherimg">
+                        <img class="img" src="img/other.png" alt="">
+                    </div>
+                    <el-submenu index="1">
+                        <template slot="title">
+                            <i class="el-icon-location"></i>
+                            <span>基本信息</span>
+                        </template>
+                        <el-menu-item-group>
+                            <el-menu-item index="1-1" @click="goAlert">应用服务</el-menu-item>
+                            <el-menu-item index="1-2" @click="goManage">系统人员</el-menu-item>
+                        </el-menu-item-group>
+                    </el-submenu>
+                    <el-submenu index="2">
+                        <template slot="title">
+                            <i class="el-icon-setting"></i>
+                            <span>应用预警配置</span>
+                        </template>
+                        <el-menu-item-group>
+                            <el-menu-item index="2-1" @click="goUser">预警人员</el-menu-item>
+                            <el-menu-item index="2-2" @click="goStage">预警策略</el-menu-item>
+                            <el-menu-item index="2-3" @click="goServe">预警应用</el-menu-item>
+                        </el-menu-item-group>
+                    </el-submenu>
+
+
+                </el-menu>
+            </div>
+            <div class="content-right">
+                <iframe name="my_iframe" id="my_frame" width="100%"   frameborder="0" src=""   runat="server"  ></iframe>
+
+            </div>
+            <!--<div class="content-right">-->
+                <!---->
+                <!--<a href="heartBeatController/beat"> sssss</a>-->
+            <!--</div>-->
+        </div>
+    </div>
+
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>

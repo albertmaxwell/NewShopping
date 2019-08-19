@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#panel{
+    position: relative;
+}
+body{
+    background:#071623;
+}
+.panel-top{
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+.top-text{
+    color: white;
+    font-size: 47px;
+}
+.panel-content{
+    position: absolute;
+    top: 28%;
+    left: 63%;
+    display: inline-block;
+    background: rgba(174, 206, 255, 0.06);
+    /* border: 1px solid #dddddd ; */
+    padding: 30px;
+    width: 400px;
+    height: 370px;
+}
+.panel-content .int{
+    height: 50px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.panel-content label{
+    position: absolute;
+    top: 7px;
+    left: 6px;
+}
+.panel-content .int input{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    border: 1px solid #dddddd;
+    background: rgb(67, 80, 96);
+    border: 1px solid rgb(67, 80, 96);
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.panel-content input:focus{
+    outline: none;
+    border: 1px solid #41a4f8;
+    box-shadow: 0 0 2px #41a4f8;
+}
+#title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 26px;
+}
+#title img{
+    width: 38px;
+    height: 38px;
+}
+#title span{
+    margin-left: 10px;
+    color: white;
+    font-size: 28px;
+}
+.panel-content .pwd-login a{
+    display: inline-block;
+    color: gray;
+    font-size: 13px;
+}
+.panel-content .pwd-login{
+    width: 260px;
+    height: 30px;
+    line-height: 30px;
+}
+.panel-content .setting{
+    background-color: red;
+}
+.panel-content .setting .forget-pwd{
+    float: right;
+}
+.panel-content .setting .auto-login{
+    float: left;
+    text-decoration: none;
+}
+.panel-content .pwd-login  input{
+    display: inline-block;
+    width: 18px;
+    float: left;
+}
+.login button{
+    margin-top: 26px;
+    width: 100%;
+    height: 50px;
+    border: 0;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #51a4f8, #43faff);
+    cursor: pointer;
+}
+
+.form-group a {
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+}
+.fr {
+    float: right;
+}
+a .fr{
+    color: white;
+}
+.form-group label {
+    position: relative;
+    color: white;
+    font-size: 13px;
+}
+.fl {
+    float: left;
+}
+.panel-bottom{
+    color: white;
+    position: absolute;
+    bottom:10px;
+    font-size: 13px;
+    right:20px;
+}

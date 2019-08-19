@@ -17,17 +17,16 @@
         <module name="shopping_protal_web" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="shopping_back" options="-parameters" />
       <module name="shopping_back_bean" options="-parameters" />
       <module name="shopping_back_dao" options="-parameters" />
       <module name="shopping_back_service" options="-parameters" />
       <module name="shopping_back_web" options="-parameters" />
       <module name="shopping_bean" options="-parameters" />
       <module name="shopping_common" options="-parameters" />
-      <module name="shopping_protal" options="" />
       <module name="shopping_protal_dao" options="-parameters" />
       <module name="shopping_protal_service" options="-parameters" />
       <module name="shopping_protal_web" options="-parameters" />
