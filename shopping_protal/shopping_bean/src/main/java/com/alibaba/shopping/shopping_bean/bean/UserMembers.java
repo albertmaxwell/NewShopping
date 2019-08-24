@@ -1,9 +1,11 @@
 package com.alibaba.shopping.shopping_bean.bean;
 
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -16,10 +18,13 @@ import java.io.Serializable;
 @Entity
 @Table(name = "user")
 @NoArgsConstructor
-@Getter
-@Setter
 public class UserMembers implements Serializable {
 
+	@Id
+	@GeneratedValue(generator = "paymentableGenerator")
+	@GenericGenerator(name = "paymentableGenerator", strategy = "uuid")
+	@Column(name = "ID", columnDefinition = "varchar(36)")
+	@ApiModelProperty(value = "主键", required = false, example = "40287e816c6afe00016c6aff42e90001")
 	private String id;
 
 	private String username;

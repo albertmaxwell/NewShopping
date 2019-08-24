@@ -43,12 +43,14 @@ public class LoginController {
 	 */
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	@ResponseBody
-	/*@Cacheable(cacheNames = "users")实现序列化的返回对象才能进入缓存*/
+	//@Cacheable(cacheNames = "users")实现序列化的返回对象才能进入缓存
 	@ApiOperation(value = "用户登录接口", notes = "传入对象数据", produces = "application/json")
 	public ResponseMessage<?> login(@RequestBody LoginVo loginVo, HttpServletRequest request) {
 		try {
-			redisService.set("1","value22222");
-			System.out.println(redisService.get("1"));
+			//redisService.set("1","value22222");
+			//System.out.println(redisService.get("1"));
+			System.out.println("jinhaiyang");
+			send();
 			SysUserEntity user = userService.login(loginVo.getUsername(), loginVo.getPassword());
 			if(user!=null){
 				return Result.success(user);
@@ -60,6 +62,10 @@ public class LoginController {
 			return Result.error("用户密码错误");
 		}
 
+	}
+
+	public void send(){
+		System.out.println("热部署");
 	}
 
 
@@ -75,6 +81,7 @@ public class LoginController {
 	@ApiOperation(value = "用户新增接口", notes = "传入对象数据", produces = "application/json")
 	public ResponseMessage<?> addUser(@RequestBody SysUserEntity sysUserEntity, HttpServletRequest request) {
 		try {
+			System.out.println("wrwerw");
 			 userService.addUser(sysUserEntity);
 				return Result.success("用户添加成功");
 		} catch (ResultException e) {
@@ -97,7 +104,7 @@ public class LoginController {
 	public ResponseMessage<?> deleteUserById(@RequestParam("id") Integer id, HttpServletRequest request) {
 		try {
 			 userService.deleteUser(id);
-				return Result.success("用户删除成功");
+				return Result.success("用户删除失败");
 		} catch (ResultException e) {
 			e.printStackTrace();
 			return Result.error("用户删除失败");

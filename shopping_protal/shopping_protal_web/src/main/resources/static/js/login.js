@@ -31,6 +31,7 @@ $(".login button").click(function(){
 
                     if(checked){
                         localStorage.setItem("name",data.data.userCode);
+                        localStorage.setItem("loginTab","1");
                         localStorage.setItem("password",$.base64.encode(data.data.passWord));
                     }else{
                         localStorage.removeItem("password");

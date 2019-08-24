@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.shopping.shopping_protal_service.*"})
+@MapperScan("com.alibaba.shopping.shopping_protal_dao.*")
 public class ShoppingProtalServiceApplication {
 
 	public static void main(String[] args) {

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预警人员</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@2.11.0/lib/theme-chalk/index.css">
+    <link href="css/alert.css" rel="stylesheet">
+</head>
+<style>
+    html{
+        overflow-x: hidden;
+    }
+</style>
+<body>
+
+<div id="app">
+    <!--<div class="content-right">-->
+
+        <template  v-if="init0">
+            <div v-if="!formLoading" class="style">
+                <el-form :inline="true" :model="formInline" class="demo-form-inline">
+                    <el-form-item label="标签一">
+                        <el-input v-model="formInline.user" placeholder="审批人"></el-input>
+                    </el-form-item>
+                    <el-form-item label="标签二">
+                        <el-select v-model="formInline.region" placeholder="选择">
+                            <el-option label="区域一" value="shanghai"></el-option>
+                            <el-option label="区域二" value="beijing"></el-option>
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-button type="primary" @click="query">查询</el-button>
+                        <el-button type="primary" @click="goAdd">新增</el-button>
+                    </el-form-item>
+                </el-form>
+
+
+                <el-table :data="tableData" border style="width: 98%">
+                    <!--项次-->
+                    <el-table-column label="#" type="index" width="45">
+                    </el-table-column>
+                    <el-table-column prop="userName" label="姓名">
+                    </el-table-column>
+                    <el-table-column prop="phoneNum" label="手机号">
+                    </el-table-column>
+                    <el-table-column prop="openId" label="微信ID">
+                    </el-table-column>
+                    <el-table-column prop="notepad" label="备注">
+                    </el-table-column>
+                    <el-table-column label="操作" width="180">
+                        <template scope="scope">
+                            <el-button @click="goEdit(scope.row)"  size="small">修改</el-button>
+                            <el-button @click="handleDel(scope.row)" type="danger" size="small">删除</el-button>
+                        </template>
+                    </el-table-column>
+                </el-table>
+                <el-col :span="24" class="toolbar">
+                    <el-pagination small background @current-change="handleCurrentChange" @size-change="handleSizeChange" :page-sizes="[10, 20, 50, 100]"
+                                   :page-size="pageSize" :total="total" layout="sizes, prev, pager, next"  style="float:right;margin: 20px 0"></el-pagination>
+                </el-col>
+            </div>
+            <div v-if="formLoading">
+                <span class="labelNew">{{formTitle}}</span>
+                <div id="apply" v-cloak>
+                    <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px"  class="demo-ruleForm">
+
+                        <el-row>
+                            <el-col :span="8">
+                                <el-form-item label="姓名" prop="userName">
+                                    <el-input v-model="ruleForm.userName"></el-input>
+                                </el-form-item>
+                            </el-col>
+                            <el-col :span="8">
+                                <el-form-item label="手机号" prop="phoneNum">
+                                    <el-input v-model="ruleForm.phoneNum"></el-input>
+                                </el-form-item>
+                            </el-col>
+                            <el-col :span="8">
+                                <el-form-item label="微信ID" prop="openId">
+                                    <el-input v-model="ruleForm.openId"></el-input>
+                                </el-form-item>
+                            </el-col>
+                        </el-row>
+                        <el-row>
+                            <el-col :span="24">
+                                <el-form-item label="备注" prop="notepad">
+                                    <el-input v-model="ruleForm.notepad"></el-input>
+                                </el-form-item>
+                            </el-col>
+                        </el-row>
+                    </el-form>
+                    <div slot="footer" class="dialog-footer">
+                        <el-button @click.native="cancel">取消</el-button>
+                        <el-button type="primary" @click.native="formSubmit"  >提交</el-button>
+                    </div>
+                </div>
+            </div>
+        </template>
+    <!--</div>-->
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" src="js/vue-resource-1.3.4.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/warnUser.js"></script>
+</html>

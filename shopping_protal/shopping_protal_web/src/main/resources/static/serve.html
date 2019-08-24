@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预警应用</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@2.11.0/lib/theme-chalk/index.css">
+    <link href="css/alert.css" rel="stylesheet">
+</head>
+<body style="width: 100%">
+<style>
+    html{
+        overflow-x: hidden;
+    }
+.dialog-footer{
+    margin-top: 50px;
+}
+    .el-divider--horizontal{
+        margin: 60px 0!important;
+    }
+    /*.el-table th>div>label{*/
+        /*display: none!important;*/
+    /*}*/
+
+</style>
+<div id="app">
+    <!--<div class="content-right">-->
+
+    <template>
+        <div v-if="cang" class="style">
+            <el-form :inline="true" :model="formInline" class="demo-form-inline">
+                <!--<el-form-item label="标签一">-->
+                    <!--<el-input v-model="formInline.user" placeholder="审批人"></el-input>-->
+                <!--</el-form-item>-->
+                <!--<el-form-item label="标签二">-->
+                    <!--<el-select v-model="formInline.region" placeholder="选择">-->
+                        <!--<el-option label="区域一" value="shanghai"></el-option>-->
+                        <!--<el-option label="区域二" value="beijing"></el-option>-->
+                    <!--</el-select>-->
+                <!--</el-form-item>-->
+                <!--<el-form-item>-->
+                    <!--<el-button type="primary" @click="query">查询</el-button>-->
+                    <!--<el-button type="primary" @click="goAdd">新增</el-button>-->
+
+                <!--</el-form-item>-->
+            </el-form>
+            <!--default-expand-all="true"-->
+            <el-table
+                    :data="tableData"
+                    border
+                    style="width: 98%"
+            >
+                <el-table-column type="expand">
+                    <template slot-scope="props">
+                        <el-form label-position="left" inline class="demo-table-expand">
+                            <el-form-item label="  预警策略：" >
+                                <span>{{ props.row.warnTacticName }}</span>
+                            </el-form-item>
+                            <el-form-item label="  预警人员：" >
+                                <span>{{ props.row.warnPeopleVos[0].userName }}</span>
+                            </el-form-item>
+
+                        </el-form>
+                    </template>
+                </el-table-column>
+                <el-table-column label="#" type="index" width="45">
+                </el-table-column>
+                <el-table-column
+                        prop="ip"
+                        label="IP"
+                >
+                </el-table-column>
+                <el-table-column
+                        prop="proName"
+                        label="项目名称"
+                >
+                </el-table-column>
+                <!--<el-table-column-->
+                <!--prop="address"-->
+                <!--label="地址"-->
+                <!--&gt;-->
+                <!--</el-table-column>-->
+                <el-table-column
+                        prop="domain"
+                        label="映射域名"
+                >
+                </el-table-column>
+                <el-table-column
+                        prop="address"
+                        label="地址"
+                >
+                </el-table-column>
+                <el-table-column
+                        prop="serveSta"
+                        label="服务状态"
+                        :formatter="formatterColumn"
+                >
+                </el-table-column>
+                <el-table-column
+                        prop="notePad"
+                        label="备注"
+                >
+                </el-table-column>
+                <el-table-column
+
+                        label="操作"
+                        width="130">
+                    <template scope="scope">
+                        <!--<el-button size="mini" @click="handleEdit(scope.$index, scope.row)" >预警配置</el-button>-->
+                        <el-button size="mini" type="primary" @click="changeUpdate(scope.$index, scope.row)" >预警配置</el-button>
+                    </template>
+                </el-table-column>
+            </el-table>
+            <el-col :span="24" class="toolbar">
+                <el-pagination small background @current-change="handleCurrentChange" @size-change="handleSizeChange" :page-sizes="[10, 20, 50, 100]"
+                               :page-size="pageSize" :total="total" layout="sizes, prev, pager, next"  style="float:right; margin: 20px 0"></el-pagination>
+            </el-col>
+        </div>
+        <div v-if="!cang">
+            <span class="labelNew">{{formTitle}}</span>
+            <div id="apply" v-cloak>
+                <!--<el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px"  class="demo-ruleForm">-->
+                        <template>
+                            <el-table
+                                    :data="detailStage"
+                                    stripe
+                                    ref="Table"
+                                    highlight-current-row
+                                    @selection-change="selsChange1"
+                                    @current-change="handleSelectionChange"
+                                    style="width: 100%">
+                                <el-table-column label="选择" width="55">
+                                    <template slot-scope="scope">
+                                        <el-checkbox v-model="scope.row.checked" ></el-checkbox>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column
+                                        prop="warnName"
+                                        label="预警策略名称"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="intervalDate"
+                                        label="间隔时间（秒）"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="reminNum"
+                                        label="提醒次数"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="notepad"
+                                        label="备注">
+                                </el-table-column>
+                            </el-table>
+                        </template>
+                        <el-divider><i class="el-icon-user"></i></el-divider>
+                    <template>
+                        <el-table
+                                :data="detailPeople"
+                                stripe
+                                ref="Table2"
+                                highlight-current-row @selection-change="selsChange2"
+                                style="width: 100%">
+                            <el-table-column label="选择" width="55">
+                                <template slot-scope="scope">
+                                    <el-checkbox v-model="scope.row.checked1" @change="selsChange2(scope.$index, scope.row)"></el-checkbox>
+                                </template>
+                            </el-table-column>
+                            <el-table-column
+                                    prop="userName"
+                                    label="姓名"
+                                    >
+                            </el-table-column>
+                            <el-table-column
+                                    prop="phoneNum"
+                                    label="手机号"
+                                    >
+                            </el-table-column>
+                        </el-table>
+                    </template>
+                <!--</el-form>-->
+                <div slot="footer" class="dialog-footer">
+                    <el-button @click.native="cancel">取消</el-button>
+                    <el-button type="primary" @click.native="formSubmit" :loading="formLoading" >提交</el-button>
+                </div>
+            </div>
+        </div>
+
+    </template>
+
+
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" src="js/vue-resource-1.3.4.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script type="text/javascript" src="static/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/serve.js"></script>
+</html>

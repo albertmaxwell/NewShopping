@@ -13,14 +13,14 @@ public class MyFilterTwo implements Filter {
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		// TODO Auto-generated method stub
-		System.out.println("MyFilterTwo init ");
+		//System.out.println("MyFilterTwo init ");
 	}
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 // TODO Auto-generated method stub
 		HttpServletRequest req = (HttpServletRequest) request;
-		System.out.println("MyFilterTwo doFilter"+req.getParameter("id"));
+		//System.out.println("MyFilterTwo doFilter"+req.getParameter("id"));
 		chain.doFilter(request, response);
 		return ;
 	}
@@ -28,7 +28,7 @@ public class MyFilterTwo implements Filter {
 	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub
-		System.out.println("MyFilterTwo destroy");
+		//System.out.println("MyFilterTwo destroy");
 
 	}
 }

@@ -17,7 +17,7 @@ public class MyInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("preHandle....");
+		//System.out.println("preHandle....");
 		return true;
 	}
 

@@ -5,7 +5,7 @@ $(function () {
         data(){
             return {
                 url: {
-                    getApply: '/monitor/applySetController/getApplyPage',
+                    getApply: '/monitor/applySetController/queryApplyWarn',
                     doAdd:'/monitor/warnApplyController/add',
                     doUpdate:'/monitor/warnApplyController/update',
 
@@ -189,7 +189,7 @@ $(function () {
                 if(row.checked1){
                     this.sels2.push(row.warnUserId);
                 }else{
-                    row.checked1=false;
+                    // row.checked1=false;
                     for(var index=0;index<this.sels2.length;index++){
                         if (this.sels2[index] === row.warnUserId) {
                             _this.sels2.splice(index,1);
@@ -225,7 +225,9 @@ $(function () {
                 this.$http.get(this.url.getApply,data1).then((res) => {
                     if (res.data.message) {
                         this.total = res.data.data.totalElements;
-                        this.tableData=res.data.data.content;
+                        //表单数据
+                        this.tableData=res.data.data;
+
                     } else {
                         console.log("不ok");
                     }
@@ -233,6 +235,11 @@ $(function () {
                 });
 
             },
+            // //获取分页，rowKeys
+            // getRowKeys(row) {
+            //     return row.id;
+            // },
+
             //新增页面是否显示
             cancel(){
                 this.cang=true;

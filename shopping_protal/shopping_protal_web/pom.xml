@@ -20,24 +20,13 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.alibaba.shopping</groupId>
-            <artifactId>shopping_protal</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+
         <dependency>
             <groupId>com.alibaba.shopping</groupId>
             <artifactId>shopping_bean</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>com.shopping</groupId>
-            <artifactId>shopping_protal_service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-
         <dependency>
             <groupId>com.shopping</groupId>
             <artifactId>shopping_protal_service</artifactId>
@@ -55,6 +44,33 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.6.1</version>
         </dependency>
+
+        <dependency>
+            <artifactId>shopping-web-util</artifactId>
+            <groupId>com.alibaba.shopping</groupId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+      <!--  <dependency>
+            <groupId>com.alibaba.shopping</groupId>
+            <artifactId>message</artifactId>
+            <version>1.1.0</version>
+        </dependency>-->
+
     </dependencies>
+
+   <!-- &lt;!&ndash;jar上传私服  &ndash;&gt;
+    <distributionManagement>
+        &lt;!&ndash;pom.xml这里<id> 和 settings.xml 配置 <id> 对应  &ndash;&gt;
+        <repository>
+            <id>releases</id>
+            <url>http://localhost:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>-->
+
 
 </project>

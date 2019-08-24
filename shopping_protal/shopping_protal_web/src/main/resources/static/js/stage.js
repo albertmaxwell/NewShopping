@@ -149,6 +149,7 @@ $(function () {
                 this.formTitle = "新增";
                 this.formLoading=true;
                 this.ruleForm = {
+                    warnName:'',
                     reminNum:'',
                     intervalDate:'',
                     notePad:'',

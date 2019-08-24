@@ -1,0 +1,15 @@
+com\alibaba\shopping\common\exception\controlleradvice\MyException.class
+com\alibaba\shopping\common\vo\ResultVoFactory\ResultVoFactory.class
+com\alibaba\shopping\common\exception\ResultException.class
+com\alibaba\shopping\common\utils\json\JsonUtils.class
+com\alibaba\shopping\common\exception\CanotRemoveObjectException.class
+com\alibaba\shopping\common\utils\StringUtil.class
+com\alibaba\shopping\common\exception\controlleradvice\MyControllerAdvice.class
+com\alibaba\shopping\common\emun\ResponseMessageCodeEnum.class
+com\alibaba\shopping\common\response\ResponseMessage.class
+com\alibaba\shopping\common\json\AjaxJson.class
+com\alibaba\shopping\common\response\Result.class
+com\alibaba\shopping\common\emun\ErrorCode.class
+com\alibaba\shopping\common\vo\ResultVo.class
+com\alibaba\shopping\common\exception\BusinessException.class
+com\alibaba\shopping\common\utils\Md5Util.class

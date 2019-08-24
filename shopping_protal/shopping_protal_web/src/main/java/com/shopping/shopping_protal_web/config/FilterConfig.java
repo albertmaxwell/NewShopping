@@ -19,7 +19,7 @@ public class FilterConfig {
 		filterRegistrationBean.setFilter(new MyFilter());
 		//指定过滤器的执行顺序
 		filterRegistrationBean.setOrder(2);
-		filterRegistrationBean.addUrlPatterns("/*");
+		//filterRegistrationBean.addUrlPatterns("/*");
 		return filterRegistrationBean;
 	}
 	@Bean
@@ -28,7 +28,7 @@ public class FilterConfig {
 				new FilterRegistrationBean();
 		filterRegistrationBean.setFilter(new MyFilterTwo());
 		filterRegistrationBean.setOrder(1);
-		filterRegistrationBean.addUrlPatterns("/*");
+		//filterRegistrationBean.addUrlPatterns("/*");
 		return filterRegistrationBean;
 	}
 

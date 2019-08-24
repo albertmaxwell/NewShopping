@@ -3,7 +3,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -31,6 +30,48 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <!--<repositories>
+  &lt;!&ndash;<repository>
+    <id>nexus</id>
+    <name>local private nexus</name>
+    <url>http://maven.oschina.net/content/groups/public/</url>
+  </repository>
+  <repository>
+    <id>alimaven</id>
+    <name>aliyun maven</name>
+    <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+  </repository>&ndash;&gt;
+
+    <repository>
+      <id>nexus</id>
+      <name>nexus</name>
+   &lt;!&ndash;   <url>http://192.168.43.172:8081/nexus/content/groups/public/</url>&ndash;&gt;
+      <url>http://localhost:8081/nexus/content/repositories/thirdparty</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>nexus</id>
+      <name>nexus</name>
+&lt;!&ndash;      <url>http://192.168.1.170:8081/nexus/content/groups/public/</url>&ndash;&gt;
+      <url>http://192.168.1.170:8081/nexus/content/repositories/thirdparty</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>-->
+
 
 
   <dependencies>
@@ -91,7 +132,6 @@
       <scope>compile</scope>
     </dependency>
 
-
     <dependency>
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
@@ -117,6 +157,7 @@
       <artifactId>reactor-test</artifactId>
       <scope>test</scope>
     </dependency>
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-cache</artifactId>
@@ -127,7 +168,20 @@
       <artifactId>spring-boot-starter-data-redis</artifactId>
     </dependency>
 
+    <!--<dependency>
+      <groupId>com.alibaba.shopping</groupId>
+      <artifactId>message</artifactId>
+      <version>1.1.0</version>
+    </dependency>-->
+
   </dependencies>
+
+  <!--<distributionManagement>
+    <repository>
+      <id>thirdparty</id>
+      <url>http://192.168.1.170:8081/nexus/content/repositories/thirdparty</url>
+    </repository>
+  </distributionManagement>-->
 
 
   <build>
