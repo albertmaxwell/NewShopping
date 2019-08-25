@@ -19,14 +19,95 @@
         <java.version>1.8</java.version>
     </properties>
 
+   <!-- &lt;!&ndash; id:仓库名 url:仓库url &ndash;&gt;
+    <distributionManagement>
+        <repository>
+            <id>cuncaojin_hosted</id>
+            <url>http://localhost:8081/repository/shopping/</url>
+        </repository>
+    </distributionManagement>-->
+
+   <!-- &lt;!&ndash;maven私服代理中央仓库&ndash;&gt;
+    <repositories>
+        <repository>
+            <id>maven-resource</id>
+            <name>maven-resource</name>
+            <url>http://localhost:8081/repository/shopping/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>-->
+
+    <!-- id:仓库名 url:仓库url -->
+   <!-- <distributionManagement>
+        <repository>
+            <id>shopping</id>
+            <url>http://localhost:8081/repository/shopping/</url>
+        </repository>
+    </distributionManagement>-->
+
+
+   <!-- <repositories>
+        &lt;!&ndash;<repository>
+            <id>nexus</id>
+            <name>local private nexus</name>
+            <url>http://maven.oschina.net/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </repository>&ndash;&gt;
+        <repository>
+            <id>nexus</id>
+            <name>nexus</name>
+          &lt;!&ndash;  <url>http://192.168.43.172:8081/nexus/content/groups/public</url>&ndash;&gt;
+            <url>http://192.168.43.172:8081/nexus/content/repositories/thirdparty</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>-->
+
+    <!--<pluginRepositories>
+        <pluginRepository>
+            <id>nexus</id>
+            <name>nexus</name>
+           &lt;!&ndash; <url>http://192.168.43.172:8081/nexus/content/groups/public/</url>&ndash;&gt;
+            <url>http://192.168.43.172:8081/nexus/content/repositories/thirdparty</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>-->
+  <repositories>
+
+    <repository>
+        <id>shopping</id>
+        <name>shopping</name>
+        <url>http://localhost:8081/repository/shopping/</url>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+    </repository>
+
+</repositories>
+
     <dependencies>
 
-        <dependency>
-            <groupId>com.alibaba.shopping</groupId>
-            <artifactId>shopping_bean</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
         <dependency>
             <groupId>com.shopping</groupId>
             <artifactId>shopping_protal_service</artifactId>
@@ -36,41 +117,58 @@
 
         <dependency>
             <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.6.1</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.6.1</version>
         </dependency>
 
         <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+
+       <!-- <dependency>
             <artifactId>shopping-web-util</artifactId>
             <groupId>com.alibaba.shopping</groupId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
 
-      <!--  <dependency>
+         <!-- <dependency>
             <groupId>com.alibaba.shopping</groupId>
             <artifactId>message</artifactId>
             <version>1.1.0</version>
         </dependency>-->
 
+       <dependency>
+            <groupId>com.zltrj.message.plugin</groupId>
+            <artifactId>message_api_plugin</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+
+
     </dependencies>
 
-   <!-- &lt;!&ndash;jar上传私服  &ndash;&gt;
-    <distributionManagement>
-        &lt;!&ndash;pom.xml这里<id> 和 settings.xml 配置 <id> 对应  &ndash;&gt;
+    <!--<distributionManagement>
         <repository>
-            <id>releases</id>
-            <url>http://localhost:8081/nexus/content/repositories/releases/</url>
+            <id>thirdparty</id>
+            <url>http://192.168.43.172:8081/nexus/content/repositories/thirdparty</url>
         </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
     </distributionManagement>-->
+
+
+    <!-- &lt;!&ndash;jar上传私服  &ndash;&gt;
+     <distributionManagement>
+         &lt;!&ndash;pom.xml这里<id> 和 settings.xml 配置 <id> 对应  &ndash;&gt;
+         <repository>
+             <id>releases</id>
+             <url>http://localhost:8081/nexus/content/repositories/releases/</url>
+         </repository>
+         <snapshotRepository>
+             <id>snapshots</id>
+             <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+         </snapshotRepository>
+     </distributionManagement>-->
 
 
 </project>

@@ -1,56 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="unit" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9386ca-bb6f-46bb-901f-2779732877b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../shopping-service-util/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-service-util/shopping-service-util.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-web-util/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/exception/BusinessException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/json/AjaxJson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/utils/json/JsonUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/common/controlller/BaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/common/controlller/CommonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/common/dao/CommonDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/common/service/CommonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/common/service/impl/CommonServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/img/KHCFDC_监控.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/img/no.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/img/other.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/img/title.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/img/tou.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/jquery-1.9.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/js/alert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/serve.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/stage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/warnUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_back/shopping_back_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_back/shopping_back_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_common/target/classes/META-INF/shopping_common.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/UserMembers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/UserMembers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/test/java/com/alibaba/shopping/shopping_bean/ShoppingBeanApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/test/java/com/alibaba/shopping/shopping_bean/ShoppingBeanApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/ShoppingProtalServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/ShoppingProtalServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/config/FilterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/config/FilterConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/ShoppingProtalWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/ShoppingProtalWebApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/config/InterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/config/InterceptorConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/filter/MyFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/filter/MyFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/filter/MyFilterTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/filter/MyFilterTwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/interceptor/MyInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/interceptor/MyInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/serve.js" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/js/serve.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/stage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/js/stage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/js/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/warnUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/js/warnUser.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,13 +53,6 @@
     <option name="jrebelEnabledAutocompile" value="true" />
   </component>
   <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="localRepository" value="E:\Aenvironment\repo\m2" />
-        <option name="mavenHome" value="E:/Aenvironment/apache-maven-3.5.4" />
-        <option name="userSettingsFile" value="E:\Aenvironment\apache-maven-3.5.4\conf\settings.xml" />
-      </MavenGeneralSettings>
-    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="downloadSourcesAutomatically" value="true" />
@@ -109,6 +65,10 @@
   <component name="ProjectId" id="1PXCI4Wl91mjTYjqwDn7AzlDP8a" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -116,10 +76,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static" />
+    <property name="last_opened_file_path" value="E:/AAAAA" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.48965517" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -280,6 +240,9 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.ShoppingBeanApplicationTests" />
+      <item itemvalue="JUnit.ShoppingProtalServiceApplicationTests" />
+      <item itemvalue="JUnit.ShoppingProtalServiceApplicationTests.contextLoads" />
       <item itemvalue="Spring Boot.ShoppingBackBeanApplication" />
       <item itemvalue="Spring Boot.ShoppingBackDaoApplication" />
       <item itemvalue="Spring Boot.ShoppingBackServiceApplication" />
@@ -288,9 +251,6 @@
       <item itemvalue="Spring Boot.ShoppingProtalDaoApplication" />
       <item itemvalue="Spring Boot.ShoppingProtalServiceApplication" />
       <item itemvalue="Spring Boot.ShoppingProtalWebApplication" />
-      <item itemvalue="JUnit.ShoppingBeanApplicationTests" />
-      <item itemvalue="JUnit.ShoppingProtalServiceApplicationTests" />
-      <item itemvalue="JUnit.ShoppingProtalServiceApplicationTests.contextLoads" />
     </list>
     <recent_temporary>
       <list>
@@ -316,7 +276,8 @@
       <workItem from="1566562812851" duration="7808000" />
       <workItem from="1566605094562" duration="431000" />
       <workItem from="1566605550612" duration="5796000" />
-      <workItem from="1566612116070" duration="19818000" />
+      <workItem from="1566612116070" duration="31892000" />
+      <workItem from="1566692598024" duration="3100000" />
     </task>
     <servers />
   </component>

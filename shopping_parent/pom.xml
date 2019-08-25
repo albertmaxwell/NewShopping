@@ -31,47 +31,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
-  <!--<repositories>
-  &lt;!&ndash;<repository>
-    <id>nexus</id>
-    <name>local private nexus</name>
-    <url>http://maven.oschina.net/content/groups/public/</url>
-  </repository>
-  <repository>
-    <id>alimaven</id>
-    <name>aliyun maven</name>
-    <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-  </repository>&ndash;&gt;
-
-    <repository>
-      <id>nexus</id>
-      <name>nexus</name>
-   &lt;!&ndash;   <url>http://192.168.43.172:8081/nexus/content/groups/public/</url>&ndash;&gt;
-      <url>http://localhost:8081/nexus/content/repositories/thirdparty</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>nexus</id>
-      <name>nexus</name>
-&lt;!&ndash;      <url>http://192.168.1.170:8081/nexus/content/groups/public/</url>&ndash;&gt;
-      <url>http://192.168.1.170:8081/nexus/content/repositories/thirdparty</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>-->
-
 
 
   <dependencies>
@@ -168,11 +127,6 @@
       <artifactId>spring-boot-starter-data-redis</artifactId>
     </dependency>
 
-    <!--<dependency>
-      <groupId>com.alibaba.shopping</groupId>
-      <artifactId>message</artifactId>
-      <version>1.1.0</version>
-    </dependency>-->
 
   </dependencies>
 
