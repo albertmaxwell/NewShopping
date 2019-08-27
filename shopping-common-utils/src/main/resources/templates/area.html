@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script th:src="@{/js/jquery-1.9.1.min.js}" type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+
+
+<div class="row">
+    <div class="input-field col s4">
+        <select class=" form- control" id="province">
+            <option value="">省</option>
+            <option th:each="province : ${province}" th:value="${province.id}">
+                [[${province.name}]]
+            </option>
+        </select>
+    </div>
+    <div class="input-field col s4">
+        <select class=" form- control" id="city">
+            <option value="">市</option>
+            <option th:each="city : ${city}" th:value="${city.id}">
+                [[${city.name}]]
+            </option>
+        </select>
+    </div>
+    <div class="input-field col s4">
+        <select class="form- control" id="district">
+            <option value="">区</option>
+            <option th:each="district : ${district}" th:value="${district.id}">
+                [[${district.name}]]
+            </option>
+        </select>
+    </div>
+</div>
+
+
+</body>
+
+<script>
+
+
+    $('#province').change(function () {
+        var provinceId = $('#province').val();
+        if (provinceId == "") {
+            return "";
+        }
+        $.ajax({
+            cache: true,
+            type: "get",
+            url: "getAreaById",
+            data: {"areaPid": provinceId},
+            success: function (data) {
+                var cityId = $("#city").empty();
+                for (var i = 0; i < data.length; i++) {
+                    cityId.append("<option value='" + data[i].id + "'>" + data[i].name + "</option>");
+                    if (i == 0) {
+                        $.ajax({
+                            cache: true,
+                            async: false,
+                            type: "get",
+                            url: "getAreaById",
+                            data: {"areaPid": data[i].id},
+                            success: function (data) {
+                                var districtId = $("#district").empty();
+                                for (var i = 0; i < data.length; i++) {
+                                    districtId.append(" <option value='" + data[i].id + "'>" + data[i].name + "</option>");
+                                }
+                            }, error: function (error) {
+                                /* Notification("获取数据失败，请重新刷新")*/
+                                alert("获取数据失败，请重新刷新");
+                            }
+                        });
+                    }
+                }
+            }, error: function (error) {
+                /*Notification("获取数据失败，请重新刷新")*/
+                alert("获取数据失败，请重新刷新");
+            }
+        });
+    });
+
+
+    $("#city").change(function () {
+        var cityId = $("#city").val();
+        if (cityId =="") {
+        return ;
+        }
+            $.ajax({
+                cache: true,
+                async: false,
+                type: "get",
+                url: "getAreaById",
+                data: {"areaPid": cityId},
+                success: function (data) {
+
+                    var districtId = $("#district").empty();
+                    for (var i = 0; i < data.length; i++) {
+                          districtId.append("<option value='"+ data[i].id + "'>" + data[i].name + "</option>");
+                    }
+                }, error: function (error) {
+                    alert("获取数据失败，请重新刷新")
+                }
+            });
+        });
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.alibaba.shopping.shoppingcommonutils.common.mapper.AreaMapper">
+
+
+    <select id="selectAllProvince" resultType="java.util.Map"
+             >
+        SELECT id AS id ,NAME AS name,PID as pid FROM area WHERE PID="1"
+    </select>
+
+    <select id="selectAllCity" resultType="java.util.Map"
+            >
+        SELECT id AS id ,NAME AS name,PID as pid FROM area WHERE PID="2"
+    </select>
+
+    <select id="selectAllDistrict" resultType="java.util.Map"
+            >
+        SELECT id AS id ,NAME AS name,PID as pid FROM area WHERE PID="3"
+    </select>
+
+    <select id="selectAreaById" resultType="java.util.Map"
+            >
+        SELECT id AS id ,NAME AS name,PID as pid FROM area WHERE PID=#{areaPid}
+    </select>
+
+
+
+</mapper>

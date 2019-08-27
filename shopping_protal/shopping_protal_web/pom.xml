@@ -49,49 +49,7 @@
             <url>http://localhost:8081/repository/shopping/</url>
         </repository>
     </distributionManagement>-->
-
-
-   <!-- <repositories>
-        &lt;!&ndash;<repository>
-            <id>nexus</id>
-            <name>local private nexus</name>
-            <url>http://maven.oschina.net/content/groups/public/</url>
-        </repository>
-        <repository>
-            <id>alimaven</id>
-            <name>aliyun maven</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-        </repository>&ndash;&gt;
-        <repository>
-            <id>nexus</id>
-            <name>nexus</name>
-          &lt;!&ndash;  <url>http://192.168.43.172:8081/nexus/content/groups/public</url>&ndash;&gt;
-            <url>http://192.168.43.172:8081/nexus/content/repositories/thirdparty</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>-->
-
-    <!--<pluginRepositories>
-        <pluginRepository>
-            <id>nexus</id>
-            <name>nexus</name>
-           &lt;!&ndash; <url>http://192.168.43.172:8081/nexus/content/groups/public/</url>&ndash;&gt;
-            <url>http://192.168.43.172:8081/nexus/content/repositories/thirdparty</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>-->
-  <repositories>
-
+   <repositories>
     <repository>
         <id>shopping</id>
         <name>shopping</name>
@@ -143,6 +101,12 @@
             <groupId>com.zltrj.message.plugin</groupId>
             <artifactId>message_api_plugin</artifactId>
             <version>1.0</version>
+        </dependency>
+
+        <!-- 引入thymeleaf模板引擎-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
 

@@ -4,6 +4,7 @@ package com.shopping.shopping_protal_web.controller;
 import com.alibaba.shopping.common.exception.ResultException;
 import com.alibaba.shopping.common.response.ResponseMessage;
 import com.alibaba.shopping.common.response.Result;
+import com.alibaba.shopping.shopping_bean.bean.LoginUserVo;
 import com.alibaba.shopping.shopping_bean.bean.entity.SysUserEntity;
 import com.shopping.shopping_protal_service.service.RedisService;
 import com.shopping.shopping_protal_service.service.UserService;
@@ -182,6 +183,7 @@ public class LoginController {
 		}
 
 	}
+
 
 
 }

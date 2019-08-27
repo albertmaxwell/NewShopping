@@ -188,7 +188,9 @@ public class SysMenuEntity implements java.io.Serializable{
 
         SysMenuEntity that = (SysMenuEntity) o;
 
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) {
+            return false;
+        }
         if (createDate != null ? !createDate.equals(that.createDate) : that.createDate != null) return false;
         if (createBy != null ? !createBy.equals(that.createBy) : that.createBy != null) return false;
         if (createName != null ? !createName.equals(that.createName) : that.createName != null) return false;
