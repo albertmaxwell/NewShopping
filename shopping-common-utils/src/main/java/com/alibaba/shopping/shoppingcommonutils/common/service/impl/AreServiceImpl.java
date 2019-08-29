@@ -1,5 +1,6 @@
 package com.alibaba.shopping.shoppingcommonutils.common.service.impl;
 
+import com.alibaba.shopping.shoppingcommonutils.common.bean.area;
 import com.alibaba.shopping.shoppingcommonutils.common.mapper.AreaMapper;
 import com.alibaba.shopping.shoppingcommonutils.common.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,26 +23,26 @@ public class AreServiceImpl implements AreaService {
 	AreaMapper areaMapper;
 
 	@Override
-	public List<Map<String, Object>>  getProvinceList() {
-		List<Map<String, Object>>  provinces=areaMapper.selectAllProvince();
+	public List<Map<String, area>>  getProvinceList() {
+		List<Map<String, area>>  provinces=areaMapper.selectAllProvince();
 		return provinces;
 	}
 
 	@Override
-	public List<Map<String, Object>>  getCityList() {
-		List<Map<String, Object>>  citys =areaMapper.selectAllCity();
+	public List<Map<String, area>>  getCityList() {
+		List<Map<String, area>>  citys =areaMapper.selectAllCity();
 		return citys;
 	}
 
 	@Override
-	public List<Map<String, Object>>  getDistrictList() {
-		List<Map<String, Object>>   districts=areaMapper.selectAllDistrict();
+	public List<Map<String, area>>  getDistrictList() {
+		List<Map<String, area>>   districts=areaMapper.selectAllDistrict();
 		return districts;
 	}
 
 	@Override
-	public List<Map<String, Object>> findAreaById(String areaPid) {
-		List<Map<String, Object>>  ares=areaMapper.selectAreaById(areaPid);
+	public List<Map<String, area>> findAreaById(String areaPid) {
+		List<Map<String, area>>  ares=areaMapper.selectAreaById(areaPid);
 		return ares;
 	}
 }

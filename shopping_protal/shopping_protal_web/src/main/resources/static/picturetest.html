@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
 <body>
 
@@ -34,6 +35,51 @@
     <input type = "submit" value = "多文件点击上传">
 </form>
 
+<br>
+<br>
+<br>
+<br>
+
+<form target="name" id="download_dubbo_form" name="download_dubbo_form" method="post" action="/jfpointscore-test/download">
+    <button id="download_dubbo_config" type="button" class="btn btn-default download_dubbo_config" onclick="download_dubbo_config2();">下载</button>
+</form>
+
+
+
+
+
+
 
 </body>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script>
+    //下载按钮
+    function download_dubbo_config2(){
+        $.ajax({
+            type: "post",
+            url: "http://localhost:8086/common/upload/download",
+            cache: false,
+            async : false,
+            timeout: 15000,          // 设置超时时间
+            success: function (data ,textStatus, jqXHR)
+            {
+                if (textStatus == "success") {
+                    $("#download_dubbo_form").submit();
+                }
+            },
+            error:function (XMLHttpRequest, textStatus, errorThrown) {
+                console.log("请求失败！");
+            },
+            complete: function (XMLHttpRequest,status) {
+                if(status == 'timeout') {
+                    console.log("网络超时，请刷新");
+                }
+            }
+        });
+    }
+
+
+
+
+</script>
 </html>

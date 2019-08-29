@@ -1,5 +1,7 @@
 package com.alibaba.shopping.shoppingcommonutils.common.mapper;
 
+import com.alibaba.shopping.shoppingcommonutils.common.bean.area;
+
 import java.util.List;
 import java.util.Map;
 
@@ -9,11 +11,11 @@ import java.util.Map;
  */
 public interface AreaMapper {
 
-	List<Map<String, Object>>  selectAllProvince();
+	List<Map<String, area>>  selectAllProvince();
 
-	List<Map<String, Object>>  selectAllCity();
+	List<Map<String, area>>  selectAllCity();
 
-	List<Map<String, Object>>  selectAllDistrict();
+	List<Map<String, area>>  selectAllDistrict();
 
-	List<Map<String, Object>> selectAreaById(String areaPid);
+	List<Map<String, area>> selectAreaById(String areaPid);
 }

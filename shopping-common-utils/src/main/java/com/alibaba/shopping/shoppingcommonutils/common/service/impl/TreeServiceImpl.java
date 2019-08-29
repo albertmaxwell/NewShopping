@@ -13,7 +13,7 @@ import java.util.List;
  * @author 金海洋
  * @date 2019/8/27  -17:57
  */
-@Service("treeService")
+@Service("tree")
 @Transactional
 public class TreeServiceImpl  implements TreeService {
 

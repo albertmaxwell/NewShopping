@@ -21,13 +21,13 @@ import java.util.List;
 public class TreeController {
 
 	@Autowired
-	TreeService treeService;
+	TreeService tree;
 
     @ResponseBody
 	@RequestMapping(value = "/getNodeTree",method = RequestMethod.GET)
 	public List<DeptEmtity> getNodeTree() {
 
-		List<DeptEmtity> deptEmtityList=treeService.getNoteTree();
+		List<DeptEmtity> deptEmtityList=tree.getNoteTree();
 		return deptEmtityList;
 	}
 

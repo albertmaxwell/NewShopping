@@ -1,5 +1,8 @@
 package com.alibaba.shopping.shoppingcommonutils.common.service;
 
+import com.alibaba.shopping.shoppingcommonutils.common.bean.area;
+
+
 import java.util.List;
 import java.util.Map;
 
@@ -10,11 +13,11 @@ import java.util.Map;
 public interface AreaService {
 
 
-	List<Map<String, Object>>  getProvinceList();
+	List<Map<String, area>>  getProvinceList();
 
-	List<Map<String, Object>>  getCityList();
+	List<Map<String, area>>  getCityList();
 
-	List<Map<String, Object>>  getDistrictList();
+	List<Map<String, area>>  getDistrictList();
 
-	List<Map<String, Object>> findAreaById(String areaPid);
+	List<Map<String, area>> findAreaById(String areaPid);
 }
