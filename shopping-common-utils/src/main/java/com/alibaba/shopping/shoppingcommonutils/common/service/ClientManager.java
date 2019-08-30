@@ -1,17 +1,29 @@
-package com.alibaba.shopping.shoppingcommonutils.common.utils;
+package com.alibaba.shopping.shoppingcommonutils.common.service;
 
 import com.alibaba.shopping.common.bean.TSUser;
 import com.alibaba.shopping.common.utils.ContextHolderUtils;
+import com.alibaba.shopping.shoppingcommonutils.common.utils.Client;
 
+import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 
 /**
  * @author 金海洋
  * @date 2019/8/29  -14:21
  */
+@Service("clientManager")
 public class ClientManager {
+
+	/**国际化缓存key*/
+	private final static String ONLINE_CLIENTS_CACHE_KEY ="online_client_users";
+
+	@Resource
+	CacheServiceI cacheService;
+
 
 	/**
 	 * 根据sessionId 得到Client 对象
@@ -47,7 +59,7 @@ public class ClientManager {
 			t.setUsername(client.getUser().getUsername());
 			t.setUsername(client.getUser().getUsername());
 			ret.setUser(t);
-			// TODO: 2019/8/29  addClientToCachedMap(sessionId,ret);
+			// TODO: 2019/8/30  addClientToCachedMap(sessionId,ret);
 		}
 	}
 
@@ -56,7 +68,7 @@ public class ClientManager {
 	 * 用户退出登录 从Session中删除用户信息
 	 * sessionId
 	 */
-	public static void removeClinet(String sessionId){
+	public void removeClinet(String sessionId){
 		try {
 			//从静态常量池中删除对应的session
 			ContextHolderUtils.removeSession(sessionId);
@@ -68,9 +80,43 @@ public class ClientManager {
 			session.removeAttribute(sessionId);
 		} catch (Exception e) {}
 		//从在线用户列表移除用户
-		// TODO: 2019/8/29  removeClientFromCachedMap(sessionId);
+		removeClientFromCachedMap(sessionId);
 	}
 
+	/**
+	 * 向ehcache缓存中增加Client对象
+	 * @author xugj
+	 * */
+	private  boolean addClientToCachedMap(String sessionId, Client client){
+		HashMap<String, Client> onLineClients ;
+		if(cacheService.get(CacheServiceI.FOREVER_CACHE, ONLINE_CLIENTS_CACHE_KEY)==null){
+			onLineClients = new HashMap<String, Client>();
+		}
+		else{
+			onLineClients =(HashMap<String, Client>) cacheService.get(CacheServiceI.FOREVER_CACHE,ONLINE_CLIENTS_CACHE_KEY);
+		}
+		onLineClients.put(sessionId, client);
+		cacheService.put(CacheServiceI.FOREVER_CACHE,ONLINE_CLIENTS_CACHE_KEY, onLineClients);
+		return true;
+	}
+
+
+	/**
+	 * 从缓存中的Client集合中删除 Client对象
+	 *
+	 * */
+	private boolean removeClientFromCachedMap(String sessionId){
+		HashMap<String, Client> onLineClients ;
+		if(cacheService.get(CacheServiceI.FOREVER_CACHE, ONLINE_CLIENTS_CACHE_KEY)!=null){
+			onLineClients =(HashMap<String, Client>) cacheService.get(CacheServiceI.FOREVER_CACHE,ONLINE_CLIENTS_CACHE_KEY);
+			onLineClients.remove(sessionId);
+			cacheService.put(CacheServiceI.FOREVER_CACHE, ONLINE_CLIENTS_CACHE_KEY, onLineClients);
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
 
 
 

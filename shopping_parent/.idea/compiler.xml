@@ -12,9 +12,9 @@
         <module name="shopping-common-utils" />
         <module name="shopping-service-util" />
         <module name="shopping_back_bean" />
-        <module name="shopping_protal_dao" />
-        <module name="shopping_protal_service" />
         <module name="shopping_back_service" />
+        <module name="shopping_protal_service" />
+        <module name="shopping_protal_dao" />
         <module name="shopping-web-util" />
         <module name="shopping_bean" />
         <module name="shopping_back_web" />

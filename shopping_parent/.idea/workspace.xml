@@ -11,24 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9386ca-bb6f-46bb-901f-2779732877b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/impl/LoginServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/utils/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/utils/ClientManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/utils/IpUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/utils/ResourceUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/bean/TSUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/controller/AreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/controller/AreaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/listenter/ApplyUpLoadListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/listenter/ApplyRunListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/utils/util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/utils/util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/utils/ContextHolderUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/utils/ContextHolderUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_common/target/classes/com/alibaba/shopping/common/utils/ContextHolderUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_common/target/classes/com/alibaba/shopping/common/utils/ContextHolderUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/CacheServiceI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/impl/EhcacheService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/utils/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/ClientManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/cache/RedisService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/ShoppingProtalWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/ShoppingProtalWebApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/listener/CountListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/listener/CountListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -106,11 +98,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.alibaba.shopping.shoppingcommonutils.common.service" />
+      <recent name="com.alibaba.shopping.shoppingcommonutils.common.cache" />
       <recent name="mapper" />
       <recent name="com.alibaba.shopping.shoppingcommonutils.common.controller" />
       <recent name="com.alibaba.shopping.common.json" />
-      <recent name="com.shopping.shopping_protal_service.service.serviceImpl" />
-      <recent name="com.shopping.shopping_protal_service.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\mapper" />
@@ -336,6 +328,9 @@
       <workItem from="1566954169616" duration="2357000" />
       <workItem from="1566965234585" duration="18356000" />
       <workItem from="1567040866576" duration="26924000" />
+      <workItem from="1567126911111" duration="2825000" />
+      <workItem from="1567158496578" duration="3001000" />
+      <workItem from="1567170670271" duration="279000" />
     </task>
     <servers />
   </component>
@@ -354,16 +349,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/LoginController.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

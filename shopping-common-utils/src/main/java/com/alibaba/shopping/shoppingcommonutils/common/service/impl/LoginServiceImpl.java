@@ -2,13 +2,14 @@ package com.alibaba.shopping.shoppingcommonutils.common.service.impl;
 
 import com.alibaba.shopping.common.bean.TSUser;
 import com.alibaba.shopping.common.utils.ContextHolderUtils;
+import com.alibaba.shopping.shoppingcommonutils.common.service.ClientManager;
 import com.alibaba.shopping.shoppingcommonutils.common.service.LoginService;
 import com.alibaba.shopping.shoppingcommonutils.common.utils.Client;
-import com.alibaba.shopping.shoppingcommonutils.common.utils.ClientManager;
 import com.alibaba.shopping.shoppingcommonutils.common.utils.ResourceUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -25,6 +26,8 @@ import static com.alibaba.shopping.shoppingcommonutils.common.utils.util.getIpAd
 @Transactional
 public class LoginServiceImpl implements LoginService {
 
+	@Resource
+	private ClientManager clientManager;
 
 	/**
 	 * 保存登录用户信息，并将当前登录用户的组织机构赋值到用户实体中；
@@ -74,7 +77,7 @@ public class LoginServiceImpl implements LoginService {
 			//如果不一致，则注销session并通过session=req.getSession(true)初始化session
 			Client client = new Client();
 			//把这个用户上一次在系统中保存的信息都删除掉
-			ClientManager.removeClinet(session.getId());
+			clientManager.removeClinet(session.getId());
 			session.invalidate();
 			session = req.getSession(true);//session初始化
 			session.setAttribute(ResourceUtil.LOCAL_CLINET_USER, user);

@@ -8,23 +8,15 @@ import com.alibaba.shopping.common.response.Result;
 
 import com.alibaba.shopping.shopping_bean.bean.entity.SysUserEntity;
 
+import com.alibaba.shopping.shoppingcommonutils.common.cache.RedisService;
 import com.alibaba.shopping.shoppingcommonutils.common.service.LoginService;
-import com.shopping.shopping_protal_service.service.RedisService;
 import com.shopping.shopping_protal_service.service.UserService;
 import com.shopping.shopping_protal_web.vo.LoginVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-import com.zltrj.message.plugin.constants.MessageType;
-import com.zltrj.message.plugin.disruptor.MessageInfo;
-import com.zltrj.message.plugin.disruptor.MsgQueue;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
@@ -60,8 +52,8 @@ public class LoginController {
 	@ApiOperation(value = "用户登录接口", notes = "传入对象数据", produces = "application/json")
 	public ResponseMessage<?> login(@RequestBody LoginVo loginVo, HttpServletRequest request) {
 		try {
-			//redisService.set("1","value22222");
-			//System.out.println(redisService.get("1"));
+			redisService.set("1","value22222");
+			System.out.println(redisService.get("1"));
 			System.out.println("jinhaiyang");
 			SysUserEntity user = userService.login(loginVo.getUsername(), loginVo.getPassword());
 			if(user!=null){
@@ -92,10 +84,6 @@ public class LoginController {
 	@ApiOperation(value = "用户新增接口", notes = "传入对象数据", produces = "application/json")
 	public ResponseMessage<?> addUser(@RequestBody SysUserEntity sysUserEntity, HttpServletRequest request) {
 		try {
-			MessageInfo info = new MessageInfo();
-			info.setType(MessageType.WECHAT_TEMPLETE);
-			MsgQueue.publishMessge(info);
-			System.out.println("wrwerw");
 			 userService.addUser(sysUserEntity);
 				return Result.success("用户添加成功");
 		} catch (ResultException e) {

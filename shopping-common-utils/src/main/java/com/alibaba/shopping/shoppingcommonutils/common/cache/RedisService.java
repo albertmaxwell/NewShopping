@@ -1,4 +1,4 @@
-package com.shopping.shopping_protal_service.service;
+package com.alibaba.shopping.shoppingcommonutils.common.cache;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.*;
@@ -16,8 +16,16 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class RedisService {
 
+	/**
+	 * 在线用户列表 [永久缓存]
+	 */
+	public static String FOREVER_CACHE = "foreverCache";
+
 	@Autowired
 	private RedisTemplate redisTemplate;
+
+
+
 	/**
 	 * 写入缓存
 	 * @param key

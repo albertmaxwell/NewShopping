@@ -97,11 +97,11 @@
             <version>1.1.0</version>
         </dependency>-->
 
-       <dependency>
+       <!--<dependency>
             <groupId>com.zltrj.message.plugin</groupId>
             <artifactId>message_api_plugin</artifactId>
             <version>1.0</version>
-        </dependency>
+        </dependency>-->
 
         <!-- 引入thymeleaf模板引擎-->
         <dependency>
