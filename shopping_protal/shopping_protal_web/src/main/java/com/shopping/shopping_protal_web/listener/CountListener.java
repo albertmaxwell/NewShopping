@@ -15,7 +15,7 @@ public class CountListener implements HttpSessionListener {
 		// TODO Auto-generated method stub
 		count++;
 		se.getSession().getServletContext().setAttribute("count", count);
-		System.out.println("新增在线人数，当前在线人数："+count);
+		//System.out.println("新增在线人数，当前在线人数："+count);
 
 	}
 
@@ -24,7 +24,7 @@ public class CountListener implements HttpSessionListener {
 		// TODO Auto-generated method stub
 		count--;
 		se.getSession().getServletContext().setAttribute("count", count);
-		System.out.println("删减在线人数，当前在线人数："+count);
+		//System.out.println("删减在线人数，当前在线人数："+count);
 	}
 
 

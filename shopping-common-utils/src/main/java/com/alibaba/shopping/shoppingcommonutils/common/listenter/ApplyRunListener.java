@@ -18,14 +18,14 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Order(Ordered.LOWEST_PRECEDENCE)//监听器  监听启动类
-public class ApplyUpLoadListener  implements ApplicationListener<ContextRefreshedEvent>, ApplicationRunner {
+public class ApplyRunListener implements ApplicationListener<ContextRefreshedEvent>, ApplicationRunner {
 
 	@Autowired
 	AreaMapper areaMapper;
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		upLoadArea();
+		//upLoadArea();
 	}
 
 	@Override
@@ -35,13 +35,13 @@ public class ApplyUpLoadListener  implements ApplicationListener<ContextRefreshe
 
 	/**
 	 * 从缓存中加载数据
-	 */
+	 *//*
 	private void upLoadArea() {
 		AreaCache ast = AreaCache.getInstance();
 		ast.setProvinceCache(areaMapper.selectAllProvince());
 		ast.setCityCache(areaMapper.selectAllCity());
 		ast.setAreaCache(areaMapper.selectAllDistrict());
-	}
+	}*/
 
 
 }

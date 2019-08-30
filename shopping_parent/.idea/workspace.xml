@@ -11,28 +11,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9386ca-bb6f-46bb-901f-2779732877b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/cache/AreaCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/listenter/ApplyUpLoadListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/BrowserType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/utils/BrowserUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/utils/ContextHolderUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/utils/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/utils/ClientManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/utils/IpUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/utils/ResourceUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/bean/TSUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping-common-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/controller/AreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/controller/AreaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/controller/TreeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/controller/TreeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/mapper/AreaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/mapper/AreaMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/picture/picturedataS80208-22113950209.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/AreaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/AreaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/impl/AreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/impl/AreServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/impl/TreeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/impl/TreeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/utils/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/utils/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_common/target/classes/com/alibaba/shopping/common/utils/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_common/target/classes/com/alibaba/shopping/common/utils/StringUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/listenter/ApplyUpLoadListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/listenter/ApplyRunListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/utils/util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/utils/util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/utils/ContextHolderUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/utils/ContextHolderUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_common/target/classes/com/alibaba/shopping/common/utils/ContextHolderUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_common/target/classes/com/alibaba/shopping/common/utils/ContextHolderUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/listener/ApplyUpLoadListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/listener/ApplyUpLoadListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/picturetest.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/picturetest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/ShoppingProtalWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/ShoppingProtalWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/listener/CountListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/listener/CountListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +96,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../erp_rq" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/mapper" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -109,16 +106,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="mapper" />
       <recent name="com.alibaba.shopping.shoppingcommonutils.common.controller" />
       <recent name="com.alibaba.shopping.common.json" />
       <recent name="com.shopping.shopping_protal_service.service.serviceImpl" />
       <recent name="com.shopping.shopping_protal_service.service" />
-      <recent name="com.alibaba.shopping.common.exception" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\mapper" />
       <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping-common-utils\src\main\resources\static\js" />
       <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping-common-utils\src\main\resources\mapper" />
-      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\mapper" />
       <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping-common-utils\src\main\resources\templates" />
       <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping-common-utils\src\main\resources\static" />
     </key>
@@ -135,7 +132,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ShoppingCommonUtilsApplication">
+  <component name="RunManager" selected="Spring Boot.ShoppingProtalWebApplication">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.shopping.shopping_protal_web.Test" />
       <module name="shopping_protal_web" />
@@ -286,6 +283,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Test" />
       <item itemvalue="JUnit.ShoppingBeanApplicationTests" />
       <item itemvalue="JUnit.ShoppingProtalServiceApplicationTests" />
       <item itemvalue="JUnit.ShoppingProtalServiceApplicationTests.contextLoads" />
@@ -298,7 +296,6 @@
       <item itemvalue="Spring Boot.ShoppingProtalServiceApplication" />
       <item itemvalue="Spring Boot.ShoppingProtalWebApplication" />
       <item itemvalue="Spring Boot.ShoppingCommonUtilsApplication" />
-      <item itemvalue="Application.Test" />
     </list>
     <recent_temporary>
       <list>
@@ -338,7 +335,7 @@
       <workItem from="1566868023143" duration="35422000" />
       <workItem from="1566954169616" duration="2357000" />
       <workItem from="1566965234585" duration="18356000" />
-      <workItem from="1567040866576" duration="9960000" />
+      <workItem from="1567040866576" duration="26924000" />
     </task>
     <servers />
   </component>
@@ -357,5 +354,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/LoginController.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

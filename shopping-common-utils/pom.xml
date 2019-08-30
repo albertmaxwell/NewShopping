@@ -25,6 +25,12 @@
             <version>1.2.39</version>
         </dependency>
 
+        <dependency>
+            <artifactId>com.shopping</artifactId>
+            <groupId>shopping_common</groupId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
     <build>

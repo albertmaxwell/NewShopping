@@ -1,11 +1,14 @@
 package com.shopping.shopping_protal_web.controller;
 
 
+import com.alibaba.shopping.common.bean.TSUser;
 import com.alibaba.shopping.common.exception.ResultException;
 import com.alibaba.shopping.common.response.ResponseMessage;
 import com.alibaba.shopping.common.response.Result;
-import com.alibaba.shopping.shopping_bean.bean.LoginUserVo;
+
 import com.alibaba.shopping.shopping_bean.bean.entity.SysUserEntity;
+
+import com.alibaba.shopping.shoppingcommonutils.common.service.LoginService;
 import com.shopping.shopping_protal_service.service.RedisService;
 import com.shopping.shopping_protal_service.service.UserService;
 import com.shopping.shopping_protal_web.vo.LoginVo;
@@ -39,9 +42,15 @@ public class LoginController {
 	@Autowired
 	UserService userService;
 	@Autowired
-	RedisService redisService ;
+	RedisService redisService;
+	@Autowired
+	LoginService login;
+
 
 	/**
+	 *
+	 * 登录用户每调用一次这个接口
+	 *
 	 * 用户登录
 	 * @return
 	 */
@@ -51,13 +60,14 @@ public class LoginController {
 	@ApiOperation(value = "用户登录接口", notes = "传入对象数据", produces = "application/json")
 	public ResponseMessage<?> login(@RequestBody LoginVo loginVo, HttpServletRequest request) {
 		try {
-			System.out.println();
 			//redisService.set("1","value22222");
 			//System.out.println(redisService.get("1"));
 			System.out.println("jinhaiyang");
-			send();
 			SysUserEntity user = userService.login(loginVo.getUsername(), loginVo.getPassword());
 			if(user!=null){
+				TSUser tsUser=new TSUser();
+				tsUser.setUsername(user.getUsername());
+				login.saveLoginUserInfo(request, tsUser);
 				return Result.success(user);
 			}else{
 				return Result.error("用户密码错误");
@@ -67,10 +77,6 @@ public class LoginController {
 			return Result.error("用户密码错误");
 		}
 
-	}
-
-	public void send(){
-		System.out.println("热部署");
 	}
 
 
