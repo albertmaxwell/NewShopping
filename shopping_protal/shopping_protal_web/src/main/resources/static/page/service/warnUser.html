@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>预警策略</title>
+    <title>预警人员</title>
     <link rel="stylesheet" href="https://unpkg.com/element-ui@2.11.0/lib/theme-chalk/index.css">
-    <link href="css/alert.css" rel="stylesheet">
+    <link href="../../css/alert.css" rel="stylesheet">
 </head>
 <style>
     html{
@@ -39,15 +39,13 @@
                     <!--项次-->
                     <el-table-column label="#" type="index" width="45">
                     </el-table-column>
-                    <el-table-column prop="warnName" label="预警策略名称">
+                    <el-table-column prop="userName" label="姓名">
                     </el-table-column>
-                    <el-table-column prop="intervalDate" label="提醒间隔时间（秒）">
+                    <el-table-column prop="phoneNum" label="手机号">
                     </el-table-column>
-                    <el-table-column prop="reminNum" label="提醒次数">
+                    <el-table-column prop="openId" label="微信ID">
                     </el-table-column>
-                    <el-table-column prop="abnormalTime" label="异常中断时间">
-                    </el-table-column>
-                    <el-table-column prop="notePad" label="备注">
+                    <el-table-column prop="notepad" label="备注">
                     </el-table-column>
                     <el-table-column label="操作" width="180">
                         <template scope="scope">
@@ -62,36 +60,31 @@
                 </el-col>
             </div>
             <div v-if="formLoading">
-                <span class="labelNew" >{{formTitle}}</span>
+                <span class="labelNew">{{formTitle}}</span>
                 <div id="apply" v-cloak>
-                    <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="150px"  class="demo-ruleForm">
+                    <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px"  class="demo-ruleForm">
 
                         <el-row>
-                            <el-col :span="12">
-                                <el-form-item label="预警策略名称" prop="warnName">
-                                    <el-input v-model="ruleForm.warnName"></el-input>
+                            <el-col :span="8">
+                                <el-form-item label="姓名" prop="userName">
+                                    <el-input v-model="ruleForm.userName"></el-input>
                                 </el-form-item>
                             </el-col>
-                            <el-col :span="12">
-                                <el-form-item label="提醒间隔时间（秒）" prop="intervalDate">
-                                    <el-input v-model="ruleForm.intervalDate"></el-input>
+                            <el-col :span="8">
+                                <el-form-item label="手机号" prop="phoneNum">
+                                    <el-input v-model="ruleForm.phoneNum"></el-input>
                                 </el-form-item>
                             </el-col>
-                            <el-col :span="12">
-                                <el-form-item label="提醒次数" prop="reminNum">
-                                    <el-input v-model="ruleForm.reminNum"></el-input>
-                                </el-form-item>
-                            </el-col>
-                            <el-col :span="12">
-                                <el-form-item label="异常中断时间" prop="abnormalTime">
-                                    <el-input v-model="ruleForm.abnormalTime"></el-input>
+                            <el-col :span="8">
+                                <el-form-item label="微信ID" prop="openId">
+                                    <el-input v-model="ruleForm.openId"></el-input>
                                 </el-form-item>
                             </el-col>
                         </el-row>
                         <el-row>
                             <el-col :span="24">
-                                <el-form-item label="备注" prop="notePad">
-                                    <el-input v-model="ruleForm.notePad"></el-input>
+                                <el-form-item label="备注" prop="notepad">
+                                    <el-input v-model="ruleForm.notepad"></el-input>
                                 </el-form-item>
                             </el-col>
                         </el-row>
@@ -104,13 +97,12 @@
             </div>
         </template>
     <!--</div>-->
-
 </div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script type="text/javascript" src="js/vue-resource-1.3.4.js"></script>
+<script type="text/javascript" src="../../js/vue-resource-1.3.4.js"></script>
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/stage.js"></script>
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/warnUser.js"></script>
 </html>
