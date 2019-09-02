@@ -34,7 +34,7 @@ public class FileController {
 
 
 	@RequestMapping(value = "/test", method = RequestMethod.POST)
-	public void fileUpload(@RequestParam("fileName") MultipartFile file) {
+	public void fileUpload(@RequestParam("file") MultipartFile file) {
 		// 先设定一个放置上传文件的文件夹(该文件夹可以不存在，下面会判断创建)
 		String deposeFilesDir = "E:\\ideaproject\\AlibabaShopping\\NewShopping\\shopping-common-utils\\src\\main\\java\\com\\alibaba\\shopping\\shoppingcommonutils\\common\\picture\\picturedata";
 		// 判断文件手否有内容

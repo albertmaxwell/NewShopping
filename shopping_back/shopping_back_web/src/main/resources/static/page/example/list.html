@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <!-- 公共css引入 -->
+    <script type="text/javascript" src="/js/public_css.js"></script>
+    <!-- 公共js引入 -->
+    <script type="text/javascript" src="/js/public_js.js"></script>
+</head>
+<body>
+<main class="main">
+    <!--头部-->
+    <script type="text/javascript" src="/js/common/mg_title.js"></script>
+    <!--身体-->
+<div class="section home" id="sysMenuFrom">
+    <!-- 查询列 -->
+    <el-row>
+        <el-form :inline="true" :model="filters" size="mini" ref="filters">
+            <el-form-item style="margin-bottom: 8px;" prop="name">
+                <el-input v-model="filters.name" auto-complete="off" placeholder="请输入菜单名称"></el-input>
+            </el-form-item>
+
+            <el-form-item>
+                <el-button type="primary" icon="el-icon-search" v-on:click="getSysMenus" >查询</el-button>
+            </el-form-item>
+            <el-form-item>
+                <el-button icon="el-icon-refresh" @click="resetForm('filters')">重置</el-button>
+            </el-form-item>
+            <el-form-item>
+                <el-button type="primary" icon="el-icon-edit" @click="handleAdd">新增</el-button>
+            </el-form-item>
+        </el-form>
+    </el-row>
+
+    <!-- 单身列表 -->
+    <template>
+        <el-table :data="sysMenus"  border style="width: 100%"  max-height="600" @sort-change="handleSortChange" v-loading="listLoading">
+            <el-table-column fixed type="index" width="60"></el-table-column>
+            <el-table-column prop="username" label="用户账号" sortable="custom" size="mini"></el-table-column>
+            <el-table-column prop="password" label="用户密码" sortable="custom" size="mini"></el-table-column>
+
+
+            <el-table-column fixed="right" label="操作" width="180">
+                <template slot-scope="scope">
+                    <el-button @click="handleClick(scope.row)" type="text" size="small">编辑</el-button>
+                    <el-button @click="doDelete(scope.row)" type="text" size="small">删除</el-button>
+                </template>
+            </el-table-column>
+        </el-table>
+    </template>
+
+    <!-- 新增页dialog -->
+    <el-dialog :title="formTitle" width="60%" center :visible.sync="formVisible" :close-on-click-modal="false">
+        <el-form :model="form" label-width="120px" :rules="formRules" ref="form">
+            <el-form-item label="用户账号" prop="name">
+                <el-input type="text" v-model="form.username" clearable auto-complete="off" placeholder="请输入用户账号" ></el-input>
+            </el-form-item>
+
+            <el-form-item label="用户密码" prop="name">
+                <el-input type="text" v-model="form.password" clearable auto-complete="off" placeholder="请输入用户密码" ></el-input>
+            </el-form-item>
+
+            <el-row>
+                <el-col :span="12">
+                    <el-form-item label="身份证正面照片" prop="imgFiles">
+                        <el-button style="cursor: pointer; width:100px; height:40px;"  size="80" type="primary"  >点击上传</el-button>
+                        <form action="http://localhost:8085/uploadFile/uploadImg" enctype="multipart/form-data" method="post">
+                            <input id='fileSizeZheng' type="file" style="cursor: pointer;position:absolute; top:0; width:100px; height:40px; filter:alpha(opacity:0);opacity: 0;" name="file" accept="image/*" onClick="if(false){return false;}" onChange="selFile(this, 1)" />
+                            <input type="hidden" name="suffix" />
+                        </form>
+                    </el-form-item>
+                </el-col>
+
+                <el-col :span="12">
+                    <el-form-item label="身份证反面照片" prop="imgFiles">
+                        <el-button style="cursor: pointer; width:100px; height:40px;"  size="80" type="primary" >点击上传</el-button>
+                        <form action="http://localhost:8085/uploadFile/uploadImg" enctype="multipart/form-data" method="post">
+                            <input id='fileSizeFan' type="file" style="cursor: pointer;position:absolute; top:0; width:100px; height:40px; filter:alpha(opacity:0);opacity: 0;" name="file" accept="image/*" onClick="if(false){return false;}" onChange="selFile(this, 2)" />
+                            <input type="hidden" name="suffix" />
+                        </form>
+                    </el-form-item>
+                </el-col>
+
+            </el-row>
+
+            <el-row>
+                <el-col :span="8" style="text-align:center;">
+                    <a href='javascript:;' target="_black"><img width="300" height="200" style="display:none;" id="idCardZImg"/></a>
+                    <div>&nbsp;</div>
+                </el-col>
+                <el-col :span="8" style="text-align:center;" >
+                    <a href='javascript:;' target="_black"><img width="300" height="200" style="display:none;" id="idCardFImg"/></a>
+                    <div>&nbsp;</div>
+                </el-col>
+                <el-col :span="8" style="text-align:center;">
+                    <a href='javascript:;' target="_black"><img width="300" height="200" style="display:none;" id="personImg"/></a>
+                    <div>&nbsp;</div>
+                </el-col>
+            </el-row>
+
+        </el-form>
+        <div slot="footer" class="dialog-footer">
+            <el-button type="primary" @click.native="formSubmit" @click.native="formVisible = true" :loading="formLoading">保存</el-button>
+            <el-button @click.native="formVisible = false">取消</el-button>
+        </div>
+    </el-dialog>
+    <!--工具条-->
+    <el-col :span="24" class="toolbar">
+        <el-pagination small background @current-change="handleCurrentChange" @size-change="handleSizeChange" :page-sizes="[10, 20, 50, 100]"
+            :page-size="pageSize" :total="total" layout="sizes, prev, pager, next"  style="float:right;"></el-pagination>
+    </el-col>
+</div>
+</main>
+<script>
+    // 初始化
+    $(function(){
+
+    });
+    var valiSuffix = ["jpg", "jpeg", "gif", "png"];
+    var uploadIndex = 0;
+    var vue = new Vue({
+        el: "#sysMenuFrom",
+        data() {
+            return {
+                filters: {
+                    username:'',
+                },
+                url:{
+                    save:'loginController.do?addUser',
+                    edit:'loginController.do?updateUser',
+                    list:'loginController.do?userList',
+                },
+                // 列表
+                sysMenus:[
+                ],
+                //新增界面数据
+                form:{
+                },
+                isChild:false,// 选择父菜单
+                total: 0,//总条目数
+                page: 1,//当前页
+                pageSize:10,//每页显示条目个数
+                sort:{
+                    sort:'createDate',
+                    orders:'desc'
+                },
+                // 表单验证
+                formRules:{
+                    password: [
+                        { required: true, message: '请输入菜单名称', trigger: 'blur' },
+                    ],
+                    username: [
+                        { required: true, message: '请输入菜单地址', trigger: 'blur' },
+                    ],
+
+                },
+                formTitle:'Dialog标题',
+                formVisible: false,//新增界面是否显示
+                formLoading: false,// 表单加载  增改
+                listLoading: false,// 列表加载  删除
+
+
+                // 默认配置
+                defaultProps: {
+                    children: 'children',
+                    label: 'label'
+                }
+            }
+        },
+        methods: {
+
+
+            // 查询列表
+            getSysMenus() {
+                // 分页查询参数
+                var para = {"name":this.filters.name,
+                    "currPage": this.page ,"pageSize":this.pageSize,};
+                var url = "/loginController/pluginPage";
+                $.ajax({
+                    url: url, //请求路径
+                    async: true, //是否异步请求，默认为true
+                    type: "POST",
+                    contentType: "application/x-www-form-urlencoded", //编码类型
+                    data: para, //请求参数
+                    dataType: "json", //预处理服务端可能返回的数据类型
+                    scriptCharset: "UTF-8", //编码
+                    success: function(data) { //请求成功的回调函数
+                        if(true) {
+                            var datas=data.data.list;
+                            console.log(datas);
+                            vue.sysMenus = datas;
+                            vue.total=data.data.total;
+                            console.log(data.data.total)
+                        }else {
+                            vue.$message({
+                                type: 'warning',
+                                message: data.message
+                            });
+                        }
+                    },
+                    error: function(data) { //请求失败的回调函数
+                        vue.$message({
+                            type: 'error',
+                            message: '服务器异常！'
+                        });
+                    }
+                });
+            },
+            // 分页  当前页-改变时会触发
+            handleCurrentChange(val) {
+                this.page = val;
+                this.getSysMenus();
+            },// 每页条数-改变时会触发
+            handleSizeChange(val) {
+                this.pageSize = val;
+                this.page = 1;
+                this.getSysMenus();
+            },
+            // 查询重置
+            resetForm(formname) {
+                this.$refs[formname].resetFields();
+                this.getSysMenus();
+            },
+            // 列表排序
+            handleSortChange(sort){
+                this.sort={
+                    sort:sort.prop,
+                    order:sort.order=='ascending'?'asc':'desc'
+                };
+                this.getSysMenus();
+            },
+            // 格式化日期
+            formatDate: function(row,column,cellValue, index){
+                return !!cellValue?utilFormatDate(new Date(cellValue), 'yyyy-MM-dd'):'';
+            },
+            formatDateTime: function(row,column,cellValue, index){
+                return !!cellValue?utilFormatDate(new Date(cellValue), 'yyyy-MM-dd hh:mm:ss'):'';
+            },
+            // 编辑页 根据id查看
+            handleClick(row) {
+                this.formTitle='编辑';
+                this.formVisible = true;
+                this.form = Object.assign({}, row);
+
+            },
+            // 新增页
+            handleAdd:function(){
+                this.formTitle='新增';
+                this.formVisible = true;
+                this.form = {
+                    id:'',
+                    username:'',
+                    password:'',
+
+                };
+            },
+            // 提交
+            formSubmit: function () {
+                this.$refs.form.validate((valid) => {
+                    if (valid) {
+                        this.$confirm('确认提交吗？', '提示', {}).then(() => {
+                            this.formLoading = true;
+                            let para = Object.assign({}, this.form);
+                            var url;
+                            if (!!para.id){
+                                var url = "/loginController/doUpdate";
+                            }else {
+                                var url = "/loginController/addUser";
+                            }
+                        var param = {"id":this.form.id,"username":this.form.username,
+                            "password": this.form.password};
+                            //ajax提交请求  JSON.stringify(param)
+                            $.ajax({
+                                url: url, //请求路径
+                                async: true, //是否异步请求，默认为true
+                                type: "POST",
+                                contentType: "application/x-www-form-urlencoded", //编码类型
+                                data: param, //请求参数
+                                dataType: "json", //预处理服务端可能返回的数据类型
+                                scriptCharset: "UTF-8", //编码
+                                success: function(data) { //请求成功的回调函数
+                                    if(data.ok) {
+                                       /* vue.$message({
+                                            type: 'success',
+                                            message: '保存成功！'
+                                        });*/
+                                    }else {
+                                        vue.$message({
+                                            type: 'warning',
+                                            message: data.message
+                                        });
+                                    }
+                                    vue.getSysMenus();
+                                },
+                                error: function(data) { //请求失败的回调函数
+                                    vue.$message({
+                                        type: 'error',
+                                        message: '服务器异常！'
+                                    });
+                                }
+                            });
+                            this.formVisible = false;
+                            this.formLoading = false;
+                        });
+                    }
+                });
+            },
+            // 删除
+            doDelete(row) {
+                var url = "/loginController/doDelete/"+row.id;
+                this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    //ajax提交请求
+                    this.listLoading = true;
+                    $.ajax({
+                        url: url, //请求路径
+                        async: false, //是否异步请求，默认为true
+                        type: "GET",
+                        contentType: "application/x-www-form-urlencoded", //编码类型
+                        dataType: "json", //预处理服务端可能返回的数据类型
+                        scriptCharset: "UTF-8", //编码
+                        success: function(data) {
+                            if(data.ok) {
+                                vue.$message({
+                                    type: 'success',
+                                    message: '删除成功！'
+                                });
+                            }else {
+                                vue.$message({
+                                    type: 'warning',
+                                    message: data.message
+                                });
+                            }
+                            vue.getSysMenus();
+                        },
+                        error: function(data) { //请求失败的回调函数
+                            vue.$message({
+                                type: 'error',
+                                message: '服务器异常！'
+                            });
+                        }
+                    });
+                    this.listLoading = false;
+                }).catch(() => {
+                    this.$message({
+                        type: 'info',
+                        message: '取消删除！'
+                    });
+                });
+            },
+
+        },
+        mounted() {
+            vue = this;// 再赋值
+            this.getSysMenus();
+        }
+    });
+
+    // 日期格式化
+    function utilFormatDate(date, pattern) {
+        pattern = pattern || "yyyy-MM-dd";
+        return pattern.replace(/([yMdhsm])(\1*)/g, function ($0) {
+            switch ($0.charAt(0)) {
+                case 'y': return padding(date.getFullYear(), $0.length);
+                case 'M': return padding(date.getMonth() + 1, $0.length);
+                case 'd': return padding(date.getDate(), $0.length);
+                case 'w': return date.getDay() + 1;
+                case 'h': return padding(date.getHours(), $0.length);
+                case 'm': return padding(date.getMinutes(), $0.length);
+                case 's': return padding(date.getSeconds(), $0.length);
+            }
+        });
+    };
+    function padding(s, len) {
+        var len = len - (s + '').length;
+        for (var i = 0; i < len; i++) { s = '0' + s; }
+        return s;
+    };
+
+    //传入一个file对象，传出访问地址
+    function fileToUrl(fileObj) {
+        var windowURL = window.URL || window.webkitURL;
+        var dataURL;
+        if (fileObj && fileObj.files && fileObj.files[0]) {
+            dataURL = windowURL.createObjectURL(fileObj.files[0]);
+        }
+        return dataURL;
+    }
+
+    //选择文件
+    function selFile(obj, type) {
+        obj = $(obj);
+        var form = obj.parent("form"); //获取form对象
+        var suffixObj = obj.next("input[name='suffix']"); //获取后缀名对象
+        var str = obj.val();
+        if(str.indexOf(".") != -1) {
+            if(type=="1"){
+                var zheng=$('#fileSizeZheng')[0].files[0].size/1024/1024;
+                if(zheng.toFixed(2)>=1){
+                    obj.val("");
+                    layer.alert("文件过大，请选择小于等于1Mb的图片！", {icon:2});
+                    return;
+                }
+            }
+            else if(type=="2"){
+                var fan=$('#fileSizeFan')[0].files[0].size/1024/1024;
+                if(fan.toFixed(2)>=1){
+                    obj.val("");
+                    layer.alert("文件过大，请选择小于等于1Mb的图片！", {icon:2});
+                    return;
+                }
+            }
+            var suffix = str.substring(str.lastIndexOf(".")+1, str.length);
+            var isVali = false;
+            for(var i=0; i<valiSuffix.length; i++) {
+                if(suffix.toLowerCase() == valiSuffix[i]) {
+                    isVali = true;
+                }
+            }
+            if(isVali) {
+                suffixObj.val(suffix);
+                uploadImg(form, obj, type); //上传文件
+                return;
+            }
+        }
+        obj.val("");
+        layer.alert("文件类型不合法，请选择图片！", {icon:2});
+    }
+
+    //上传图片
+    function uploadImg(form, obj, type) {
+        var f = obj.val(); //获取本地文件路径
+        if(f == null || f == undefined || f == "") {
+            layer.alert("请先选择要上传的图片！", {icon:0});
+            return;
+        }
+        var name = 'uploadIframe'+uploadIndex+'_'+type;
+        var str = '<iframe style="display:none;" name="'+name+'" id="'+name+'"></iframe>';
+        $("body").append(str);
+        form.attr("target", name);
+        form.submit();
+        //layer.load(0, {shade: [0.5, "#fff"]});
+        listenerUploadimg(fileToUrl(obj[0]), name, obj);
+    }
+
+    function listenerUploadimg(url, name, obj) {
+
+        var html = $("#" + name).contents().find('body').html();
+
+        if (html != null && html != undefined && html.length > 0) {
+            //转换成json
+            console.log(html);
+            //var obj = $.parseJSON(responseText.replace(/<.*?>/ig,""));
+            //var json = eval("(" + html + ")");
+            if (true) {
+               /* var id = vue.form.id;
+                var type = name.substring(name.indexOf("_") + 1, name.length);
+                var param = "{'fileId':'" + json.data + "', 'tableId':'" + id + "', 'type':'" + type + "'}";*/
+                obj.val("");
+                            obj.next("input[name='suffix']").val("");
+                            if (name.indexOf("_1") != -1) {
+                                //身份证正面
+                                $("#idCardZImg").attr("src", url);
+                                $("#idCardZImg").parent("a").attr("href", url);
+                                $("#idCardZImg").show();
+                            }
+                            else if (name.indexOf("_2") != -1) {
+                                $("#idCardFImg").attr("src", url);
+                                $("#idCardFImg").parent("a").attr("href", url);
+                                $("#idCardFImg").show();
+                            }
+                            else if (name.indexOf("_3") != -1) {
+                                $("#personImg").attr("src", url);
+                                $("#personImg").parent("a").attr("href", url);
+                                $("#personImg").show();
+                            }
+
+                            layer.closeAll();
+            }
+        } else {
+            setTimeout(function () {
+                listenerUploadimg(url, name, obj);
+            }, 1000);
+        }
+    }
+
+    //获取用户对应图片集
+    function loadImgId(id) {
+        $.ajax({
+            url: "resourceFileController.do?getImgByTabIdGroupType&tableId="+id, //请求路径
+            async: false, //是否异步请求，默认为true
+            type: "GET",
+            contentType: "application/x-www-form-urlencoded", //编码类型
+            dataType: "json", //预处理服务端可能返回的数据类型
+            scriptCharset: "UTF-8", //编码
+            success: function(data) { //请求成功的回调函数
+                if(data.ok) {
+                    var d = data.data;
+                        setTimeout(function() {
+                            for(var i=0; i<d.length; i++) {
+                                loadImgs(d[i].type, d[i].file_id);
+                            }
+                        }, 1000);
+
+                }
+            }
+        });
+    }
+    //载入图片 、
+    function loadImgs(type, id) {
+        $.ajax({
+            url: "file_plugin/find.do?id=" + id, //请求路径
+            async: false, //是否异步请求，默认为true
+            type: "GET",
+            contentType: "application/x-www-form-urlencoded", //编码类型
+            dataType: "json", //预处理服务端可能返回的数据类型
+            scriptCharset: "UTF-8", //编码
+            success: function(data) { //请求成功的回调函数
+                if(data.ok) {
+                    var d = data.data;
+                    if(type == "1") {
+                        //身份证正面
+                        frontIdCartUrl=d.url;     //身份证正面网络地址
+                        $("#idCardZImg").attr("src", d.url);
+                        $("#idCardZImg").parent("a").attr("href",d.url);
+                        $("#idCardZImg").show();
+                    }
+                    else if(type == "2"){
+                        //身份证反面
+                        ReverseIdCartUrl=d.url;   //身份证反面网络地址
+                        $("#idCardFImg").attr("src", d.url);
+                        $("#idCardFImg").parent("a").attr("href",d.url);
+                        $("#idCardFImg").show();
+                    }
+                    else if(type == "3"){
+                        //身份证反面
+                        $("#personImg").attr("src", d.url);
+                        $("#personImg").parent("a").attr("href",d.url);
+                        $("#personImg").show();
+                    }
+                }
+            }
+        });
+    }
+    //初始化三张图
+    function initImg() {
+        $("#idCardZImg").removeAttr("src").hide();
+        $("#idCardFImg").removeAttr("src").hide();
+        $("#personImg").removeAttr("src").hide();
+    }
+
+
+
+</script>
+</body>
+</html>

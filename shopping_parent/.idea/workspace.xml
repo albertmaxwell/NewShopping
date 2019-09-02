@@ -11,18 +11,264 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9386ca-bb6f-46bb-901f-2779732877b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_bean/src/main/java/com/alibaba/shopping/shopping_back_bean/bean/UserMembers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_bean/src/main/java/com/alibaba/shopping/shopping_back_bean/bean/entity/SysUserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_dao/src/main/java/com/alibaba/shopping/shopping_back_dao/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_service/src/main/java/com/alibaba/shopping/shopping_back_service/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_service/src/main/java/com/alibaba/shopping/shopping_back_service/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/adapter/WebAppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/config/MyWebAppConfigurer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/constant/ResultEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/controller/FileUploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/utils/ImageUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/utils/SaveFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/utils/UUIDGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/vo/LoginVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/css/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/css/common_top.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/css/public.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/js/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/js/common/mg_title.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/js/common/mg_title/mg_title_dom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/js/common/mg_title/mg_title_js.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/js/html2canvas.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/js/jquery-1.9.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/js/public.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/js/public_css.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/js/public_js.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/js/vue-resource.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/js/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/page/example/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/alert.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/aside.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/autocomplete.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/badge.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/breadcrumb-item.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/breadcrumb.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/button-group.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/card.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/carousel-item.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/cascader.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/checkbox-button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/checkbox-group.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/checkbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/col.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/collapse-item.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/collapse.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/color-picker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/container.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/date-picker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/display.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/dropdown-item.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/dropdown-menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/dropdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/elementui-ext.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/fonts/element-icons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/fonts/element-icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/form-item.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/icon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/input-number.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/input.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/loading.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/menu-item-group.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/menu-item.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/message-box.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/message.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/notification.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/option-group.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/option.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/pagination.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/popover.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/popper.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/progress.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/radio-button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/radio-group.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/radio.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/rate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/row.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/scrollbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/select-dropdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/spinner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/step.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/steps.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/submenu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/switch.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/tab-pane.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/table-column.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/tag.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/time-picker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/time-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/tooltip.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/transfer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/tree.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/css/upload.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/element-ui/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/layer_v2.1/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/layer_v2.1/doc/jquery下载.url" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/layer_v2.1/doc/layer交流.url" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/layer_v2.1/doc/layer官网.url" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/layer_v2.1/layer/extend/layer.ext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/layer_v2.1/layer/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/layer_v2.1/layer/skin/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/layer_v2.1/layer/skin/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/layer_v2.1/layer/skin/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/layer_v2.1/layer/skin/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/layer_v2.1/layer/skin/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/layer_v2.1/layer/skin/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/layer_v2.1/layer/skin/layer.ext.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/plugin/layer_v2.1/更新日志.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/web/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/css/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/img/active.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/img/ddd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/img/googs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/img/ss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/component/inputcom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/component/onecom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/component/topcom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/shop/images/login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/account.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/address.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/article_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/article_read.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/authenticate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/change_password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/channel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/css/font/151219-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/css/font/151219-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/css/font/151219-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/css/font/151219-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/css/font/151219-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/css/font/151219.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/css/swiper3.07.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/favorite.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/find_pwd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/images/form_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/images/icon/DefaultAvatar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/images/icon/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/images/icon_edit.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/images/icon_trash.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/images/icon_view.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/images/unbg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/images/userIcon_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/information.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/inquiry_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/js/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/js/html5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/js/jquery.jqzoom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/js/swiper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/library.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/library_category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/message.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/offer_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/offer_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/order_comment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/order_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/order_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/order_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/price_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/price_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/product_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/reading.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/seller_order_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/seller_order_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/seller_product_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/seller_product_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/setting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/shop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/shop_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/system_prompts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/union_login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/006.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/007.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/008.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/ad001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/ad002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/ad005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/ad006.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/bestCategoryPic01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/bestCategoryPic02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/bestShop01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/brandLogo01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/brandLogo02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/brandLogo03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/brandLogo04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/case001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/case002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/case003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/case004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/case005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/goods.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/goods001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/goods002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/goods003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/goods004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/goods004small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/goods005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/goods006.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/goods007.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/goods008.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/goods009.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/goods010.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/goodssmall.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/sigleAd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/slide001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/slide002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/slide003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/slide004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/slide01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/slide02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/upload/slide03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/tao/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/controller/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/picture/picturedataS80209-21501040103.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/picture/picturedataS80209-21501051379.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_back/shopping_back_bean/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_bean/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_back/shopping_back_dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_dao/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_back/shopping_back_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/ShoppingBackWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/ShoppingBackWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/test/java/com/alibaba/shopping/shopping_back_web/ShoppingBackWebApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/test/java/com/alibaba/shopping/shopping_back_web/ShoppingBackWebApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/alert.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/service/alert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/area.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/service/area.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/service/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/jquery-1.9.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/service/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/picturetest.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/service/picture.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/serve.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/service/serve.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/stage.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/service/stage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/service/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/warnUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/service/warnUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/ShoppingProtalWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/ShoppingProtalWebApplication.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,10 +297,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JavaScript File" />
-        <option value="Class" />
+        <option value="Interface" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -89,28 +335,28 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/service" />
+    <property name="last_opened_file_path" value="E:/GITHUB/Maxwell/school-blog" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.48965517" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.alibaba.shopping.shoppingcommonutils.common.service" />
-      <recent name="com.alibaba.shopping.shoppingcommonutils.common.cache" />
-      <recent name="mapper" />
-      <recent name="com.alibaba.shopping.shoppingcommonutils.common.controller" />
-      <recent name="com.alibaba.shopping.common.json" />
+      <recent name="com.alibaba.shopping.shopping_back_web.controller" />
+      <recent name="com.alibaba.shopping.shopping_back_web.utils" />
+      <recent name="com.alibaba.shopping.shopping_back_web.config" />
+      <recent name="com.alibaba.shopping.shopping_back_web.vo" />
+      <recent name="com.alibaba.shopping.shopping_back_bean.bean.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\static\page\service" />
-      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\static" />
-      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\static\css" />
-      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\mapper" />
-      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping-common-utils\src\main\resources\static\js" />
+      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_back\shopping_back_web\src\main\resources" />
+      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_back\shopping_back_web\src\main\resources\static\page\example" />
+      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_back\shopping_back_web\src\main\resources\image" />
+      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_back\shopping_back_web\src\main\resources\static" />
+      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_back\shopping_back_service\src\main\java\com\alibaba\shopping\shopping_back_service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -125,7 +371,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ShoppingProtalWebApplication">
+  <component name="RunManager" selected="Spring Boot.ShoppingBackWebApplication">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.shopping.shopping_protal_web.Test" />
       <module name="shopping_protal_web" />
@@ -135,6 +381,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShoppingBackWebApplicationTests.uploadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shopping_back_web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.alibaba.shopping.shopping_back_web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.alibaba.shopping.shopping_back_web" />
+      <option name="MAIN_CLASS_NAME" value="com.alibaba.shopping.shopping_back_web.ShoppingBackWebApplicationTests" />
+      <option name="METHOD_NAME" value="uploadTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -280,6 +542,7 @@
       <item itemvalue="JUnit.ShoppingBeanApplicationTests" />
       <item itemvalue="JUnit.ShoppingProtalServiceApplicationTests" />
       <item itemvalue="JUnit.ShoppingProtalServiceApplicationTests.contextLoads" />
+      <item itemvalue="JUnit.ShoppingBackWebApplicationTests.uploadTest" />
       <item itemvalue="Spring Boot.ShoppingBackBeanApplication" />
       <item itemvalue="Spring Boot.ShoppingBackDaoApplication" />
       <item itemvalue="Spring Boot.ShoppingBackServiceApplication" />
@@ -292,6 +555,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ShoppingBackWebApplicationTests.uploadTest" />
         <item itemvalue="Application.Test" />
         <item itemvalue="JUnit.ShoppingProtalServiceApplicationTests.contextLoads" />
         <item itemvalue="JUnit.ShoppingProtalServiceApplicationTests" />
@@ -332,6 +596,18 @@
       <workItem from="1567126911111" duration="2825000" />
       <workItem from="1567158496578" duration="3001000" />
       <workItem from="1567170670271" duration="6217000" />
+      <workItem from="1567229711731" duration="267000" />
+      <workItem from="1567229987073" duration="434000" />
+      <workItem from="1567230433854" duration="2576000" />
+      <workItem from="1567233028028" duration="12060000" />
+      <workItem from="1567253262441" duration="7431000" />
+      <workItem from="1567298202998" duration="11000" />
+      <workItem from="1567298745264" duration="1044000" />
+      <workItem from="1567299845641" duration="228000" />
+      <workItem from="1567300103156" duration="11000" />
+      <workItem from="1567300142279" duration="388000" />
+      <workItem from="1567300583363" duration="29739000" />
+      <workItem from="1567331445578" duration="3774000" />
     </task>
     <servers />
   </component>
@@ -350,5 +626,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/controller/IndexController.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

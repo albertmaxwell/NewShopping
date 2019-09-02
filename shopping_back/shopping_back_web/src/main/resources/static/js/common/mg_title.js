@@ -1,0 +1,2 @@
+document.write("<script type=\"text\/javascript\" src=\"\/js\/common\/mg_title\/mg_title_dom.js\"><\/script>");
+document.write("<script type=\"text\/javascript\" src=\"\/js\/common\/mg_title\/mg_title_js.js\"><\/script>");

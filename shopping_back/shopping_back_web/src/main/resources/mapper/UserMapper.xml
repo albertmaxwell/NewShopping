@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.alibaba.shopping.shopping_back_dao.mapper.UserMapper">
+
+
+    <insert id="save" >
+        <selectKey keyProperty="id" resultType="String" order="BEFORE">
+            select REPLACE(UUID(),"-","")
+        </selectKey>
+          insert into user (id,username,password) values(#{id},#{username},#{password})
+    </insert>
+
+    <delete id="deleteById" parameterType="int">
+        DELETE FROM user WHERE id=#{id}
+    </delete>
+
+    <update id="updateById" parameterType="com.alibaba.shopping.shopping_back_bean.bean.entity.SysUserEntity">
+        UPDATE user SET
+        username=#{username},password=#{password} WHERE id =#{id}
+    </update>
+
+    <select id="findByUsername" parameterType="String" resultType="com.alibaba.shopping.shopping_back_bean.bean.entity.SysUserEntity">
+        SELECT * FROM user where username=#{username}
+    </select>
+
+    <select id="selectAll" resultType="com.alibaba.shopping.shopping_back_bean.bean.entity.SysUserEntity"
+            resultMap="usermap">
+        SELECT * FROM user
+    </select>
+
+    <select id="selectUsers" resultType="com.alibaba.shopping.shopping_back_bean.bean.entity.SysUserEntity"
+            >
+        SELECT * FROM user
+    </select>
+
+    <resultMap type="com.alibaba.shopping.shopping_back_bean.bean.entity.SysUserEntity" id="usermap">
+        <id property="id" column="id" />
+        <result property="username" column="username" />
+        <result property="password" column="password" />
+    </resultMap>
+
+    <select id="queryUsersByArray" resultType="com.alibaba.shopping.shopping_back_bean.bean.entity.SysUserEntity"
+            resultMap="usermap">
+        SELECT * FROM user
+    </select>
+
+
+</mapper>
