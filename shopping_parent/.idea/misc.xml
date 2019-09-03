@@ -23,6 +23,8 @@
         <option value="$PROJECT_DIR$/../shopping-service-util/pom.xml" />
         <option value="$PROJECT_DIR$/../shopping-web-util/pom.xml" />
         <option value="$PROJECT_DIR$/../shopping-common-utils/pom.xml" />
+        <option value="$PROJECT_DIR$/../shopping-files/pom.xml" />
+        <option value="$PROJECT_DIR$/../shopping-files-plugin/pom.xml" />
       </list>
     </option>
   </component>

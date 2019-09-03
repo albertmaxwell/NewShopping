@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.alibaba.shopping.shopping_back_web.*","com.alibaba.shopping.shopping_back_service.*", "com.alibaba.shopping.shoppingcommonutils.common.*"})
+@ComponentScan(basePackages = {"com.alibaba.shopping.shopping_back_web.*","com.alibaba.shopping.shopping_back_service.*", "com.alibaba.shopping.shoppingcommonutils.common.*", "com.shoppingfilesplugin.shoppingfilesplugin.plugin.*"})
 @MapperScan({"com.alibaba.shopping.shopping_back_dao.*","com.alibaba.shopping.shoppingcommonutils.common.*"})
 @ServletComponentScan
 @EnableSwagger2

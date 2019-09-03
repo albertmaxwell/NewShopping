@@ -17,7 +17,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
 
 	/**
 	 * 在配置文件中配置的文件保存路径
-	 */
+	 *//*
 	@Value("${web.upload-path}")
 	private String location;
 
@@ -29,5 +29,5 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
 		//设置总上传数据总大小
 		factory.setMaxRequestSize("10MB");
 		return factory.createMultipartConfig();
-	}
+	}*/
 }

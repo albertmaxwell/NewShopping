@@ -103,6 +103,12 @@
             <version>3.15</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.shopping-files-plugin</groupId>
+            <artifactId>shopping-files-plugin</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
 
