@@ -84,10 +84,7 @@ public class HttpClientUtil {
 		try {
 			//发送（执行）请求
 			CloseableHttpResponse response = httpClient.execute(httpGet);
-//			//获取响应头、内容
-//			int statusCode =  response.getStatusLine().getStatusCode();
-//			//打印状态码
-//			logger.info("执行状态码："+statusCode);
+//
 			org.apache.http.HttpEntity entity = response.getEntity();
 			resulrStr = IOUtils.toString(entity.getContent(),"UTF-8");
 			response.close();

@@ -76,10 +76,10 @@ public class FileNewController {
 			result = fileService.find(id);
 		} catch (Exception e) {
 			e.printStackTrace();
-			result.put("code", 500);
-			result.put("message", "接口访问异常");
-			result.put("ok", false);
-			result.put("data", null);
+//			result.put("code", 500);
+//			result.put("message", "接口访问异常");
+//			result.put("ok", false);
+//			result.put("data", null);
 		}
 		return result;
 	}
@@ -91,10 +91,10 @@ public class FileNewController {
 			result = fileService.finds(ids);
 		} catch (Exception e) {
 			e.printStackTrace();
-			result.put("code", 500);
-			result.put("message", "接口访问异常");
-			result.put("ok", false);
-			result.put("data", null);
+//			result.put("code", 500);
+//			result.put("message", "接口访问异常");
+//			result.put("ok", false);
+//			result.put("data", null);
 		}
 		return result;
 	}

@@ -20,7 +20,7 @@ import java.util.UUID;
  * Created by 金海洋
  */
 @Controller
-public class IndexController {
+public class IndexNewController {
 
     //获取上传的文件夹，具体路径参考application.properties中的配置
     @Value("${web.upload-path}")
@@ -32,7 +32,7 @@ public class IndexController {
      * @param model
      * @return
      */
-    @GetMapping(value = "/index")
+    @GetMapping(value = "/indexTwo")
     public String index(Model model) {
         //获取已存在的文件
         File [] files = new File(uploadPath).listFiles();
@@ -46,9 +46,10 @@ public class IndexController {
      * @param files
      * @return
      */
-    @PostMapping(value = "index")
+    @PostMapping(value = "indexOne")
     public String index(HttpServletRequest request, @RequestParam("headimg") MultipartFile[] files) {
-        //可以从页面传参数过来
+		 System.out.println("记得修改index");
+    	//可以从页面传参数过来
         System.out.println("name====="+request.getParameter("name"));
         //这里可以支持多文件上传
         if(files!=null && files.length>=1) {

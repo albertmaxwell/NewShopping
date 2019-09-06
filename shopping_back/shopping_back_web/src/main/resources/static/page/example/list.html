@@ -63,7 +63,7 @@
 
             <el-row>
                 <el-col :span="12">
-                    <el-form-item label="身份证正面照片" prop="imgFiles">
+                    <el-form-item label="案例身份证正面照片" prop="imgFiles">
                         <el-button style="cursor: pointer; width:100px; height:40px;"  size="80" type="primary"  >点击上传</el-button>
                         <form action="http://localhost:8085/uploadFile/uploadImg" enctype="multipart/form-data" method="post">
                             <input id='fileSizeZheng' type="file" style="cursor: pointer;position:absolute; top:0; width:100px; height:40px; filter:alpha(opacity:0);opacity: 0;" name="file" accept="image/*" onClick="if(false){return false;}" onChange="selFile(this, 1)" />
@@ -73,9 +73,9 @@
                 </el-col>
 
                 <el-col :span="12">
-                    <el-form-item label="身份证反面照片" prop="imgFiles">
+                    <el-form-item label="文件服务器身份证反面照片" prop="imgFiles">
                         <el-button style="cursor: pointer; width:100px; height:40px;"  size="80" type="primary" >点击上传</el-button>
-                        <form action="http://localhost:8085/uploadFile/uploadImg" enctype="multipart/form-data" method="post">
+                        <form action="http://localhost:8085/file_plugin/upload" enctype="multipart/form-data" method="post">
                             <input id='fileSizeFan' type="file" style="cursor: pointer;position:absolute; top:0; width:100px; height:40px; filter:alpha(opacity:0);opacity: 0;" name="file" accept="image/*" onClick="if(false){return false;}" onChange="selFile(this, 2)" />
                             <input type="hidden" name="suffix" />
                         </form>

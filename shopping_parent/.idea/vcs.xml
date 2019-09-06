@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../api_proxy_plugin" vcs="Git" />
+    <mapping directory="E:/mayun/RuoYi" vcs="Git" />
   </component>
 </project>

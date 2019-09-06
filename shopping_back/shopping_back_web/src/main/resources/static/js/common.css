@@ -1,0 +1,29 @@
+.detail-title {
+    border-bottom: 1px solid #dcdcdc;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    font-weight: bold;
+}
+.detail {
+    background-color: #FFF;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.upload-image {
+    background:url(../../images/shangchuanfujian.png) no-repeat;
+    background-size:73px 13px;
+    margin-top:10px;
+}
+
+.bottom-div-btn {
+    display: -webkit-flex;
+    /* flex-direction:row;
+     align-items:center;
+     justify-content:center;*/
+    width:100%;
+    bottom:0px;
+}

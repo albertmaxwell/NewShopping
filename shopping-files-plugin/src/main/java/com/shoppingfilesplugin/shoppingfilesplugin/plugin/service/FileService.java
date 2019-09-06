@@ -119,7 +119,7 @@ public class FileService {
 	 */
 	public Map finds(String ids) throws Exception {
 		//url拼接
-		String url = fileServerUrl + "/v1/finds";
+		String url = fileServerUrl + "/file_plugin/finds";
 		Map<String, String> params = new HashMap<>();
 		params.put("ids", ids);
 		String result = HttpClientUtil.sendGet(url, params, null);

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 公共css引入 -->
+    <script type="text/javascript" src="/js/common.css"></script>
+    <!-- 公共js引入 -->
+    <script type="text/javascript" src="/js/public_js.js"></script>
+   <script src="/js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+
+
+
+<!-- 附件 -->
+<div class="detail">
+    <div class="detail-title">
+        <div>附件：</div>
+        <div style="color: #1ba1ff" control="hide">
+            <!-- 上传附件 -->
+            <div class="upload-image">
+                <form style="width:100%; height:100%;" action="/file_plugin/uploads" enctype="multipart/form-data" target="file_async" method="post" id="image_form">
+                    <input type="file" name="file" multiple="multiple" accept="image/*" class="file-hide" onchange="fileUpload(this)"/>
+                    <input type="hidden" name="busName" value="合同签章" />
+                    <input type="hidden" name="suffix" id="image_suffix"/>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="annex" id="image-list"><!-- 附件列表 -->
+
+    </div>
+</div>
+
+<!-- 底部按钮 -->
+<div class="bottom-div-btn" control="hide">
+    <div onclick="submit()">保存</div>
+</div>
+
+
+</body>
+
+
+<script type="text/javascript">
+    var iframeUrlIndex = 0;
+    //图片访问url临时存储
+    var imageUrlTemp = {};
+    //提交
+    function submit() {
+        if(!setHeadVal()) {
+            return false;
+        }
+        console.log(cmeaVo);
+        var loadIndex = layer.open({type: 2,shadeClose:false});
+        $.ajax({
+            url: "/api_proxy/rest/reimburse/addOrUpdate", //请求路径
+            async: true, //是否异步请求，默认为true
+            type: "POST",
+            contentType: "application/json", //编码类型
+            data: JSON.stringify(cmeaVo),
+            dataType: "json", //预处理服务端可能返回的数据类型
+            scriptCharset: "UTF-8", //编码
+            success: function(data) { //请求成功的回调函数
+                if(data.ok) {
+                    layer.open({
+                        content: "保存成功！"
+                        ,btn: "确定"
+                        ,end:function() {
+                            to("expenses_index.html");
+                        }
+                    });
+                    layer.close(loadIndex);
+                } else {
+                    //失败提示消息
+                    layer.open({
+                        content: data.message
+                        ,btn: '确定'
+                    });
+                    layer.close(loadIndex);
+                }
+            },
+            error: function(data) { //请求失败的回调函数
+                layer.open({
+                    content: "服务器异常"
+                    ,btn: '确定'
+                });
+                layer.close(loadIndex);
+            }
+        });
+    }
+
+    /**文件上传**/
+    //上传文件
+    function fileUpload(fileObj) {
+        //上传中
+        layer.open({type: 2,shadeClose:false, content:"上传中"});
+
+        var suffix = "";
+        for(var i=0; i<fileObj.files.length; i++) {
+            //循环组装suffix
+            var file = fileObj.files[i].name;
+            suffix += file.substring(file.lastIndexOf(".")+1, file.length) + ",";
+        }
+        suffix = suffix.substring(0, suffix.length - 1);
+        console.log(suffix);
+
+        iframeUrlIndex++;
+        //临时存储加入参数
+        //imageUrlTemp["fileAsync" + iframeUrlIndex] = url;
+        //创建一个iframe用于文件异步上传
+        var iframeName = "file_async_" + iframeUrlIndex;
+        $("body").append('<iframe style="display:none;" name="'+iframeName+'" id="'+iframeName+'"></iframe>');
+        //修改form指向新的iframe
+        $("#image_form").attr("target", iframeName);
+        $("#image_suffix").val(suffix);
+        //后立刻开始上传
+        $("#image_form").submit();
+        //开启监控iframe的返回
+        monitorImageIframe(iframeName);
+        $(fileObj).val("");
+    }
+
+    //实时监控图片传输iframe，如果返回值，则更新图片
+    function monitorImageIframe(id) {
+        var html = $("#" + id).contents().find('body').find("pre").html();
+        if(html != null && html != undefined &&  html.length > 0) {
+            var index = id.replace("file_async_","");
+
+            //转换成json
+            var json = eval("(" + html + ")");
+            if(json.code == "10000") {
+                //成功
+                addImgs(json.data);
+            }
+
+            //删除对应临时数据
+            delete imageUrlTemp["fileAsync" + index];
+
+            //删除iframe
+            $("#file_async_" + index).remove();
+
+            layer.closeAll();
+        } else {
+            setTimeout("monitorImageIframe('"+id+"')",1000);
+        }
+    }
+
+    //添加图片
+    function addImgs(ids, url) {
+        if(!url) {
+            //读取图片
+            $.ajax({
+                url: "/file_plugin/finds?ids=" + ids, //请求路径
+                async: false, //是否异步请求，默认为true
+                type: "GET",
+                contentType: "application/x-www-form-urlencoded", //编码类型
+                dataType: "json", //预处理服务端可能返回的数据类型
+                scriptCharset: "UTF-8", //编码
+                success: function (data) { //请求成功的回调函数
+                    if (data.ok) {
+                        for (var i = 0; i < data.data.length; i++) {
+                            var d = data.data[i];
+                            var str = "";
+                            str += "<div>";
+                            str += "	<img class='img-look' src=\"" + d.url + "\" \/>";
+                            str += "	<img class=\"del-btn\" onclick='delImageId(this,\"" + d.id + "\")' src=\"/images\/expenses\/shanchu-fujian.png\" control=\"hide\" \/>";
+                            str += "<\/div>";
+                            $("#image-list").append(str);
+                            /*这里保存id作为之后提交数据的参数*/
+                            imageIdArr.push(d.id);
+                            //图片集存入
+                            showImgArr.push(d.url);
+                        }
+                        $("#imgBox").show();
+                    }
+                }
+            });
+        } else {
+            var id = ids;
+            var str="";
+            str += "<div>";
+            str += "	<img class='img-look' src=\"" + url + "\" \/>";
+            str += "	<img class=\"del-btn\" onclick='delImageId(this,\""+id+"\")' src=\"/images\/expenses\/shanchu-fujian.png\" control=\"hide\" \/>";
+            str += "<\/div>";
+
+            $("#image-list").append(str);
+            /*这里保存id作为之后提交数据的参数*/
+            imageIdArr.push(id);
+            //图片集存入
+            showImgArr.push(url);
+        }
+        //给图片加上点击事件，用于展示图片
+        $(".img-look").off("click").on("click", function() {
+            showImg($(this).attr("src"), showImgArr);
+        });
+    }
+
+
+
+
+</script>
+</html>
