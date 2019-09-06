@@ -19,11 +19,20 @@ import java.util.Map;
 import static com.alibaba.shopping.shoppingcommonutils.common.utils.util.getIpAddr;
 
 /**
+ *
+ * 1、遇到受检异常，事务默认不回滚。
+ *
+ * 2、在业务层捕捉异常后，发现事务不生效。
+ *   //推荐：在业务层将异常抛出
+ *   throw new RuntimeException("发生异常了..");
+ *
+ * 3、因为@Transactional只能控制单线程事务 多线程是独立的
+ *
  * @author 金海洋
  * @date 2019/8/29  -14:12
  */
 @Service("login")
-@Transactional
+@Transactional(rollbackFor = Exception.class)
 public class LoginServiceImpl implements LoginService {
 
 	@Resource

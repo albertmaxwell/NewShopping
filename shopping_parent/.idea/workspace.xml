@@ -11,230 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9386ca-bb6f-46bb-901f-2779732877b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/annotations/AdminAuth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/annotations/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/controller/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/controller/AppConfigController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/controller/AppErrorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/controller/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/controller/InitController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/controller/LoginNewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/controller/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/controller/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/dto/AuthToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/dto/MenuDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/dto/PMenuDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/exception/ErrorInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/exception/SystemException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/interceptor/AuthInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/interceptor/MyWebAppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/interceptor/SystemInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/interceptor/TokenInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/model/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/model/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/model/RoleMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/model/UserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/service/AppConfigServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/service/IAppConfigService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/service/IMenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/service/IRoleMenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/service/IRoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/service/IUserRoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/service/MenuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/service/RoleMenuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/service/UserRoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/service/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/tools/AuthTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/tools/ConfigTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/tools/DateTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/tools/MyBeanUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/tools/NormalTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/tools/PinyinToolkit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/tools/SecurityUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/tools/TokenTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/utils/BaseSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/utils/PageableUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/utils/ParamFilterUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/utils/SearchDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/utils/SearchSpeDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/utils/SearchUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/utils/SortDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/basic/utils/SortUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/bean/ExcelData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/constant/ExcelConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/controller/ExcelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/utils/ExcelUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/通用业务.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/mapper/TreeMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/admin/myself/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/admin/myself/cms.admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/admin/myself/delete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/admin/myself/my.sortable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/admin/myself/my_filter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/admin/myself/public.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/admin/myself/role_menus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/admin/myself/user_roles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/admin/form-page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/admin/list-page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/admin/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/admin/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/admin/myself/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/admin/myself/cms.admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/admin/myself/delete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/admin/myself/my.sortable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/admin/myself/my_filter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/admin/myself/public.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/admin/myself/role_menus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/admin/myself/user_roles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/admin/nav.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/bootstrap3/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/bootstrap3/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/bootstrap3/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/bootstrap3/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/bootstrap3/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/bootstrap3/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/bootstrap3/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/bootstrap3/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/bootstrap3/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/bootstrap3/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/bootstrap3/js/bootstrap.file-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/bootstrap3/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/bootstrap3/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/bootstrap3/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome/css/font-awesome-ie7.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/fonts/59ZRklaO5bWGqF5A9baEERJtnKITppOI_IvcXXDNrsc.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/fonts/DXI1ORHCpsQm3Vp6mXoaTRWV49_lSm1NYrwo-zkhivY.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/fonts/DXI1ORHCpsQm3Vp6mXoaTT0LW-43aMEzIO6XUTLjad8.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/fonts/DXI1ORHCpsQm3Vp6mXoaTZX5f-9o1vgP2EXwfjgl7AY.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/fonts/DXI1ORHCpsQm3Vp6mXoaTa-j2U0lmluP9RWlSytm3ho.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/fonts/DXI1ORHCpsQm3Vp6mXoaTaaRobkAwv3vxw3jMhVENGA.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/fonts/DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/fonts/DXI1ORHCpsQm3Vp6mXoaTf8zf_FOSsgRmwsS7Aa9k2w.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/fonts/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/fonts/LWCjsQkB6EMdfHrEVqA1KRJtnKITppOI_IvcXXDNrsc.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/fonts/RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/fonts/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/fonts/u-WUoqrET9fUeobQW7jkRRJtnKITppOI_IvcXXDNrsc.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/fonts/xozscpT2726on7jbcb_pAhJtnKITppOI_IvcXXDNrsc.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/init/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/init/css/pattern.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/init/css/pattern2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/init/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/js-lib/ajaxfileupload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/js-lib/bootstrap-treeview.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/js-lib/images/input-checked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/js-lib/images/input-unchecked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/js-lib/jquery-1.12.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/js-lib/jquery-labelauty.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/js-lib/jquery-labelauty.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/js-lib/jquery.qrcode.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/js-lib/ui/jquery.ui.core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/js-lib/ui/jquery.ui.mouse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/js-lib/ui/jquery.ui.sortable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/js-lib/ui/jquery.ui.widget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/login-new/images/bg-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/login-new/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/login-new/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/basic/validate/bootstrapValidator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/images/shangchuanfujian.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/js/common.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/page/example/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/appConfig/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/errors/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/errors/500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/errors/default.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/errors/system.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/init.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/menu/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/menu/nav.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/menu/update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/role/add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/role/filter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/role/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/role/menus.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/role/nav.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/role/update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/updatePwd.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/user/add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/user/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/user/nav.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/user/roles.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/admin/basic/user/update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/fragments/adminModel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/fragments/errorModel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/fragments/nav.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/fragments/page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/templates/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/ShoppingCommonUtilsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/ShoppingCommonUtilsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-files-plugin/src/main/java/com/shoppingfilesplugin/shoppingfilesplugin/plugin/controller/FileNewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-files-plugin/src/main/java/com/shoppingfilesplugin/shoppingfilesplugin/plugin/controller/FileNewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-files-plugin/src/main/java/com/shoppingfilesplugin/shoppingfilesplugin/plugin/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-files-plugin/src/main/java/com/shoppingfilesplugin/shoppingfilesplugin/plugin/service/FileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_back/shopping_back_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/ShoppingBackWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/ShoppingBackWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/java/com/alibaba/shopping/shopping_back_web/controller/IndexNewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/page/example/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/static/page/example/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/common/util/HttpClientUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_common/src/main/java/com/alibaba/shopping/common/common/util/HttpClientUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_common/target/classes/com/alibaba/shopping/common/common/util/HttpClientUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_common/target/classes/com/alibaba/shopping/common/common/util/HttpClientUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/前端素材.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/~$通用业务.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/通用业务.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/通用业务.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../api_proxy_plugin/src/main/java/com/api/proxy/plugin/util/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../api_proxy_plugin/src/main/java/com/api/proxy/plugin/util/MD5Util.java" afterDir="false" />
       <change beforePath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application-druid.yml" beforeDir="false" afterPath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application-druid.yml" afterDir="false" />
@@ -306,14 +89,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shopping_back/shopping_back_web/src/main/resources/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/bootstrap" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.48965517" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -324,11 +107,11 @@
       <recent name="com.shopping.files.shoppingfiles.com.shopping.files.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\static\page\bootstrap" />
       <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_back\shopping_back_web\src\main\resources\mapper" />
       <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping-common-utils\.mvn" />
       <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_back\shopping_back_web\src\main\resources\static" />
       <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_back\shopping_back_web\src\main\resources\templates" />
-      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping-common-utils\src\main\java\com\alibaba\shopping\shoppingcommonutils" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -343,7 +126,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ShoppingBackWebApplication">
+  <component name="RunManager" selected="Spring Boot.ShoppingProtalWebApplication">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.shopping.shopping_protal_web.Test" />
       <module name="shopping_protal_web" />
@@ -373,36 +156,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShoppingBeanApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shopping_bean" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.alibaba.shopping.shopping_bean.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.alibaba.shopping.shopping_bean" />
-      <option name="MAIN_CLASS_NAME" value="com.alibaba.shopping.shopping_bean.ShoppingBeanApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShoppingProtalServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shopping_protal_service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shopping.shopping_protal_service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.shopping.shopping_protal_service" />
-      <option name="MAIN_CLASS_NAME" value="com.shopping.shopping_protal_service.ShoppingProtalServiceApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ShoppingProtalServiceApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shopping_protal_service" />
       <extension name="coverage">
@@ -415,6 +168,33 @@
       <option name="MAIN_CLASS_NAME" value="com.shopping.shopping_protal_service.ShoppingProtalServiceApplicationTests" />
       <option name="METHOD_NAME" value="contextLoads" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LocaleI18nApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-locale-i18n" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hehe.LocaleI18nApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MailApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-send-mail" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hehe.MailApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OriginWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="origin-web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hehe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hehe.OriginWebApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -537,10 +317,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TargetWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="target-web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hehe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hehe.TargetWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebSocketChatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-websocket-chat" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hehe.WebSocketChatApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Test" />
-      <item itemvalue="JUnit.ShoppingBeanApplicationTests" />
-      <item itemvalue="JUnit.ShoppingProtalServiceApplicationTests" />
       <item itemvalue="JUnit.ShoppingProtalServiceApplicationTests.contextLoads" />
       <item itemvalue="JUnit.ShoppingBackWebApplicationTests.uploadTest" />
       <item itemvalue="Spring Boot.ShoppingBackBeanApplication" />
@@ -556,14 +354,19 @@
       <item itemvalue="Spring Boot.ShoppingFilesApplication" />
       <item itemvalue="Spring Boot.ShoppingFilesPluginApplication" />
       <item itemvalue="Spring Boot.RuoYiApplication" />
+      <item itemvalue="Spring Boot.WebSocketChatApplication" />
+      <item itemvalue="Spring Boot.LocaleI18nApplication" />
+      <item itemvalue="Spring Boot.MailApplication" />
+      <item itemvalue="Spring Boot.OriginWebApplication" />
+      <item itemvalue="Spring Boot.TargetWebApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.OriginWebApplication" />
+        <item itemvalue="Spring Boot.TargetWebApplication" />
         <item itemvalue="JUnit.ShoppingBackWebApplicationTests.uploadTest" />
         <item itemvalue="Application.Test" />
         <item itemvalue="JUnit.ShoppingProtalServiceApplicationTests.contextLoads" />
-        <item itemvalue="JUnit.ShoppingProtalServiceApplicationTests" />
-        <item itemvalue="JUnit.ShoppingBeanApplicationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -619,7 +422,8 @@
       <workItem from="1567594855190" duration="392000" />
       <workItem from="1567649482077" duration="5052000" />
       <workItem from="1567732038340" duration="18136000" />
-      <workItem from="1567752634699" duration="1780000" />
+      <workItem from="1567752634699" duration="11612000" />
+      <workItem from="1567778227324" duration="2551000" />
     </task>
     <servers />
   </component>

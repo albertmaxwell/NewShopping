@@ -6,26 +6,31 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springboot-send-mail" />
         <module name="ruoyi-generator" />
-        <module name="shopping_back_web" />
+        <module name="target-web" />
+        <module name="ruoyi-common" />
+        <module name="shopping_back_bean" />
+        <module name="origin-web" />
         <module name="shopping_protal_service" />
-        <module name="shopping_bean" />
         <module name="ruoyi-admin" />
         <module name="shopping_protal_web" />
-        <module name="shopping-files" />
-        <module name="api_proxy_plugin" />
+        <module name="springboot-locale-i18n" />
         <module name="shopping_back_dao" />
+        <module name="ruoyi-framework" />
         <module name="shopping_back_service" />
+        <module name="shopping-files" />
+        <module name="shopping-web-util" />
         <module name="ruoyi-quartz" />
-        <module name="shopping-service-util" />
-        <module name="shopping_back_bean" />
+        <module name="shopping_bean" />
         <module name="shopping-files-plugin" />
         <module name="shopping_protal_dao" />
-        <module name="shopping-web-util" />
+        <module name="shopping-service-util" />
         <module name="shopping-common-utils" />
+        <module name="springboot-websocket-chat" />
+        <module name="api_proxy_plugin" />
+        <module name="shopping_back_web" />
         <module name="shopping_common" />
-        <module name="ruoyi-framework" />
-        <module name="ruoyi-common" />
         <module name="ruoyi-system" />
       </profile>
     </annotationProcessing>
@@ -38,6 +43,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api_proxy_plugin" options="-parameters" />
+      <module name="origin-web" options="-parameters" />
       <module name="resource_file_plugin" options="-parameters" />
       <module name="resource_files" options="-parameters" />
       <module name="shopping-common-utils" options="-parameters" />
@@ -54,6 +60,10 @@
       <module name="shopping_protal_dao" options="-parameters" />
       <module name="shopping_protal_service" options="-parameters" />
       <module name="shopping_protal_web" options="-parameters" />
+      <module name="springboot-locale-i18n" options="-parameters" />
+      <module name="springboot-send-mail" options="-parameters" />
+      <module name="springboot-websocket-chat" options="-parameters" />
+      <module name="target-web" options="-parameters" />
     </option>
   </component>
 </project>
