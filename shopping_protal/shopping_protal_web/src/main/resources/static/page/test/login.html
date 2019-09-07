@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        max-width: 1920px;
+        max-height: 1080px;
+        margin: 0 auto;
+        background: #eee url("../../img/big.png") no-repeat center top;
+        background-size: 100% auto;
+        position: relative;
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.07rem 0.58rem 0.50rem 0.58rem;
+        position: absolute;
+        top: 2.66rem;
+        left: 9.38rem;
+        width: 6.32rem;
+        height: 4.35rem;
+        color: #04c7ff;
+        background: url("../../img/login.png") no-repeat center;
+        background-size: 100% auto;
+        box-sizing: border-box;
+    }
+
+    .input {
+        width: 5.17rem;
+        height: 0.57rem;
+        position: relative;
+        text-indent: 0.65rem;
+        font-size: 16px;
+        color: #04c7ff;
+        border: 0.01rem solid #008ddf;
+    }
+
+    .login input:nth-child(1) {
+        background: #0C508F url("../../img/username.png") no-repeat 0.29rem 0.18rem;
+        background-size: auto 0.23rem;
+    }
+
+    .login input:nth-child(2) {
+        background: #0C508F url("../../img/password.png") no-repeat 0.29rem 0.18rem;
+        background-size: auto 0.23rem;
+    }
+
+    .remember {
+        display: flex;
+        align-items: center;
+    }
+
+    .remember span {
+        font-size: 14px;
+        margin-left: 0.13rem;
+    }
+
+    input[type=checkbox] {
+        position: relative;
+        cursor: pointer;
+        width: 0.20rem;
+        height: 0.20rem;
+    }
+
+    input[type=checkbox]::after {
+        background-color: #0C508F;
+        color: #008ddf;
+        width: 0.20rem;
+        height: 0.20rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        content: '';
+        border: 0.01rem solid #008ddf;
+    }
+
+    input[type=checkbox]:checked::after {
+        content: "✓";
+        font-size: 0.20rem;
+        font-weight: 900;
+    }
+
+    button {
+        cursor: pointer;
+        width: 5.17rem;
+        height: 0.57rem;
+        background-color: #00e1eb;
+        border: none;
+        color: #0e2267;
+        font-size: 0.22rem;
+    }
+</style>
+<script type="text/javascript">
+
+    var deviceWidth
+    setHtmlFontSize()
+
+    if (window.addEventListener) {
+        window.addEventListener('resize', function () {
+            setHtmlFontSize()
+        }, false)
+    }
+    function setHtmlFontSize() {
+        deviceWidth = document.documentElement.clientWidth > 1920 ? 1920 : document.documentElement.clientWidth
+        document.getElementsByTagName('html')[0].style.cssText = 'font-size:' + deviceWidth / 19.20 + 'px !important'
+    }
+</script>
+<body>
+
+<div class="login">
+    <input class="input" id="username" type="text" placeholder="请输入用户名">
+    <input class="input" id="password" type="password" placeholder="请输入用户密码">
+    <div class="remember">
+
+    </div>
+    <button onclick="login()" id="login_btn">登 录</button>
+</div>
+</body>
+</html>

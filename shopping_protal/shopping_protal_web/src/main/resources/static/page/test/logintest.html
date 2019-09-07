@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    body{
+        max-width: 1920px;
+        max-height: 1080px;
+        margin: 0;
+        background: #0C508F url("../../img/three.png") no-repeat center top;
+        background-size: 100% auto;
+        position: relative;
+    }
+
+    input{
+        width:5.17rem;
+        height: 0.57rem;
+        position: relative;
+        text-indent: 0.65rem;
+        font-size: 16px;
+        color: #0B61A4;
+        border: 0.01rem solid #0C508F;
+    }
+
+    .login{
+      display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.07rem 0.58rem 0.50rem 0.58rem;
+        position: absolute;
+        top: 2.66rem;
+        left: 9.38rem;
+        width: 6.32rem;
+        height: 4.35rem;
+        color: #04c7ff;
+        background: url("../../img/login.png") no-repeat center;
+        background-size: 100% auto;
+        box-sizing: border-box;
+    }
+
+
+
+
+
+</style>
+
+<script type="text/javascript">
+
+    var deviceWidth
+    setHtmlFontSize()
+
+    if (window.addEventListener) {
+        window.addEventListener('resize', function () {
+            setHtmlFontSize()
+        }, false)
+    }
+    function setHtmlFontSize() {
+        deviceWidth = document.documentElement.clientWidth > 1920 ? 1920 : document.documentElement.clientWidth
+        document.getElementsByTagName('html')[0].style.cssText = 'font-size:' + deviceWidth / 19.20 + 'px !important'
+    }
+</script>
+<body>
+
+<div class="login">
+    <input class="input" id="username" type="text" placeholder="请输入用户账号">
+    <input class="input" id="password" type="password" placeholder="请输入用户密码">
+<div class="remember">
+
+</div>
+    <button onclick="login" class="login_btn"></button>
+</div>
+
+</body>
+</html>
