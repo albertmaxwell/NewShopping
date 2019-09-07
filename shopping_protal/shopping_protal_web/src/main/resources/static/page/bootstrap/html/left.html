@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<style type="text/css">
+    .navigation_bar_font {
+        font-size: large;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+</style>
+<div style="background-color: #26344b;height:100%" class="panel-group col-sm-2" id="hrms_sidebar_left" role="tablist"
+     aria-multiselectable="true">
+    <ul class="nav nav-pills nav-stacked emp_sidebar">
+        <li role="presentation" class="active">
+            <a href="#" data-toggle="collapse" data-target="#collapse_emp">
+                <span class="navigation_bar_font" class="glyphicon glyphicon-user" aria-hidden="true">客户资料</span>
+            </a>
+            <ul class="nav nav-pills nav-stacked" id="collapse_emp">
+                <li class="navigation_bar_font" role="presentation"><a href="#" class="emp_info"><span
+                        class="glyphicon glyphicon-user"></span><font
+                        style="color: #ffffff;padding-left: 13px">员工信息</font></a></li>
+                <li class="navigation_bar_font" role="presentation"><a href="#" role="button" class="emp_add_btn"
+                                                                       data-toggle="modal" data-target=".emp-add-modal"><font
+                        color="#ffffff"><span class="glyphicon glyphicon-plus"></span><font
+                        style="color: #ffffff;padding-left: 13px">员工新增</font></font></a></li>
+                <li class="navigation_bar_font" role="presentation"><a href="#"
+                                                                       clasemp_add_btns="emp_clearall_btn"><font
+                        color="#ffffff"><span class="glyphicon glyphicon-minus"></span><font
+                        style="color: #ffffff;padding-left: 13px">员工清零</font></font></a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="nav nav-pills nav-stacked dept_sidebar">
+        <li role="presentation" class="active">
+            <a href="#" data-toggle="collapse" data-target="#collapse_dept">
+                <span class="navigation_bar_font" class="glyphicon glyphicon-cloud" aria-hidden="true">联系人集</span>
+            </a>
+            <ul class="nav nav-pills nav-stacked" id="collapse_dept">
+                <li class="navigation_bar_font" role="presentation"><a href="#" class="dept_info"><span
+                        class="glyphicon glyphicon-user"></span><font
+                        style="color: #ffffff;padding-left: 13px">部门信息</font></a></li>
+                <li class="navigation_bar_font" role="presentation"><a href="#" class="dept_add_btn" data-toggle="modal"
+                                                                       data-target=".dept-add-modal"><span
+                        class="glyphicon glyphicon-plus"></span><font
+                        style="color: #ffffff;padding-left: 10px">部门新增</font></a></li>
+                <li class="navigation_bar_font" role="presentation"><a href="#" class="dept_clearall_btn"><span
+                        class="glyphicon glyphicon-minus"></span><font
+                        style="color: #ffffff;padding-left: 10px">部门清零</font></a></li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <ul class="nav nav-pills nav-stacked dept_sidebar">
+        <li role="presentation" class="active">
+            <a href="#" data-toggle="collapse" data-target="#collapse_dept">
+                <span class="navigation_bar_font" class="glyphicon glyphicon-cloud" aria-hidden="true">合同管理</span>
+            </a>
+            <ul class="nav nav-pills nav-stacked" id="collapse_con">
+                <li class="navigation_bar_font" role="presentation"><a href="#" class="contracts_info"><span
+                        class="glyphicon glyphicon-user"></span>
+                    <font
+                            style="color: #ffffff;padding-left: 13px">合同信息</font>
+                </a>
+                </li>
+                <li class="navigation_bar_font" role="presentation"><a href="#" class="con_add_btn" data-toggle="modal"
+                                                                       data-target=".con-add-modal"><span
+                        class="glyphicon glyphicon-plus"></span><font
+                        style="color: #ffffff;padding-left: 10px">新增合同</font>
+                </a>
+                </li>
+                <li class="navigation_bar_font" role="presentation"><a href="#" class="dept_visualData_btn"><span
+                        class="glyphicon glyphicon-minus">
+
+                </span>
+                    <font
+                            style="color: #ffffff;padding-left: 10px">数据统计
+                    </font>
+                </a>
+                </li>
+                <li class="navigation_bar_font" role="presentation"><a href="#" class="dept_visualCityData_btn"><span
+                        class="glyphicon glyphicon-minus"></span>
+                    <font
+                            style="color: #ffffff;padding-left: 10px">城市数据统计</font>
+                </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <ul class="nav nav-pills nav-stacked dept_sidebar">
+        <li role="presentation" class="active">
+            <a href="#" data-toggle="collapse" data-target="#collapse_dept">
+                <span class="navigation_bar_font" class="glyphicon glyphicon-cloud" aria-hidden="true">权限管理</span>
+            </a>
+            <ul class="nav nav-pills nav-stacked" id="collapse_dept">
+                <li class="navigation_bar_font" role="presentation">
+                    <a href="#" class="rights_manage"><span
+                            class="glyphicon glyphicon-user"></span>
+                        <font style="color: #ffffff;padding-left: 13px">权限设置</font>
+                    </a>
+                </li>
+                <li class="navigation_bar_font" role="presentation">
+                    <a href="#" class="rights_add_btn"
+                       data-toggle="modal"
+                       data-target=".rights-add-modal"><span
+                            class="glyphicon glyphicon-plus"></span>
+                        <font style="color: #ffffff;padding-left: 13px">用户添加</font>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+
+</div>
+
+
+</body>
+</html>
