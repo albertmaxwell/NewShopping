@@ -58,3 +58,27 @@
 .dsc-search .button-store {
     background-color: #b31919;
 }
+
+.top-one-banner {
+    min-width: 1200px;
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #ff287d;
+}
+
+.site-nav {
+    background: #e60e31;
+    margin-bottom: 1px;
+    width: 100%;
+    min-width: 1200px;
+}
+
+.w1200 {
+    width: 1200px;
+}
+
+.fl{ float:left !important;}
+
+

@@ -4,35 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/jquery-1.9.1.min.js"></script>
+    <!-- 公共css引入 -->
+    <script type="text/javascript" src="/js/public_css.js"></script>
+    <!-- 公共js引入 -->
+    <script type="text/javascript" src="/js/public_js.js"></script>
     <title>Title</title>
 </head>
 <style>
-    *{
+    * {
         padding: 0;
         margin: 0;
     }
 
-    body{
+    body {
         max-width: 1920px;
         max-height: 1080px;
-        margin: 0;
-        background: #0C508F url("../../img/three.png") no-repeat center top;
+        margin: 0 auto;
+        background: #eee url("../../img/three.png") no-repeat center top;
         background-size: 100% auto;
         position: relative;
     }
 
-    input{
-        width:5.17rem;
-        height: 0.57rem;
-        position: relative;
-        text-indent: 0.65rem;
-        font-size: 16px;
-        color: #0B61A4;
-        border: 0.01rem solid #0C508F;
-    }
-
-    .login{
-      display: flex;
+    .login {
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 1.07rem 0.58rem 0.50rem 0.58rem;
@@ -47,9 +42,70 @@
         box-sizing: border-box;
     }
 
+    .input {
+        width: 5.17rem;
+        height: 0.57rem;
+        position: relative;
+        text-indent: 0.65rem;
+        font-size: 16px;
+        color: #04c7ff;
+        border: 0.01rem solid #008ddf;
+    }
 
+    .login input:nth-child(1) {
+        background: #0C508F url("../../img/username.png") no-repeat 0.29rem 0.18rem;
+        background-size: auto 0.23rem;
+    }
 
+    .login input:nth-child(2) {
+        background: #0C508F url("../../img/password.png") no-repeat 0.29rem 0.18rem;
+        background-size: auto 0.23rem;
+    }
 
+    .remember {
+        display: flex;
+        align-items: center;
+    }
+
+    .remember span {
+        font-size: 14px;
+        margin-left: 0.13rem;
+    }
+
+    input[type=checkbox] {
+        position: relative;
+        cursor: pointer;
+        width: 0.20rem;
+        height: 0.20rem;
+    }
+
+    input[type=checkbox]::after {
+        background-color: #0C508F;
+        color: #008ddf;
+        width: 0.20rem;
+        height: 0.20rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        content: '';
+        border: 0.01rem solid #008ddf;
+    }
+
+    input[type=checkbox]:checked::after {
+        content: "✓";
+        font-size: 0.20rem;
+        font-weight: 900;
+    }
+
+    button {
+        cursor: pointer;
+        width: 5.17rem;
+        height: 0.57rem;
+        background-color: #00e1eb;
+        border: none;
+        color: #0e2267;
+        font-size: 0.22rem;
+    }
 
 </style>
 
@@ -76,8 +132,54 @@
 <div class="remember">
 
 </div>
-    <button onclick="login" class="login_btn"></button>
+    <button onclick="login()" class="login_btn">登   录</button>
 </div>
 
 </body>
+<script type="text/javascript">
+
+    //用户登录
+    function login() {
+
+        //锁住按钮
+        var username = $("#username").val();
+        var password = $("#password").val();
+
+        if(username.length <= 0) {
+            layer.alert('请输入账号！', {icon: 0});
+            return;
+        }
+        if(password.length <= 0) {
+            layer.alert('请输入密码！', {icon: 0});
+            return;
+        }
+
+        var url = "/loginController/loginOne";
+        var param = {"username":username, "password": password};
+        //ajax提交请求
+        $.ajax({
+            url: url, //请求路径
+            async: true, //是否异步请求，默认为true
+            type: "POST",
+            contentType: "application/x-www-form-urlencoded", //编码类型
+            data: param, //请求参数
+            dataType: "json", //预处理服务端可能返回的数据类型
+            scriptCharset: "UTF-8", //编码
+            success: function(data) { //请求成功的回调函数
+                if(data.ok) {
+                        //管理端直接进入后台
+                        location.href = "/page/test/index.html";
+                        return;
+                } else {
+                    alert(data.data.success);
+                    layer.alert(data.message, {icon:2});
+                }
+            },
+            error: function(data) { //请求失败的回调函数
+                layer.alert("服务器异常", {icon:2});
+            }
+        });
+    }
+
+    </script>
 </html>

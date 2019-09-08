@@ -6,6 +6,7 @@ import com.alibaba.shopping.common.exception.ResultException;
 import com.alibaba.shopping.common.response.ResponseMessage;
 import com.alibaba.shopping.common.response.Result;
 
+import com.alibaba.shopping.shopping_bean.bean.LoginUserVo;
 import com.alibaba.shopping.shopping_bean.bean.entity.SysUserEntity;
 
 import com.alibaba.shopping.shoppingcommonutils.common.cache.RedisService;
@@ -70,6 +71,37 @@ public class LoginController {
 		}
 
 	}
+
+	/**
+	 *
+	 * 登录用户每调用一次这个接口
+	 *
+	 * 用户登录
+	 * @return
+	 */
+	@RequestMapping(value = "/loginOne", method = RequestMethod.POST)
+	@ResponseBody
+	//@Cacheable(cacheNames = "users")实现序列化的返回对象才能进入缓存
+	@ApiOperation(value = "用户登录接口", notes = "传入对象数据")
+	public ResponseMessage<?> login(@RequestParam("username") String username, @RequestParam("password") String password
+			, HttpServletRequest request){
+		try {
+			SysUserEntity user = userService.login(username, password);
+			if(user!=null){
+				TSUser tsUser=new TSUser();
+				tsUser.setUsername(user.getUsername());
+				return Result.success(user);
+			}else{
+				return Result.error("用户密码错误");
+			}
+		} catch (ResultException e) {
+			e.printStackTrace();
+			return Result.error("用户密码错误");
+		}
+
+	}
+
+
 
 
 	/**
