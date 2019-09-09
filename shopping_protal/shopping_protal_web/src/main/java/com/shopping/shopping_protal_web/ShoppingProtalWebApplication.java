@@ -10,7 +10,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.shopping.shopping_protal_web.*","com.shopping.shopping_protal_service.*", "com.alibaba.shopping.shoppingcommonutils.common.*"})
+@ComponentScan(basePackages = {"com.shopping.shopping_protal_web.*","com.shopping.shopping_protal_service.*", "com.alibaba.shopping.shoppingcommonutils.common.*"/*,"com.shopping.monitor.monitorservice.*"*/})
 @MapperScan({"com.alibaba.shopping.shopping_protal_dao.*","com.alibaba.shopping.shoppingcommonutils.common.*"})
 @ServletComponentScan
 @EnableSwagger2

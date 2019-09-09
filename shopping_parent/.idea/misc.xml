@@ -31,6 +31,7 @@
         <option value="E:/GITHUB/Maxwell/springboot-socks/springboot-cross-orgin/pom.xml" />
         <option value="E:/GITHUB/Maxwell/springboot-socks/springboot-locale-i18n/pom.xml" />
         <option value="E:/GITHUB/Maxwell/springboot-socks/springboot-send-mail/pom.xml" />
+        <option value="$PROJECT_DIR$/../monitor-service/pom.xml" />
       </list>
     </option>
   </component>

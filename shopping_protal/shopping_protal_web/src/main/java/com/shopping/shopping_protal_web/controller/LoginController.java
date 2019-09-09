@@ -34,8 +34,8 @@ public class LoginController {
 
 	@Autowired
 	UserService userService;
-	@Autowired
-	RedisService redisService;
+	/*@Autowired
+	RedisService redisService;*/
 	@Autowired
 	LoginService login;
 
@@ -53,9 +53,9 @@ public class LoginController {
 	@ApiOperation(value = "用户登录接口", notes = "传入对象数据", produces = "application/json")
 	public ResponseMessage<?> login(@RequestBody LoginVo loginVo, HttpServletRequest request) {
 		try {
-			redisService.set("1","value22222");
+			/*redisService.set("1","value22222");
 			System.out.println(redisService.get("1"));
-			System.out.println("jinhaiyang");
+			System.out.println("jinhaiyang");*/
 			SysUserEntity user = userService.login(loginVo.getUsername(), loginVo.getPassword());
 			if(user!=null){
 				TSUser tsUser=new TSUser();

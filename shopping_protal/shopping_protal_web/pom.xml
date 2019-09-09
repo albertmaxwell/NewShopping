@@ -121,6 +121,12 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.shopping.monitor</groupId>
+            <artifactId>monitor-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
 
 
     </dependencies>

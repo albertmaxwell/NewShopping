@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/jquery-1.9.1.min.js"></script>
+    <!-- 公共css引入 -->
+    <script type="text/javascript" src="/js/public_css.js"></script>
+    <!-- 公共js引入 -->
+    <script type="text/javascript" src="/js/public_js.js"></script>
+</head>
+<body>
+
+<div id="app-6">
+    <p>{{ message }}</p>
+    <input v-model="message">
+</div>
+</body>
+
+<script>
+    var app6 = new Vue({
+        el: '#app-6',
+        data: {
+            message: 'Hello Vue!'
+        }
+
+    })
+
+</script>
+</html>

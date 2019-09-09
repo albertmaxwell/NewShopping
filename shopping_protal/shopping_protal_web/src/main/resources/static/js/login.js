@@ -19,7 +19,7 @@ $(".login button").click(function(){
         $.base64.utf8encode = true;
         $.ajax({
             type: "Post",
-            url: "/shopping/loginController/login",
+            url: "/loginController/login",
             async: true,
             data:JSON.stringify(data),
             dataType: "json",
