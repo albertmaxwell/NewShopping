@@ -5,6 +5,9 @@
     <file type="web" url="file://$PROJECT_DIR$/../shopping_back/shopping_back_web" />
     <file type="web" url="file://$PROJECT_DIR$/../shopping_protal/shopping_protal_web" />
   </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
