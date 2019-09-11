@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--div里面的如input button就是他的item  就是子项-->
+<!--
+    设置在父元素上的属性有：flex-direction、flex-wrap、flex-flow、justify-content、align-item、align-content六种
+-->
+    <style>
+        /*.test{
+            !*这是因为弹性布局下，所有的项目（item）之间默认没有间隔，并且有个特别的地方，就是不给项目设置高度的情况下，所有项目跟父元素等高*!
+            display:flex;
+        }*/
+
+        .test {
+            width: 500px;
+            height: 100px;
+            display: flex;
+            border: 3px solid red;
+            box-sizing: border-box;
+            flex-direction:row;
+            /*是否换行*/
+            flex-wrap:nowrap;
+            /*布局*/
+            flex-flow: wrap;
+            /*水平方向上的对齐*//**/
+            justify-content:space-around;
+            /*垂直方向上的对其*/
+/*
+            align-items:s ;
+*/
+
+
+        }
+        .hello-world {
+            border: 3px solid blue;
+        }
+
+        .test2 {
+            width: 500px;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid blue;
+            box-sizing: border-box;
+            align-items: center;
+            margin-top: 200px;
+        }
+        .mybox {
+            border: 1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--<div class="test">
+    <input placeholder="随便输入点什么"></input>
+    <button>发送</button>
+</div>-->
+
+<!--<div class="test">
+    <input type="text" placeholder="随便输入点什么吧" />
+    <button>send</button>
+    <div class="hello-world">item1</div>
+    <div class="hello-world">item2</div>
+    <div class="hello-world">item3</div>
+    <div class="hello-world">item3</div>
+    <div class="hello-world">item3</div>
+    <div class="hello-world">item3</div>
+    <div class="hello-world">item3</div>
+    <div class="hello-world">item3</div>
+    <div class="hello-world">item4</div>
+</div>-->
+
+<div class="test2">
+    <div class="mybox">1</div>
+    <div class="mybox">2</div>
+    <div class="mybox">3</div>
+    <div class="mybox">4</div>
+    <div class="mybox">5</div>
+    <div class="mybox">6</div>
+    <div class="mybox">7</div>
+</div>
+
+
+
+</body>
+</html>

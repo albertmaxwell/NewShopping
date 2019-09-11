@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 手机web适配 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<title>登录</title>
+
+<style type="text/css">
+.box {
+	display:flex;
+	display: -webkit-flex;
+	flex-direction:row;
+	width:100%;
+	height:100%;
+	align-items:center;
+	justify-content:center;
+}
+.box-content {
+	width:90%;
+	height:95%;
+	border-radius: 10px;
+	background-color:#ffffff;
+	box-shadow:0px 1px 5px 0px #888888;
+}
+.box-content-back {
+	background:url(../../img/back.png) no-repeat;
+	background-size:100% 100px;
+	display:flex;
+	display: -webkit-flex;
+	align-items:flex-end;
+	justify-content:center;
+	width:100%;
+	height:140px;
+}
+.box-content-head {
+	background:url(../../img/ins.png) no-repeat;
+	background-size:100% 100%;
+	width:80px;
+	height:80px;
+}
+
+.box-content-input {
+	display:flex;
+	display: -webkit-flex;
+	flex-direction:column;
+	margin-top:20px;
+	background-color:#fafafa;
+	width:100%;
+	height:140px;
+}
+.box-content-input-box {
+	display:flex;
+	display: -webkit-flex;
+	justify-content:space-around;
+	align-items:center;
+	width:100%;
+    /*高度是父div的高度的50%的center*/
+	height:50%;
+}
+.box-content-input-box div {
+	display: inline-flex;
+	display: -webkit-inline-flex;
+	align-items:center;
+}
+.box-content-input-center {
+	display:flex;
+	display: -webkit-flex;
+	width:100%;
+	height:1px;
+	align-items:center;
+}
+
+
+.box-content-btn {
+	display:flex;
+	display: -webkit-flex;
+	flex-direction:column;
+	margin-top:20px;
+	width:100%;
+	height:140px;
+}
+.box-content-btn-box {
+	display:flex;
+	display: -webkit-flex;
+	justify-content:space-around;
+	align-items:center;
+	width:100%;
+	height:50%;
+}
+.box-content-btn-box div {
+	display: inline-flex;
+	display: -webkit-inline-flex;
+	align-items:center;
+	width:100%;
+	justify-content:space-around;
+}
+.box-content-btn-center {
+	display:flex;
+	display: -webkit-flex;
+	width:100%;
+	height:1px;
+	align-items:center;
+	justify-content:center;
+}
+
+.box-bottom {
+	display:flex;
+	display: -webkit-flex;
+	flex-direction:column;
+	margin-top:20px;
+	width:100%;
+	align-items:center;
+	color:#000;
+}
+</style>
+</head>
+<body>
+
+
+<div class="box">
+    <div class="box-content">
+        <!-- 上半部分 -->
+        <div class="box-content-back">
+            <div class="box-content-head"></div>
+        </div>
+        <!-- 中部输入框 -->
+        <div class="box-content-input">
+            <div class="box-content-input-box">
+                <div>
+                    <span style="margin-right:10px;">账号：</span>
+                    <span><input type="text" id="username" class="login-input" placeholder="请输入账号"/></span>
+                </div>
+            </div>
+            <div class="box-content-input-center">
+                <div class="hr"></div>
+            </div>
+            <div class="box-content-input-box">
+                <div>
+                    <span style="margin-right:10px;">密码：</span>
+                    <span><input type="password" id="password" class="login-input" placeholder="请输入密码"/></span>
+                </div>
+            </div>
+        </div>
+        <!-- 按钮框 -->
+        <div class="box-content-btn">
+            <div class="box-content-btn-box">
+                <div>
+                    <input type="button" onClick="login(this)" id="login_btn" value="登 录" class="btn-button"
+                           style="width:82%; height:40px;"/>
+                </div>
+            </div>
+        </div>
+        <!-- 欢迎标语 -->
+        <div class="box-bottom">
+            <span>——&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WELCOME TO LOGIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——</span>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
