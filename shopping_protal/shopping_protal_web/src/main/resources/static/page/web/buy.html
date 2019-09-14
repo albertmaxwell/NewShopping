@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+        .top{
+            width: 100%;
+            height: 9rem;
+            background-color: #feeafe;
+        }
+        .top-one-banner{
+            width: 100%;
+            height: 3rem;
+            background-color: #a70700;
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:space-around;
+        }
+        .top-one-banner a{
+            color: #ffffff;
+            text-decoration:none;
+            font-size: larger;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+
+        }
+        .center{
+            margin-top: 2rem;
+            width: 100%;
+            height: 32rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:start;
+            justify-content:space-around;
+        }
+        .show{
+            margin-left: 3rem;
+            background: url("../../img/girl.png") no-repeat;
+            background-size: 100% 100%;
+            width: 60%;
+            height: 500px;
+            background-color: #ffffff;
+        }
+
+        .detail{
+            width: 100%;
+            height:500px;
+            background-color: #ffffff;
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:flex-start;
+            justify-content:center;
+        }
+        .des-two{
+            margin-top: 1rem;
+            width: 100%;
+            height: 150px;
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:flex-start;
+            justify-content:center;
+        }
+
+
+        .right{
+            width: 100%;
+            height: 25%;
+            margin-top: 1rem;
+            margin-left: 2rem;
+            color: #000000;
+            font-size: large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+        }
+
+        .right-price{
+            width: 100%;
+            height: 25%;
+            margin-top: 1rem;
+            margin-left: 2rem;
+            color: #fe210d;
+            font-size: xx-large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+        }
+        .right-button{
+            width: 100%;
+            height: 20%;
+            margin-left: 1rem;
+
+            color: #000000;
+            font-size: large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:start;
+
+        }
+        button{
+            width: 8rem;
+            height: 4rem;
+            color: #ffffff;
+            -web-kit-appearance: none;
+            -moz-appearance: none;
+            outline: 0;
+            border:none;
+            background-color: #fe210d;
+
+            font-size: large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+
+            margin-left: 5rem;
+            margin-top: 3rem;
+
+        }
+
+        button:hover{
+            background-color: #a70700;
+        }
+        .des-two{
+          width: 100%;
+          height: 100%;
+
+        }
+
+
+        .address div{
+            width: 100%;
+            height: 20%;
+        }
+        .small{
+            height: 100%;
+            margin-left: 24px;
+            width: 40%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:space-around;
+        }
+        .haha{
+            height: 100%;
+            width: 60%;
+        }
+        .small div{
+
+            width: 5rem;
+            height: 5rem;
+            background-color: #a70700;
+        }
+        .hehe{
+            width: 100%;
+            height:7rem;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:flex-end;
+            justify-content:space-around;
+        }
+
+        .pink{
+            background: url("../../img/pink.png") no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100%;
+        }
+        .green{
+            background: url("../../img/green.png") no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100%;
+        }
+        .black{
+            background: url("../../img/black.png") no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100%;
+        }
+        .yello{
+            background: url("../../img/girl.png") no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="top"></div>
+
+    <div class="top-one-banner">
+        <div><a href="tianmao.html"><span>首页</span></a></div>
+        <div><a href="tianmao.html"><span>所有宝贝</span></a></div>
+        <div><a href="tianmao.html"><span>秋季新款</span></a></div>
+        <div><a href="tianmao.html"><span>卫衣</span></a></div>
+    </div>
+
+    <div class="center">
+        <div class="show" id="cold"></div>
+        <div class="detail">
+            <div class="des-two">
+                <div class="right">初秋女生卫衣绒衫韩版宽松上衣时尚灯笼袖薄针织网红百搭圆领外套</div>
+                <div class="right">价格: $180</div>
+                <div class="right-price">促销价:$89.0</div>
+                <div class="right">地址</div>
+                <div class="right">想￥88.00拿下？手机天猫购买更便宜</div>
+                <div class="right">销量</div>
+                <div class="right">运费</div>
+                <div class="right">尺码</div>
+                <div class="right">颜色</div>
+                <div class="right">数量</div>
+                <div class="right-button">
+                    <button>立即购物</button>
+                    <button>加入购物车</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hehe">
+        <div class="small">
+            <div id="pink" class="pink"></div>
+            <div  id="green" class="green"></div>
+            <div id="yello" class="yello"></div>
+            <div id="black" class="black"></div>
+        </div>
+        <div class="haha"></div>
+    </div>
+   
+
+</div>
+
+</body>
+<script src="../../js/jquery-1.9.1.min.js"></script>
+<script src="../../page/web/fangdajingg2/common.js"></script>
+<link href="../../page/web/fangdajingg2/common.css" rel="stylesheet" type="text/css" />
+
+<script>
+   /* 鼠标事件
+    click：单击
+    dblclick：双击
+    mousedown：鼠标按下
+    mouseup：鼠标抬起
+    mouseover：鼠标悬浮
+    mouseout：鼠标离开
+    mousemove：鼠标移动
+    mouseenter：鼠标进入
+    mouseleave：鼠标离开*/
+    var btn = document.getElementById("pink");
+   btn.addEventListener("mouseenter",function () {
+       var el = document.getElementById('cold');
+       el.style.backgroundImage = 'url(../../img/black.png)';
+   });
+
+
+   var btn = document.getElementById("green");
+   btn.addEventListener("mouseenter",function () {
+       var el = document.getElementById('cold');
+       el.style.backgroundImage = 'url(../../img/green.png)';
+   })
+
+   var btn = document.getElementById("yello");
+   btn.addEventListener("mouseenter",function () {
+       var el = document.getElementById('cold');
+       el.style.backgroundImage = 'url(../../img/girl.png)';
+   })
+
+   var btn = document.getElementById("black");
+   btn.addEventListener("mouseenter",function () {
+       var el = document.getElementById('cold');
+       el.style.backgroundImage = 'url(../../img/black.png)';
+   })
+
+   $(document).ready(function(){
+       var showproduct = {
+           "boxid":"showbox",
+           "sumid":"showsum",
+           "boxw":400,//宽度,该版本中请把宽高填写成一样
+           "boxh":400,//高度,该版本中请把宽高填写成一样
+           "sumw":60,//列表每个宽度,该版本中请把宽高填写成一样
+           "sumh":60,//列表每个高度,该版本中请把宽高填写成一样
+           "sumi":7,//列表间隔
+           "sums":5,//列表显示个数
+           "sumsel":"sel",
+           "sumborder":1,//列表边框，没有边框填写0，边框在css中修改
+           "lastid":"showlast",
+           "nextid":"shownext"
+       };//参数定义
+       $.ljsGlasses.pcGlasses(showproduct);//方法调用，务必在加载完后执行
+   });
+
+
+</script>
+</html>

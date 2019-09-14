@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="../../js/jquery-1.9.1.min.js"></script>
-    <!-- 公共css引入 -->
+   <!-- &lt;!&ndash; 公共css引入 &ndash;&gt;
     <script type="text/javascript" src="/js/public_css.js"></script>
-    <!-- 公共js引入 -->
-    <script type="text/javascript" src="/js/public_js.js"></script>
+    &lt;!&ndash; 公共js引入 &ndash;&gt;
+    <script type="text/javascript" src="/js/public_js.js"></script>-->
     <style>
         *{
             padding: 0;
@@ -27,17 +27,57 @@
             flex-direction:column;
             align-items:center;
             justify-content:center;
+
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
         }
         .head-one{
             width: 100%;
             height: 3rem;
             background-color: #f2f2f2;
+
+            font-size: larger;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+            color: #ee204e;
+            text-decoration:none;
+
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:start;
+
+
+        }
+        .me{
+
+            width: 70%;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-end;
+
+            margin-right: 1rem;
+        }
+        .you{
+
+            width: 30%;
+
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:start;
+        }
+        .happy{
+            margin-left: 2rem;
         }
         .head-two{
             width: 100%;
             height: 5rem;
-            background-color: #f8e8ff;
 
+            background-color: #f8e8ff;
             display: -webkit-flex;
             flex-direction:row;
             align-items:center;
@@ -83,24 +123,50 @@
             color: #ee004c;
             height: 3rem;
             width: 5rem;
+            border:none;
         }
 
 
         .head-big-picture{
             width: 100%;
+            height: 100%
+
+            overflow:hidden;
+            position:relative
+        }
+        .slide{
+            width: 100%;
             height: 600px;
         }
-        .head-big-picture-img{
+        .slideItem{
+/*
             background: url("../../img/bigPicture.png") no-repeat;
+*/
             background-size:100% 100%;
             width:100%;
             height:100%;
         }
+        .slide .carouse .slideItem{
+            width:100%;
+            position:absolute;
+        }
+
+
+        .slideItem img{
+            background-size:100% 100%;
+            width:100%;
+            height:100%;
+        }
+
         .backgroup{
             width: 100%;
-            height: 180rem;
-           /* background-color: #a70700;*/
+            height: 260rem;
+            background-color: #a70700;
+
+
+/*
             background-color: #3800c0;
+*/
             display:flex;
             display: -webkit-flex;
             flex-direction:column;
@@ -128,6 +194,7 @@
             justify-content:center;
             flex-wrap:wrap;
         }
+
         .ping{
             margin-left: 10px;
             margin-right: 10px;
@@ -184,6 +251,7 @@
             height:100%;
         }
 
+
         .ocean5{
             background: url("../../img/food.png") no-repeat;
             background-size:100% 100%;
@@ -222,6 +290,7 @@
             font-weight: bolder;
             font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
         }
+
         .cry{
             border-radius: 50px;
             width:10rem;
@@ -267,14 +336,109 @@
 
         }
         .search{
+            font-size: larger;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
             color: #ffffff;
         }
+        .leader{
+            width: 100%;
+            height: 5rem;
+            background-color: #feeafe;
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .curr{
+            font-size: larger;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+            margin-left: 5rem;
+            color: #000000;
+            text-decoration:none;
+        }
+        .too{
+            text-decoration:none;
+        }
+
+        a:hover{
+            color: #a70700;
+        }
+
+        li{
+            list-style: none;
+        }
+        .slide .carouse{width:100%;overflow:hidden;position:relative}
+        .slide .slideItem .banner-img{width:100%;}
+        .slide .carouse .slideItem{
+            width:100%;
+            position:absolute;
+        }
+
+        .slide{
+            width: 100%;
+            height: 100%;
+        }
+        .center-banner{
+            background-color: #dff8ec;
+            background: url("../../img/center.png") no-repeat;
+            width: 100%;
+            height: 8rem;
+
+            background-size:100% 100%;
+            border-radius: 30px;
+
+        }
+        .shop{
+            background-color: #3800c0;
+            background: url("../../img/jingdong.jpg") no-repeat;
+            width: 100%;
+            height: 90rem;
+            background-size:100% 100%;
+
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+
+        }
+
+        .shop .newton div{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            width: 200px;
+            height:320px;
+            border-radius: 0px;
+        }
+
     </style>
 </head>
 <body>
 <div class="box">
     <div class="block">
-        <div class="head-one"></div>
+
+
+        <div class="head-one">
+            <div class="you">
+                <div class="happy"><a href="#" class="too"><span>请登陆</span></a></div>
+                <div class="happy"><a href="register.html" class="too"><span>免费注册</span></a></div>
+            </div>
+            <div class="me">
+                <div class="happy"><a href="#" class="too"><span>我的天猫</span></a></div>
+                <div class="happy"><a href="#" class="too"><span>购物车0件</span></a></div>
+                <div class="happy"><a href="#" class="too"><span>收藏夹</span></a></div>
+                <div class="happy"><a href="#" class="too"><span>网站导航</span></a></div>
+            </div>
+        </div>
+
+
         <div class="head-two">
             <div class="left-picture"></div>
             <form class="right-picture">
@@ -282,9 +446,56 @@
                 <button class="button"><span class="search">搜索</span></button>
             </form>
         </div>
-        <div class="head-big-picture">
-            <div class="head-big-picture-img"> </div>
+        <div class="leader">
+            <li >
+                <a href="#" class="curr"><span>首页</span></a>
+            </li>
+            <li >
+                <a href="#" class="curr"><span>天猫超市</span></a>
+            </li>
+            <li>
+                <a href="#" class="curr"><span>天猫会员</span></a>
+            </li>
+            <li>
+                <a href="#" class="curr"><span>天猫国际</span></a>
+            </li>
+
         </div>
+       <!-- <div class="slide3" id="lun3" >
+        <div class="head-big-picture" >
+            <div class="slideItem">
+                <a href="#" target="_blank"><img class="banner-img" src="../../img/bigPicture.png"></a>
+            </div>
+            &lt;!&ndash;<div class="slideItem">
+                <a href="#" target="_blank"><img class="banner-img" src="../../img/login.png"></a>
+            </div>&ndash;&gt;
+        </div>
+        </div>-->
+
+
+
+
+        <div class="slide" id="lun2" >
+            <div class="carouse" style="min-width: 1200px;position:relative;margin-top: 0px;">
+                <div class="slideItem">
+                    <a href="#" target="_blank"><img class="banner-img" src="../../img/bigPicture.png" style="height: 500px;"></a>
+                </div>
+                <div class="slideItem">
+                    <a href="#" target="_blank"><img class="banner-img" src="../../img/mid.png" style="height: 500px;"></a>
+                </div>
+                <div class="slideItem">
+                    <a href="#" target="_blank"><img class="banner-img" src="../../img/yue.png" style="height: 500px;"></a>
+                </div>
+                <a class="carousel-control left Next"></a>
+                <a class="carousel-control right Previous"></a>
+            </div>
+            <!-- 轮播底部圆点 -->
+            <div class="dotList"></div>
+        </div>
+
+
+
+
         <div class="backgroup">
             <div class="maxwell">
                 <div class="nice"><span class="one">99 聚划算</span></div>
@@ -292,27 +503,27 @@
                 <div class="nice"><span class="two">每满20减20,可跨店使用</span></div>
                 <div class="cry"><span  class="three">立即抢 ></span></div>
             </div>
+
             <div class="newton">
                 <div class="ping"><div class="ocean"></div></div>
                 <div class="ping"><div class="ocean1"></div></div>
                 <div class="ping"><div class="ocean2"></div></div>
-                <div class="ping"><div class="ocean3"></div></div>
+                <div class="ping" ><div class="ocean3"></div></div>
 
                 <div class="ping"><div class="ocean"></div></div>
                 <div class="ping"><div class="ocean1"></div></div>
                 <div class="ping"><div class="ocean2"></div></div>
-                <div class="ping"><div class="ocean3"></div></div>
+                <div class="ping" ><div class="ocean3"></div></div>
 
                 <div class="ping"><div class="ocean"></div></div>
                 <div class="ping"><div class="ocean1"></div></div>
                 <div class="ping"><div class="ocean2"></div></div>
-                <div class="ping"><div class="ocean3"></div></div>
+                <div class="ping" ><div class="ocean3"></div></div>
 
                 <div class="ping"><div class="ocean"></div></div>
                 <div class="ping"><div class="ocean1"></div></div>
                 <div class="ping"><div class="ocean2"></div></div>
-                <div class="ping"><div class="ocean3"></div></div>
-
+                <div class="ping" ><div class="ocean3"></div></div>
 
             </div>
             <div class="love"></div>
@@ -337,7 +548,50 @@
                 <div class="ping1"><div class="ocean7"></div></div>
             </div>
 
-
+            <div class="newton">
+                <div class="ping1"><div class="ocean4"></div></div>
+                <div class="ping1"><div class="ocean5"></div></div>
+                <div class="ping1"><div class="ocean6"></div></div>
+                <div class="ping1"><div class="ocean7"></div></div>
+                <div class="ping1"><div class="ocean4"></div></div>
+                <div class="ping1"><div class="ocean5"></div></div>
+                <div class="ping1"><div class="ocean6"></div></div>
+                <div class="ping1"><div class="ocean7"></div></div>
+                <div class="ping1"><div class="ocean4"></div></div>
+                <div class="ping1"><div class="ocean5"></div></div>
+                <div class="ping1"><div class="ocean6"></div></div>
+                <div class="ping1"><div class="ocean7"></div></div>
+                <div class="ping1"><div class="ocean4"></div></div>
+                <div class="ping1"><div class="ocean5"></div></div>
+                <div class="ping1"><div class="ocean6"></div></div>
+                <div class="ping1"><div class="ocean7"></div></div>
+                <div class="ping1"><div class="ocean6"></div></div>
+                <div class="ping1"><div class="ocean7"></div></div>
+            </div>
+            <div class="center-banner">
+            </div>
+        </div>
+        <div class="shop">
+            <div class="newton">
+                <div ><div class="ocean4"></div></div>
+                <div ><div class="ocean5"></div></div>
+                <div ><div class="ocean6"></div></div>
+                <div ><div class="ocean7"></div></div>
+                <div ><div class="ocean4"></div></div>
+                <div ><div class="ocean5"></div></div>
+                <div ><div class="ocean6"></div></div>
+                <div ><div class="ocean7"></div></div>
+                <div ><div class="ocean4"></div></div>
+                <div ><div class="ocean5"></div></div>
+                <div ><div class="ocean6"></div></div>
+                <div ><div class="ocean7"></div></div>
+                <div ><div class="ocean4"></div></div>
+                <div ><div class="ocean5"></div></div>
+                <div ><div class="ocean6"></div></div>
+                <div ><div class="ocean7"></div></div>
+                <div ><div class="ocean4"></div></div>
+                <div ><div class="ocean5"></div></div>
+            </div>
         </div>
         <div class="food">
             <div><span class="comIndex">关于天猫 帮助中心 开放平台 诚聘英才 联系我们 网站合作 法律声明 隐私权政策 知识产权 廉正举报
@@ -354,4 +608,59 @@
 </div>
 
 </body>
+<script type="text/javascript" src="../../page/shop/js/slide.js"></script>
+<script>
+    var kucity = null;
+    $.fn.kuCity = function(options) {
+        var target = $(this);
+        target.on('focus', function(e) {
+            var top = $(this).offset().top + $(this).outerHeight(),
+                left = $(this).offset().left;
+            kucity = kucity ? kucity : new KuCity(target);
+            kucity.target = $(e.target);
+            kucity.init();
+            kucity.container.show().offset({
+                'top': top + 7,
+                'left': left
+            });
+            kucity.triggleShow(true);
+            kucity.resultct.on('click', 'li', function() {
+                kucity.target.val($(this).find('.name').text());
+                kucity.triggleShow('all');
+            })
+        })
+        return this;
+    };
+
+    $('.search').kuCity();
+    $("#lun2").slide({
+        autoplay: true,
+        autoTime: 5000,
+    });
+
+    function addLoadEvent(func){
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function'){
+            window.onload = func;
+        }
+        else {
+            window.onload = function(){
+                oldonload();
+                func();
+            }
+        }
+    }
+    function a(){
+
+       /* for (var i = 0; i < 3; i++) {
+            var str = ' <div class="ping"><div class="ocean"></div></div>' +
+                '                <div class="ping"><div class="ocean1"></div></div>' +
+                '                <div class="ping"><div class="ocean2"></div></div>' +
+                '                <div class="ping"><div class="ocean3"></div></div>';
+            $("#cute").append(str);
+        }*/
+    }
+
+    addLoadEvent(a);
+</script>
 </html>
