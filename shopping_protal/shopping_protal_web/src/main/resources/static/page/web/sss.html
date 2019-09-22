@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content: flex-start;
+
+            margin-left: 10px;
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+        .box video{
+            width: 20rem;
+            height:20rem;
+            margin-left: 10px;
+            background-color: #f6618a;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+  <video poster="../../img/zanting.png"  autoplay="false" >
+    <source src="../../video/v.mp4"  :type="item.videoTypeZ">
+  </video>
+
+    <video   controls autoplay>
+    <source src="../../video/v.mp4"  :type="item.videoTypeZ">
+   </video>
+
+    <video   controls autoplay>
+    <source src="../../video/v.mp4"  :type="item.videoTypeZ">
+    </video>
+
+    <video autoplay="true">
+    <source src="../../video/v.mp4"  :type="item.videoTypeZ">
+    </video>
+
+    <video>
+    <source src="../../video/v.mp4"  :type="item.videoTypeZ">
+    </video>
+</div>
+</body>
+</html>

@@ -8,17 +8,33 @@
             margin: 0;
             padding: 0;
         }
+        body{
+            width: 100%;
+        }
         .box{
             display:flex;
             display: -webkit-flex;
             flex-direction:column;
             align-items:center;
             justify-content:center;
+            box-sizing: border-box;
         }
         .top{
             width: 100%;
             height: 9rem;
             background-color: #feeafe;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+        }
+        .index{
+            background: url("../../img/leftpicture.png");
+            background-size: 100% 100%;
+            height: 100%;
+            width: 20%;
+
         }
         .top-one-banner{
             width: 100%;
@@ -51,11 +67,18 @@
         }
         .show{
             margin-left: 3rem;
+/*
             background: url("../../img/girl.png") no-repeat;
+*/
             background-size: 100% 100%;
             width: 60%;
             height: 500px;
             background-color: #ffffff;
+        }
+        .show img{
+            height: 100%;
+            width: 100%;
+            background-size: 100% 100%;
         }
 
         .detail{
@@ -171,7 +194,7 @@
 
             width: 5rem;
             height: 5rem;
-            background-color: #a70700;
+            background-color: #ffffff;
         }
         .hehe{
             width: 100%;
@@ -180,6 +203,15 @@
             flex-direction:row;
             align-items:flex-end;
             justify-content:space-around;
+        }
+
+        .video{
+            controls:"controls";
+            width: 100%;
+            height: 100%;
+            webkit-playsinline:"true";
+            playsinline:"true";
+            autoplay:"autoplay";
         }
 
         .pink{
@@ -207,11 +239,185 @@
             height: 100%;
         }
 
+        .list-pic{
+            width: 100%;
+            height: 300rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .picFocus1{
+            background: url("../../img/beau1.png");
+            background-size: 100% 100%;
+            width: 60%;
+            height: 100%;
+
+        } .picFocus2{
+            background: url("../../img/beau2.png");
+            background-size: 100% 100%;
+            width: 60%;
+            height: 100%;
+
+        } .picFocus3{
+            background: url("../../img/beau3.png");
+            background-size: 100% 100%;
+            width: 60%;
+            height: 100%;
+
+        } .picFocus4{
+            background: url("../../img/beau4.png");
+            background-size: 100% 100%;
+            width: 60%;
+            height: 100%;
+
+        } .picFocus5{
+            background: url("../../img/beau5.png");
+            background-size: 100% 100%;
+            width: 60%;
+            height: 100%;
+
+        }.picFocus5{
+            background: url("../../img/beau6.png");
+            background-size: 100% 100%;
+            width: 60%;
+            height: 100%;
+        }
+        .red-pac{
+            /*background: url("../../");*/
+            position:absolute;
+            width: 3rem;
+            height: 100%;
+            top: 0px;
+            right: 0px;
+            left: 95%;
+            background-color: #000000;
+            position:fixed;
+        }
+
+        .all-video{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+        .nice-video{
+            width: 100%;
+            height:100%;
+            display: none;
+        }
+        .main-video{
+            width: 100%;
+            height: 80%;
+            background-color: #ed5918;
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+
+        }
+        .main-control{
+            width: 100%;
+            height: 15%;
+            background-color: #929397;
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .open-button{
+           width: 15%;
+            height: 100%;
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .star-time{
+           width: 15%;
+            height: 100%;
+            background-color: #90ed56;
+        }
+        .all-time{
+           width: 15%;
+            height: 100%;
+            background-color: #90ed56;
+        }
+        .voice-pic{
+           width: 15%;
+            height: 100%;
+            background-color: #90ed56;
+        }
+        .voice-bar{
+           width: 15%;
+            height: 100%;
+            background-color: #90ed56;
+        }
+        .voice-bar{
+           width: 15%;
+            height: 100%;
+            background-color: #90ed56;
+        }
+        .bar{
+            width: 15%;
+            height: 100%;
+            background-color: #306ced;
+        }
+        .make-big{
+            width: 15%;
+            height: 100%;
+            background-color: #b319e6;
+        }
+        .open-button button{
+            width: 100%;
+            height: 100%;
+
+        }
+        .abc{
+            background: url("../../img/close.png") no-repeat;
+            background-size: 100% 100%;
+            width: 50%;
+            height: 50%;
+        }
+
+        .zzz{
+            background: url("../../img/ttt.png") no-repeat;
+            background-size: 100% 100%;
+            width: 5rem;
+            height: 5rem;
+            position: absolute;
+            top: 25rem;
+            z-index: 1;
+            cursor: pointer;
+        }
+        .zzz button{
+            width: 100%;
+            height: 100%;
+        }
+
+        .ooo{
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+        }
+
     </style>
 </head>
 <body>
 <div class="box">
-    <div class="top"></div>
+    <div class="top">
+        <div class="index"></div>
+    </div>
 
     <div class="top-one-banner">
         <div><a href="tianmao.html"><span>首页</span></a></div>
@@ -221,7 +427,45 @@
     </div>
 
     <div class="center">
-        <div class="show" id="cold"></div>
+
+
+        <div class="show" >
+
+            <img  src="../../img/girl.png" id="cold" >
+
+            <div class="nice-video" id="vvv">
+                <div class="main-video" >
+                    <video id="now-video" style="width:100%; height:100%; object-fit: fill"  >
+                    <source src="//cloud.video.taobao.com/play/u/2113337752/p/1/e/6/t/1/50217748965.mp4">
+                    </video>
+                    <div class="zzz" id="look"></div>
+                </div>
+
+
+
+
+                <div class="main-control">
+                    <div class="open-button"  id="click-button">
+                       <div class="abc"  id="open-or-close">
+                        <button role="button">
+                            <span>
+                                点击一下
+                          </span>
+                        </button>
+                       </div>
+                    </div>
+                    <div class="star-time"></div>
+                    <div class="bar"></div>
+                    <div class="all-time"></div>
+                    <div class="voice-pic"></div>
+                    <div class="voice-bar"></div>
+                    <div class="make-big"></div>
+                </div>
+            </div>
+
+        </div>
+
+
         <div class="detail">
             <div class="des-two">
                 <div class="right">初秋女生卫衣绒衫韩版宽松上衣时尚灯笼袖薄针织网红百搭圆领外套</div>
@@ -248,12 +492,27 @@
             <div  id="green" class="green"></div>
             <div id="yello" class="yello"></div>
             <div id="black" class="black"></div>
+            <div class="all-video" id="video">
+                <video class="video" >
+                    <source src="//cloud.video.taobao.com/play/u/2113337752/p/1/e/6/t/1/50217748965.mp4">
+                </video>
+                <div class="for-me"></div>
+            </div>
+
         </div>
         <div class="haha"></div>
     </div>
-   
-
+    <div class="list-pic">
+        <div class="picFocus1"></div>
+        <div class="picFocus2"></div>
+        <div class="picFocus3"></div>
+        <div class="picFocus4"></div>
+        <div class="picFocus5"></div>
+        <div class="picFocus6"></div>
+    </div>
 </div>
+
+<div class="red-pac"></div>
 
 </body>
 <script src="../../js/jquery-1.9.1.min.js"></script>
@@ -271,29 +530,82 @@
     mousemove：鼠标移动
     mouseenter：鼠标进入
     mouseleave：鼠标离开*/
-    var btn = document.getElementById("pink");
-   btn.addEventListener("mouseenter",function () {
-       var el = document.getElementById('cold');
-       el.style.backgroundImage = 'url(../../img/black.png)';
-   });
+   window.onload=function () {
+   }
 
+
+   var btn = document.getElementById("pink");
+   btn.addEventListener("mouseenter",function () {
+       /* var el = document.getElementById('cold');
+        el.style.backgroundImage = 'url(../../img/green.png)';*/
+       document.getElementById("cold").style.display="block";
+       document.getElementById("vvv").style.display="none";
+       document.getElementById("cold").src="../../img/pink.png";
+   })
+
+   var btn = document.getElementById("click-button");
+   var now = document.getElementById("now-video");
+   btn.addEventListener("mousedown",function () {
+      if(now.paused){
+          document.getElementById("open-or-close").style.backgroundImage="url(../../img/open.png)";
+          document.getElementById("look").style.display="none";
+
+          now.play();
+          getvideoprogress();
+      }else{
+          now.pause();
+          document.getElementById("look").style.display="block";
+          document.getElementById("open-or-close").style.backgroundImage="url(../../img/close.png)";
+      }
+   })
 
    var btn = document.getElementById("green");
    btn.addEventListener("mouseenter",function () {
-       var el = document.getElementById('cold');
-       el.style.backgroundImage = 'url(../../img/green.png)';
+      /* var el = document.getElementById('cold');
+       el.style.backgroundImage = 'url(../../img/green.png)';*/
+       document.getElementById("cold").style.display="block";
+       document.getElementById("vvv").style.display="none";
+       document.getElementById("cold").src="../../img/green.png";
+   })
+
+   var look = document.getElementById("look");
+   var nnn = document.getElementById("now-video");
+   look.addEventListener("mousedown",function () {
+     if (nnn.paused){
+         document.getElementById("look").style.display="none";
+         document.getElementById("open-or-close").style.backgroundImage="url(../../img/open.png)";
+         nnn.play();
+         getvideoprogress();
+     }
    })
 
    var btn = document.getElementById("yello");
    btn.addEventListener("mouseenter",function () {
-       var el = document.getElementById('cold');
-       el.style.backgroundImage = 'url(../../img/girl.png)';
+      /* var el = document.getElementById('cold');
+       el.style.backgroundImage = 'url(../../img/girl.png)';*/
+       document.getElementById("cold").style.display="block";
+       document.getElementById("vvv").style.display="none";
+       document.getElementById("cold").src="../../img/girl.png";
+
+   })
+
+   var btn = document.getElementById("video");
+   btn.addEventListener("mouseenter",function () {
+
+       document.getElementById("cold").style.display="none";
+       document.getElementById("vvv").style.display="block";
+
    })
 
    var btn = document.getElementById("black");
    btn.addEventListener("mouseenter",function () {
-       var el = document.getElementById('cold');
-       el.style.backgroundImage = 'url(../../img/black.png)';
+      /* var el = document.getElementById('cold');
+       el.style.backgroundImage = 'url(../../img/black.png)';*/
+       document.getElementById("cold").style.display="block";
+       document.getElementById("vvv").style.display="none";
+       document.getElementById("cold").src="../../img/black.png";
+
+
    })
 
    $(document).ready(function(){
@@ -313,6 +625,19 @@
        };//参数定义
        $.ljsGlasses.pcGlasses(showproduct);//方法调用，务必在加载完后执行
    });
+
+   function getvideoprogress() {
+       setTimeout(function () {
+           var vid = document.getElementById("now-video");
+           var currentTime=vid.currentTime.toFixed(0);
+           if(currentTime>30){
+               //触发
+               return false;
+           }
+           console.log(currentTime);
+           getvideoprogress();
+       }, 1000);
+   }
 
 
 </script>

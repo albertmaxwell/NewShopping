@@ -38,7 +38,7 @@
             height: 3rem;
             background-color: #f2f2f2;
 
-            font-size: larger;
+            font-size: large;
             font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
             font-weight: bolder;
             color: #ee204e;
@@ -379,8 +379,10 @@
         }
 
         .slide{
+            z-index:-1;
             width: 100%;
             height: 100%;
+            position:relative;
         }
         .center-banner{
             background-color: #dff8ec;
@@ -404,7 +406,7 @@
             display: -webkit-flex;
             flex-direction:row;
             align-items:center;
-            justify-content:center;
+            justify-content:flex-start;
 
         }
 
@@ -417,17 +419,304 @@
             height:320px;
             border-radius: 0px;
         }
+        .fenlei{
+            z-index:1;
+            width: 30%;
+            height: 40rem;
+            display: none;
+            opacity: 0.8;
+
+            top: 13rem;
+            left: 3rem;
+            position: absolute;
+            background-color: #000000;
+            display: none;
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .fenleitwo{
+            z-index:1;
+            width: 230%;
+            height: 40rem;
+            top: 0px;
+
+            opacity: 1;
+            display: none;
+            left: 27rem;
+            position: absolute;
+            background-color: #000000;
+        }
+
+        .categorys-title1:hover .fenleitwo {
+            display: block;
+        }
+        .categorys-title2:hover .fenleitwo {
+            display: block;
+        }
+
+
+        .fenmu{
+            width: 100%;
+            height: 100%;
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:flex-start;
+            justify-content:center;
+        }
+
+        .fenmu a{
+            font-size: larger;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+            color: #ffffff;
+        }
+        .singel{
+            width: 100%;
+            margin-top: 3rem;
+            margin-left: 3rem;
+            margin-top: 3rem;
+        }
+        .categorys-title1:hover .cate_detail {
+            display: block;
+        }
+        .categorys-title2:hover .cate_detail {
+            display: block;
+        }
+
+        .cate_detail{
+            display: block;
+        }
+
+        .cate_detail a{
+            font-size: larger;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+            color: #ffffff;
+        }
+        .dt{
+            margin-top: 3rem;
+            margin-left: 3rem;
+            margin-bottom: 3rem;
+        }
+        .dd a{
+            margin-top: 3rem;
+            margin-left: 3rem;
+        }
+
+        .leader :hover .fenmu{
+            display: block;
+        }
+
+
+
+
 
     </style>
 </head>
 <body>
+<div class="fenlei">
+
+    <div class="fenmu">
+
+
+        <div class="singel">
+            <div class="categorys-title1">
+                <strong>
+                    <a href="#" target="_blank" >家用电器</a>
+                </strong>
+                <span>
+                <a href="#" target="_blank">大家电</a>
+               <a href="#" target="_blank">生活电器</a>
+            </span>
+
+                <div class="fenleitwo">
+
+                    <div class="cate_detail">
+                        <dl class="dl_fore1">
+                            <dt class="dt"><a href="#" target="_blank">大家电</a></dt>
+                            <dd class="dd">
+                                <a href="#" target="_blank">平板电视</a>
+                                <a href="#" target="_blank">空调</a>
+                                <a href="#" target="_blank">冰箱</a>
+                                <a href="#" target="_blank">洗衣机</a>
+                                <a href="#" target="_blank">家庭影院</a>
+                                <a href="#" target="_blank">DVD</a>
+                                <a href="#" target="_blank">迷你音响</a>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="cate_detail">
+                        <dl class="dl_fore1">
+                            <dt class="dt"><a href="#" target="_blank">大家电</a></dt>
+                            <dd class="dd">
+                                <a href="#" target="_blank">平板电视</a>
+                                <a href="#" target="_blank">空调</a>
+                                <a href="#" target="_blank">冰箱</a>
+                                <a href="#" target="_blank">洗衣机</a>
+                                <a href="#" target="_blank">家庭影院</a>
+                                <a href="#" target="_blank">DVD</a>
+                                <a href="#" target="_blank">迷你音响</a>
+
+                            </dd>
+                        </dl>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="singel">
+            <div class="categorys-title2">
+                <strong>
+                    <a href="#" target="_blank">家用电器</a>
+                </strong>
+                <span>
+                <a href="#" target="_blank">大家电</a>
+               <a href="#" target="_blank">生活电器</a>
+            </span>
+
+                <div class="fenleitwo">
+
+                    <div class="cate_detail">
+                        <dl class="dl_fore1">
+                            <dt class="dt"><a href="#" target="_blank">大家电</a></dt>
+                            <dd class="dd">
+                                <a href="#" target="_blank">金海洋</a>
+                                <a href="#" target="_blank">空调</a>
+                                <a href="#" target="_blank">冰箱</a>
+                                <a href="#" target="_blank">洗衣机</a>
+                                <a href="#" target="_blank">家庭影院</a>
+                                <a href="#" target="_blank">DVD</a>
+                                <a href="#" target="_blank">迷你音响</a>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="cate_detail">
+                        <dl class="dl_fore1">
+                            <dt class="dt"><a href="#" target="_blank">大家电</a></dt>
+                            <dd class="dd">
+                                <a href="#" target="_blank">金海洋</a>
+                                <a href="#" target="_blank">空调</a>
+                                <a href="#" target="_blank">冰箱</a>
+                                <a href="#" target="_blank">洗衣机</a>
+                                <a href="#" target="_blank">家庭影院</a>
+                                <a href="#" target="_blank">DVD</a>
+                                <a href="#" target="_blank">迷你音响</a>
+
+                            </dd>
+                        </dl>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="singel">
+            <div class="categorys-title">
+                <strong>
+                    <a href="#" target="_blank">家用电器</a>
+                </strong>
+                <span>
+                <a href="#" target="_blank">大家电</a>
+               <a href="#" target="_blank">生活电器</a>
+            </span>
+            </div>
+        </div>
+
+        <div class="singel">
+            <div class="categorys-title">
+                <strong>
+                    <a href="#" target="_blank">家用电器</a>
+                </strong>
+                <span>
+                <a href="#" target="_blank">大家电</a>
+               <a href="#" target="_blank">生活电器</a>
+            </span>
+            </div>
+        </div>
+
+        <div class="singel">
+            <div class="categorys-title">
+                <strong>
+                    <a href="#" target="_blank">家用电器</a>
+                </strong>
+                <span>
+                <a href="#" target="_blank">大家电</a>
+               <a href="#" target="_blank">生活电器</a>
+            </span>
+            </div>
+        </div>
+
+        <div class="singel">
+            <div class="categorys-title">
+                <strong>
+                    <a href="#" target="_blank">家用电器</a>
+                </strong>
+                <span>
+                <a href="#" target="_blank">大家电</a>
+               <a href="#" target="_blank">生活电器</a>
+            </span>
+            </div>
+        </div>
+
+        <div class="singel">
+            <div class="categorys-title">
+                <strong>
+                    <a href="#" target="_blank">家用电器</a>
+                </strong>
+                <span>
+                <a href="#" target="_blank">大家电</a>
+               <a href="#" target="_blank">生活电器</a>
+            </span>
+            </div>
+        </div>
+
+        <div class="singel">
+            <div class="categorys-title">
+                <strong>
+                    <a href="#" target="_blank">家用电器</a>
+                </strong>
+                <span>
+                <a href="#" target="_blank">大家电</a>
+               <a href="#" target="_blank">生活电器</a>
+            </span>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+</div>
+
+
 <div class="box">
     <div class="block">
 
 
         <div class="head-one">
             <div class="you">
-                <div class="happy"><a href="#" class="too"><span>请登陆</span></a></div>
+                <div class="happy"><a href="../test/logintest.html" class="too"><span>请登陆</span></a></div>
                 <div class="happy"><a href="register.html" class="too"><span>免费注册</span></a></div>
             </div>
             <div class="me">
@@ -448,6 +737,9 @@
         </div>
         <div class="leader">
             <li >
+                <a href="#" class="curr"><span>全部分类</span></a>
+            </li>
+            <li >
                 <a href="#" class="curr"><span>首页</span></a>
             </li>
             <li >
@@ -459,18 +751,23 @@
             <li>
                 <a href="#" class="curr"><span>天猫国际</span></a>
             </li>
+            <li>
+                <a href="#" class="curr"><span>双 11</span></a>
+            </li>
+            <li>
+                <a href="#" class="curr"><span>淘宝</span></a>
+            </li>
+
+            <li>
+                <a href="#" class="curr"><span>购物节</span></a>
+            </li>
+
+            <li>
+                <a href="#" class="curr"><span>剁手节</span></a>
+            </li>
 
         </div>
-       <!-- <div class="slide3" id="lun3" >
-        <div class="head-big-picture" >
-            <div class="slideItem">
-                <a href="#" target="_blank"><img class="banner-img" src="../../img/bigPicture.png"></a>
-            </div>
-            &lt;!&ndash;<div class="slideItem">
-                <a href="#" target="_blank"><img class="banner-img" src="../../img/login.png"></a>
-            </div>&ndash;&gt;
-        </div>
-        </div>-->
+
 
 
 
@@ -528,7 +825,7 @@
             </div>
             <div class="love"></div>
             <div class="newton">
-                <div class="ping1"><div class="ocean4"></div></div>
+                <div class="ping1"><a href="buy.html"><div class="ocean4"></div></a></div>
                 <div class="ping1"><div class="ocean5"></div></div>
                 <div class="ping1"><div class="ocean6"></div></div>
                 <div class="ping1"><div class="ocean7"></div></div>
