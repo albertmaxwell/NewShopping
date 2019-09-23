@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../plugin/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="../../js/jquery-1.9.1.min.js"></script>
+    <script src="../../plugin/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 去掉全屏时显示的自带控制条 */
+        video::-webkit-media-controls{
+            display:none !important;
+        }
+        .wrap h3{
+            text-align: center;
+            height: 100px;
+            line-height: 100px;
+        }
+        .player{
+            width: 720px;
+            height: 400px;
+            margin: 0 auto;
+            position: relative;
+
+        }
+        .player video{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+        }
+        .player .control{
+            position: absolute;
+            background: rgba(56, 0, 192, 0.3);
+            width: 680px;
+            height: 40px;
+            border-radius: 5px;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+        }
+        .player .control div{
+            display: inline-block;
+            line-height: 40px;
+            margin-left: 10px;
+            font-size: 18px;
+            color: #fff;
+        }
+        .player .control .play_pause,.player .control .expand{
+            color: rgb(41, 141, 237);
+        }
+        .player .control div:nth-child(2){
+            width: 460px;
+            height: 10px;
+            background-color: rgba(255,255,255,0.3);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .player .control .progress{
+            display: block;
+            width: 10%;
+            height: 10px;
+            background: #fff;
+        }
+        .player .control .timer{
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrap">
+    <h3>视频控制案例</h3>
+    <div class="content">
+        <div class="player">
+            <video src="//cloud.video.taobao.com/play/u/2113337752/p/1/e/6/t/1/50217748965.mp4">
+                您的浏览器不支持 video 标签。
+            </video>
+            <div class="control">
+                <div class="fa fa-play play_pause"></div>
+                <div>
+                    <span class="progress"></span>
+                </div>
+                <div class="timer">
+                    <span class="progress_timer">00:00:00</span>/
+                    <span class="duration_timer">00:00:00</span>
+                </div>
+                <div class="fa fa-expand expand"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script>
+    var videoObj = document.querySelector('video')
+    var playBtn = document.querySelector('.play_pause')
+    var progressTimer = document.querySelector('.progress_timer')
+    var durationTimer = document.querySelector('.duration_timer')
+    var progress = document.querySelector('.progress')
+    var player = document.querySelector('.player')
+    var expand = document.querySelector('.expand')
+    playBtn.addEventListener('click', function(){
+        if(videoObj.paused){
+            // 如果视频处于播放状态
+            videoObj.play()
+            this.classList.remove('fa-play')
+            this.classList.add('fa-pause')
+        }else{
+            videoObj.pause()
+            this.classList.add('fa-play')
+            this.classList.remove('fa-pause')
+        }
+    })
+    let {totalT,presentT} = {totalT:0,presentT:0}
+    videoObj.addEventListener('canplay',function(){
+        totalT = this.duration
+        var videoDuration = formatTime(totalT)
+        durationTimer.innerHTML = videoDuration
+    })
+
+    videoObj.addEventListener('timeupdate',function(){
+        presentT = this.currentTime
+        var videoCurrent = formatTime(presentT)
+        progressTimer.innerHTML = videoCurrent
+        var percent = presentT/totalT*100
+        progress.style.width = percent+'%'
+    })
+
+    function formatTime(t){
+        var h = parseInt(t/3600)
+        h = h<10?'0'+h:h
+        var m = parseInt(t%3600/60)
+        m = m<10?'0'+m:m
+        var s = parseInt(t%60)
+        s = s<10?'0'+s:s
+        return h+':'+m+':'+s
+    }
+
+    expand.addEventListener('click',function(){
+        player.webkitRequestFullScreen()
+    })
+
+
+</script>
+</html>
