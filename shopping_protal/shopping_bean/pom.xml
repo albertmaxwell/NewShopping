@@ -29,6 +29,15 @@
             <version>1.5.20</version>
             <scope>compile</scope>
         </dependency>
+
+
+        <dependency>
+            <groupId>com.alibaba.shopping</groupId>
+            <artifactId>shopping-common-utils</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
     </dependencies>
 
 

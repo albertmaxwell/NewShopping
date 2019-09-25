@@ -115,16 +115,23 @@
             <scope>compile</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.alibaba.shopping</groupId>
-            <artifactId>shopping-common-utils</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
 
         <dependency>
             <groupId>com.shopping.monitor</groupId>
             <artifactId>monitor-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.shopping-files-plugin</groupId>
+            <artifactId>shopping-files-plugin</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.api.proxy.plugin</groupId>
+            <artifactId>api_proxy_plugin</artifactId>
+            <version>1.1.2</version>
         </dependency>
 
 

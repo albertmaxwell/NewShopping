@@ -43,7 +43,7 @@ public class LoginController {
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	@ResponseBody
 	//@Cacheable(cacheNames = "users")实现序列化的返回对象才能进入缓存
-	@ApiOperation(value = "用户登录接口", notes = "传入对象数据", produces = "application/json")
+	@ApiOperation(value = "AAA用户登录接口", notes = "传入对象数据", produces = "application/json")
 	public ResponseMessage<?> login(@RequestBody LoginVo loginVo, HttpServletRequest request) {
 		try {
 			SysUserEntity user = userService.login(loginVo.getUsername(), loginVo.getPassword());

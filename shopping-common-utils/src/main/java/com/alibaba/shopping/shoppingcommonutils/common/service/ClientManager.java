@@ -2,8 +2,10 @@ package com.alibaba.shopping.shoppingcommonutils.common.service;
 
 import com.alibaba.shopping.common.bean.TSUser;
 import com.alibaba.shopping.common.utils.ContextHolderUtils;
+import com.alibaba.shopping.shoppingcommonutils.common.bean.ApplicationContextUtil;
 import com.alibaba.shopping.shoppingcommonutils.common.utils.Client;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -21,7 +23,7 @@ public class ClientManager {
 	/**国际化缓存key*/
 	private final static String ONLINE_CLIENTS_CACHE_KEY ="online_client_users";
 
-	@Resource
+	@Autowired
 	CacheServiceI cacheService;
 
 
@@ -118,6 +120,9 @@ public class ClientManager {
 		}
 	}
 
-
+	public static ClientManager getInstance() {
+		ClientManager clientManager = ApplicationContextUtil.getContext().getBean(ClientManager.class);
+		return clientManager;
+	}
 
 }

@@ -1,7 +1,9 @@
 package com.shopping.shopping_protal_service.service;
 
+import com.alibaba.shopping.common.entity.TSFunction;
 import com.alibaba.shopping.common.exception.ResultException;
 import com.alibaba.shopping.shopping_bean.bean.entity.SysUserEntity;
+
 import java.util.List;
 import java.util.Map;
 
@@ -51,4 +53,16 @@ public interface UserService {
      * @return
      */
     List<SysUserEntity> queryUsersByArray(int currPage, int pageSize)throws  ResultException;
+
+
+
+    /**
+     * 获取权限的map
+     *
+     * @param userid
+     * @return
+     */
+    public Map<Integer, List<TSFunction>> getFunctionMap(String userid);
+
+
 }

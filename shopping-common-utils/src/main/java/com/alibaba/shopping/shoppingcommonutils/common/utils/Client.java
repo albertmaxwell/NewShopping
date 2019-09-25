@@ -2,7 +2,9 @@ package com.alibaba.shopping.shoppingcommonutils.common.utils;
 
 
 import com.alibaba.shopping.common.bean.TSUser;
+import com.alibaba.shopping.common.entity.TSFunction;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -14,6 +16,9 @@ public class Client implements java.io.Serializable{
 	private static final long serialVersionUID = 1L;
 
 	private TSUser user;
+
+	private Map<String, TSFunction> functions;
+	private Map<Integer, List<TSFunction>> functionMap;
 
 	public TSUser getUser() {
 		return user;
@@ -48,7 +53,23 @@ public class Client implements java.io.Serializable{
 		this.logindatetime = logindatetime;
 	}
 
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
 
+	public Map<String, TSFunction> getFunctions() {
+		return functions;
+	}
 
+	public void setFunctions(Map<String, TSFunction> functions) {
+		this.functions = functions;
+	}
 
+	public Map<Integer, List<TSFunction>> getFunctionMap() {
+		return functionMap;
+	}
+
+	public void setFunctionMap(Map<Integer, List<TSFunction>> functionMap) {
+		this.functionMap = functionMap;
+	}
 }

@@ -1,5 +1,7 @@
 package com.alibaba.shopping.shoppingcommonutils.common.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * @author 金海洋
  * @date 2019/8/30  -17:53

@@ -4,11 +4,13 @@ import com.alibaba.shopping.shoppingcommonutils.common.service.CacheServiceI;
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
+import org.springframework.stereotype.Service;
 
 /**
  * @author 金海洋
  * @date 2019/8/30  -17:59
  */
+@Service("cacheService")
 public class EhcacheService  implements CacheServiceI {
 
 	public static CacheManager manager = CacheManager.create();
