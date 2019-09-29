@@ -11,116 +11,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9386ca-bb6f-46bb-901f-2779732877b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/anno/annotation/Lock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/anno/annotation/Log.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/anno/annotation/SecurityMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/anno/annotation/Title.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Accessory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Activity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/ActivityGoods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Advert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/AdvertPosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Album.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Area.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/ArticleClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Bargain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/BargainGoods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Chatting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/ChattingFriend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/ChattingLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/CombinLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Complaint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/ComplaintGoods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/ComplaintSubject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Consult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Coupon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/CouponInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/DeliveryGoods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/DeliveryLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Document.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Dynamic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Evaluate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/ExpressCompany.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Favorite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/FieldType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GoldLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GoldRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Goods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GoodsBrand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GoodsBrandCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GoodsCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GoodsClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GoodsClassStaple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GoodsFloor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GoodsReturn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GoodsReturnItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GoodsReturnLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GoodsSpecProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GoodsSpecification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GoodsType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GoodsTypeProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Group.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GroupArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GroupClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GroupGoods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/GroupPriceRange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/HomePageGoodsClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/IdEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/IntegralGoods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/IntegralGoodsCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/IntegralGoodsOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/IntegralLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/LogFieldType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/LogType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/MobileVerifyCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Navigation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/OrderForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/OrderFormLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Partner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Predeposit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/PredepositCash.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/PredepositLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/RefundLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Report.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/ReportSubject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/ReportType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Res.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/RoleGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/SnsAttention.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/SnsFriend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/SpareGoods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/SpareGoodsClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/SpareGoodsFloor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Store.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/StoreCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/StoreClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/StoreGrade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/StoreGradeLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/StoreNavigation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/StorePartner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/StorePoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/StoreSlide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/StoreStat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/SysConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/SysLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Template.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/TransArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Transport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/UserConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/UserGoodsClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/Visit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/WaterMark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/ZTCGoldLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/Evaluate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/Evaluate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/Accessory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/Album.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/Consult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/Evaluate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/Goods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/GoodsBrand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/GoodsClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/GoodsSpecProperty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/GoodsSpecification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/GoodsType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/GoodsTypeProperty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/Group.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/GroupArea.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/GroupClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/GroupGoods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/OrderForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/SysConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/UserGoodsClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/IndexService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/IndexService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/serviceImpl/IndexServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/serviceImpl/IndexServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/ShoppingControllerIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/ShoppingControllerIndex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../api_proxy_plugin/src/main/java/com/api/proxy/plugin/util/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../api_proxy_plugin/src/main/java/com/api/proxy/plugin/util/MD5Util.java" afterDir="false" />
       <change beforePath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application-druid.yml" beforeDir="false" afterPath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application-druid.yml" afterDir="false" />
       <change beforePath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application.yml" beforeDir="false" afterPath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application.yml" afterDir="false" />
@@ -626,7 +538,7 @@
       <workItem from="1569546346023" duration="13769000" />
       <workItem from="1569577862359" duration="666000" />
       <workItem from="1569718688522" duration="18741000" />
-      <workItem from="1569745426952" duration="4371000" />
+      <workItem from="1569745426952" duration="8014000" />
     </task>
     <servers />
   </component>

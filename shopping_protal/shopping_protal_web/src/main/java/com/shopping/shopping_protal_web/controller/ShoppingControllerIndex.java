@@ -1,6 +1,6 @@
 package com.shopping.shopping_protal_web.controller;
 
-import com.alibaba.shopping.shopping_bean.bean.GoodsClass;
+import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.*;
 import com.shopping.shopping_protal_service.service.IndexService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -33,8 +33,32 @@ public class ShoppingControllerIndex {
 		Map<String,Object> map = new HashMap<String, Object>();
 		try {
 			List<GoodsClass> goodsClassList=indexService.getGoodsClassList(map);
+			List<GoodsBrand> goodsBrandList=indexService.getGoodsBrandList(map);
+			List<Partner>  partnerList=indexService.getPartnerList(map);
+			List<ArticleClass>  articleClassList=indexService.getArticleClassList(map);
+			List<Article>  articleList=indexService.getArticleList(map);
+			List<Goods>  goodsList=indexService.getGoodsList(map);
+			List<GroupGoods>  groupGoodsList=indexService.getGroupGoodsList(map);
+			List<BargainGoods>  bargainGoodsList=indexService.getBargainGoodsList(map);
+			List<DeliveryGoods>  deliveryGoodsList=indexService.getDeliveryGoodsList(map);
 			//添加商品分类数据
-			model.addAttribute("goodsClass", goodsClassList);
+			model.addAttribute("goodsClassList", goodsClassList);
+			//添加品牌数据
+			model.addAttribute("goodsBrandList", goodsBrandList);
+			//底部显示的合作伙伴
+			model.addAttribute("partnerList", partnerList);
+			//底部新闻分类显示
+			model.addAttribute("articleClassList", articleClassList);
+			//商城新闻
+			model.addAttribute("articleList", articleList);
+			//查询推荐店铺商品
+			model.addAttribute("goodsList", goodsList);
+			//团购商品
+			model.addAttribute("groupGoodsList", groupGoodsList);
+			//天天特价
+			model.addAttribute("bargainGoodsList", bargainGoodsList);
+			//满送商品
+			model.addAttribute("deliveryGoodsList", deliveryGoodsList);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
