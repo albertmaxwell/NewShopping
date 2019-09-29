@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+        .top{
+            -moz-box-shadow:0px 0px 14px #c08027; -webkit-box-shadow:0px 0px 14px #c08027; box-shadow:0px 0px 14px #c08027;            height: 2rem;
+            width: 100%;
+            height: 3rem;
+            background-color: #f5f5f5;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+        }
+        .top-info{
+            margin-left: 3rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+            width: 7rem;
+            height: 100%;
+        }
+        .top-message{
+            margin-left: 1rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+            width: 7rem;
+            height: 100%;
+        }
+
+        .top select{
+            border: 0;
+        }
+        .content{
+            -moz-box-shadow:0px 0px 0px #c08027; -webkit-box-shadow:0px 0px 14px #c08027; box-shadow:0px 0px 14px #c08027;            height: 2rem;
+            background-color: #ffffff;
+            width: 90%;
+            height: 100rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:flex-start;
+            justify-content:flex-start;
+        }
+        .picture{
+           background: url("../../img/gowuche.png") no-repeat;
+           background-size: 100% 100%;
+            height: 100%;
+            width: 15%;
+        }
+        .content-serach{
+            background-color: #ffffff;
+            width: 100%;
+            height: 7rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+        }
+        .daohang{
+            width: 100%;
+            height: 5rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+            border-top: 2px solid #c08027;
+
+
+        }
+        .eee{
+            margin-left: 15rem;
+        }
+        .daohang div{
+            font-size: large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+            color: #000000;
+        }
+        .q{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+            border-bottom: 2px solid #f13c4f;
+
+            width: 8rem;
+            height: 3rem;
+            margin-left: 1rem;
+        }
+        .q div{
+/*
+            background-color: #c01c0f;
+*/
+            margin-left: 1.8rem;
+            width: 100%;
+            height: 50%;
+            border-right: 2px solid #97662d;
+        }
+        .w{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+            height: 3rem;
+            width: 8rem;
+            margin-left: 2rem;
+            border-bottom: 2px solid #f13c4f;
+        }
+        .w div{
+            /*
+                        background-color: #c01c0f;
+            */
+            margin-left: 1.8rem;
+            width: 100%;
+            height: 50%;
+            border-right: 2px solid #97662d;
+        }
+        .e{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+            height: 3rem;
+            width: 8rem;
+            margin-left: 2rem;
+            border-bottom: 2px solid #f13c4f;
+        }
+        .e div{
+            /*
+                        background-color: #c01c0f;
+            */
+            margin-left: 1.8rem;
+            width: 100%;
+            height: 50%;
+            border-right: 2px solid #97662d;
+        }
+
+        .q :hover{
+            border-bottom: 2px solid #2a36ff;
+        }
+        button{
+            font-size: large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+
+            outline: 0;
+            background-color: #ee204e;
+            color: #ffffff;
+            height: 3rem;
+            width: 5rem;
+            border:none;
+        }
+        .jiesuan{
+            margin-left: 2rem;
+            margin-right: 0px;
+        }
+        button:hover{
+            background-color: #a70700;
+        }
+        .item{
+            margin-top: 4rem;
+            -moz-box-shadow:0px 0px 14px #c08027; -webkit-box-shadow:0px 0px 14px #c08027; box-shadow:0px 0px 14px #c08027;            height: 2rem;
+            border-radius: 5px;
+            border: 2px solid #c08027;
+
+            background-color: #ffffff;
+            width: 100%;
+            height: 10rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .wwe{
+            width: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+        .des{
+            background-color: #ffffff;
+            margin-left: 2rem;
+            width: 15rem;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+        .typename{
+            margin-left: 3rem;
+            background-color: #ffffff;
+            width: 8rem;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .iii{
+            margin-left: 3rem;
+            background-color: #ffffff;
+            width: 12rem;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .ttt{
+            margin-left: 3rem;
+            background-color: #ffffff;
+            width: 14rem;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+        .price{
+
+        }
+        .item-picture{
+            background: url("../../img/girl.png") no-repeat;
+            background-size: 100% 100%;
+            width: 12rem;
+            height: 8rem;
+        }
+        .select{
+            width: 3rem;
+            height: 100%;
+        }
+        .op{
+            background: url("../../img/green.png") no-repeat;
+            background-size: 100% 100%;
+            width: 8rem;
+            height: 7rem;
+        }
+        .wenzi{
+            width: 100%;
+            height: 100%;
+        }
+        .limit{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+            background: #ffffff;
+            height: 85%;
+            width: 98%;
+        }
+        .bot{
+            width: 90%;
+            height: 4rem;
+            background-color: #e5e5e5;
+            position: absolute;
+            position: fixed;
+            bottom: 0px;
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .select-all{
+         width: 5rem;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .delete{
+            width: 5rem;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .shixiao{
+            width: 10rem;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .yiwu{
+            width: 10rem;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .share{
+            width: 5rem;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .have-select{
+            width: 10rem;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .all-prices{
+            width: 13rem;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .but-it{
+            width: 10rem;
+            height: 100%;
+            background-color: #b0b0b0;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .ouch{
+            width: 80%;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+        }
+
+        .chose{
+            width: 100%;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+
+        }
+        .rrt{
+            background-color: #b02d34;
+            width: 8rem;
+            height: 30%;
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:space-between;
+        }
+        .ccc{
+            width: 2rem;
+            height: 70%;
+        }
+        .ccc input{
+            width: 2rem;
+            height: 70%;
+            text-align:center;
+        }
+        .sub{
+            width: 50%;
+            height: 100%;
+        }
+        .add{
+            width: 50%;
+            height: 100%;
+        }
+        .rrt button{
+            width: 100%;
+            height: 100%;
+
+            color: #ffffff;
+            -web-kit-appearance: none;
+            -moz-appearance: none;
+            outline: 0;
+            border:none;
+
+            font-size: large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+        }
+
+        button:hover{
+            background-color: #a70700;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="top">
+        <div class="top-info">
+            <div><label>金海洋123</label></div>
+            <div>
+                <select>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="top-message">
+            <div><label>消息</label></div>
+            <div>
+                <select>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <div class="content-serach">
+            <div class="picture"></div>
+        </div>
+        <div class="daohang">
+            <div class="q"><div>全部商品</div></div>
+            <div class="w"><div>降价商品</div></div>
+            <div class="e"><div>库存紧张</div></div>
+            <div class="eee"><div>已选商品（不含运费） 0.00</div></div>
+            <div class="jiesuan"><button>结算</button></div>
+        </div>
+
+        <div class="wwe" id="ddd">
+        <div class="item" >
+            <div class="limit">
+            <div class="select">
+                <div class="chose">
+                    <input name="chose"  type="checkbox" onClick="fuck(this);" >
+                </div>
+            </div>
+            <div class="item-picture"></div>
+            <div class="des">
+                <div class="wenzi">【焕新价】</div>
+                <div class="op"></div>
+            </div>
+            <div class="ttt">
+                <div>套餐类型：官方标配</div>
+                <div>颜色分类：黑色</div>
+            </div>
+            <div class="typename">￥2799.00</div>
+            <div class="iii">
+                <div class="rrt">
+                    <div class="sub">
+                        <button onclick="sub()">-</button>
+                    </div>
+                    <div class="ccc">
+                        <input   name="hhh" type="text" id="num" value="1">
+                    </div>
+                    <div class="add">
+                        <button onclick="add()">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="typename">￥2799.00</div>
+            <div class="typename">移入收藏夹 删除 相似宝贝</div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+    <div class="bot">
+        <div class="ouch">
+        <div class="select-all">
+<!--            <label><input type="checkbox" name="check">名称1</label>-->
+            <input name="by" id="love" type="checkbox" onclick="selecAll(this);" >
+            <div>全选</div>
+        </div>
+        <div class="delete">
+            <div>删除</div>
+        </div>
+        <div class="shixiao">
+            <div>清除失效宝贝</div>
+        </div>
+        <div class="yiwu">
+            <div>移入收藏夹</div>
+        </div>
+        <div class="share">
+            <div>分享</div>
+        </div>
+        </div>
+        <div class="have-select">
+            <div>已选0件商品</div>
+        </div>
+        <div class="all-prices">
+            <div>合计不含用费:0.00</div>
+        </div>
+        <div class="but-it">
+            <div>结算</div>
+        </div>
+    </div>
+
+</div>
+
+
+
+</body>
+<script src="../../js/jquery-1.9.1.min.js"></script>
+<script>
+
+    var allMoney=0;
+
+    $(function(){
+       aaa();
+    });
+
+    function sub() {
+        var num=$("#num").val();
+        if (num>='1'){
+            num--;
+            document.getElementById("num").value=num;
+        }
+    }
+    
+    function selecAll() {
+        var boxes = document.getElementsByName("chose");
+        var love = document.getElementById("love");
+        if (love.checked==true){
+            for(i=0;i<boxes.length;i++){
+                boxes[i].checked = true;
+            }
+        }else{
+            for(i=0;i<boxes.length;i++){
+                boxes[i].checked = false;
+            }
+        }
+
+    }
+
+    function add() {
+        var num=$("#num").val();
+        num++;
+        document.getElementById("num").value=num;
+    }
+
+    function fuck(obj) {
+        console.log(obj.value);
+        var boxes = document.getElementsByName("chose");
+
+
+    }
+
+   function aaa() {
+       for (var i = 0; i < 8; i++) {
+           var str = '<div class="item" > ' +
+               '            <div class="limit"> ' +
+               '            <div class="select">' +
+               '          <div class="chose">'+
+               '            <input name="chose"  type="checkbox" onClick="fuck(this);" >'+
+               '           </div>'+
+               '            </div> ' +
+               '            <div class="item-picture"></div> ' +
+               '            <div class="des"> ' +
+               '                <div class="wenzi">【焕新价】</div> ' +
+               '                <div class="op"></div> ' +
+               '            </div> ' +
+               '            <div class="ttt"> ' +
+               '                <div>套餐类型：官方标配</div> ' +
+               '                <div>颜色分类：黑色</div> ' +
+               '            </div> ' +
+               '            <div class="typename">￥2799.00</div> ' +
+               '       <div class="iii">' +
+               '                <div class="rrt">' +
+               '                    <div class="sub">' +
+               '                        <button onclick="sub()">-</button>' +
+               '                    </div>' +
+               '                    <div class="ccc">' +
+               '                        <input   name="hhh" type="text" id="num" value="1">' +
+               '                    </div>' +
+               '                    <div class="add">' +
+               '                        <button onclick="add()">+</button>' +
+               '                    </div>' +
+               '                </div>' +
+               '            </div>     ' +
+               ' <div class="typename">￥2799.00</div> ' +
+               '            <div class="typename">移入收藏夹 删除 相似宝贝</div> ' +
+               '            </div> ' +
+               '        </div>';
+           $("#ddd").append(str);
+       }
+   }
+
+</script>
+
+
+</html>

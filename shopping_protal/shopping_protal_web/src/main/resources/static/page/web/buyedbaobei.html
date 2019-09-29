@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+        .content-top{
+            width: 100%;
+            height: 5rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+            background-color: #f13c4f;
+        }
+        .search-input{
+            width: 100%;
+            display:flex;
+            flex-wrap: wrap;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:space-between;
+        }
+
+        .one-put{
+            margin-top: 2rem;
+            width: 20rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+            background-color: #ffffff;
+        }
+/*
+        https://jingyan.baidu.com/article/4f7d5712fbcb321a2019273f.html
+*/
+        .www{
+            margin-right: 1rem;
+            width: 68%;
+        }
+        .www input{
+            height: 2rem;
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid grey;
+            outline:none;
+        }
+
+        .one-put label{
+            height: 100%;
+            width: 50%;
+        }
+        .death{
+            background-color: #ffffff;
+            width: 30%;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .eee{
+            width: 100%;
+            height: 100%;
+        }
+
+        .sss{
+            height: 2rem;
+            width: 100%;
+            color: #97662d;
+            /* 去掉三角 */
+            appearance:none;
+            -moz-appearance:none; /* Firefox */
+            -webkit-appearance:none; /* Safari 和 Chrome */
+            /* 去掉边框 */
+            border-radius: 5px;
+            border: 2px solid grey;
+            outline:none;
+
+
+        }
+        .www input:focus {
+            -moz-box-shadow:0px 0px 14px #4168f1; -webkit-box-shadow:0px 0px 14px #4168f1; box-shadow:0px 0px 14px #4168f1;            height: 2rem;
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid #4079f1;
+            outline:none;
+
+
+         /*   border-image: -webkit-linear-gradient(#4260ff, #55a8f1) 30 30;
+            border-image: -moz-linear-gradient(red,yellow) 30 30;
+            border-image: linear-gradient(red,yellow) 30 30;*/
+        }
+
+        .sss input:focus {
+            -moz-box-shadow:0px 0px 14px #4168f1; -webkit-box-shadow:0px 0px 14px #4168f1; box-shadow:0px 0px 14px #4168f1;            height: 2rem;
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid #4079f1;
+            outline:none;
+
+
+         /*   border-image: -webkit-linear-gradient(#4260ff, #55a8f1) 30 30;
+            border-image: -moz-linear-gradient(red,yellow) 30 30;
+            border-image: linear-gradient(red,yellow) 30 30;*/
+        }
+        .serach-final{
+            margin-top: 5rem;
+            width: 50%;
+            height: 5rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .final-one{
+            margin-left: 3rem;
+           width: 25%;
+            height: 100%;
+        }
+
+        .final-two{
+            margin-left: 5rem;
+            width: 25%;
+            height: 100%;
+        }
+
+        button{
+            outline: 0;
+            background-color: #ee204e;
+            color: #ffffff;
+            height: 3rem;
+            width: 7rem;
+            border:none;
+        }
+
+        button:hover{
+            background-color: #a70700;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div class="content-top">
+        <div class="top-left">商家</div>
+        <div class="top-right">管理</div>
+    </div>
+    <div class="search-input">
+
+        <div class="one-put">
+            <div class="death">
+                <div class="eee"><label>商品ID</label></div>
+            </div>
+            <div class="www">
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="one-put">
+            <div class="death">
+                <div class="eee"><label>宝贝名称</label></div>
+            </div>
+            <div class="www">
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="one-put">
+            <div class="death">
+                <div class="eee"><label>买家名称</label></div>
+            </div>
+            <div class="www">
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="one-put">
+            <div class="death">
+                <div class="eee"><label>成交时间</label></div>
+            </div>
+            <div class="www">
+                <input type="text">
+            </div >
+        </div>
+
+        <div class="one-put">
+            <div class="death">
+                <div class="eee"><label>订单状态</label></div>
+            </div>
+            <div class="www">
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="one-put">
+            <div class="death">
+                <div class="eee"><label>评价状态</label></div>
+            </div>
+            <div class="www">
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="one-put">
+            <div class="death">
+                <div class="eee"><label>订单编号</label></div>
+            </div>
+            <div class="www">
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="one-put">
+            <div class="death">
+                <div class="eee"><label>物流服务</label></div>
+            </div>
+            <div class="www">
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="one-put">
+            <div class="death">
+                <div class="eee"><label>售后服务</label></div>
+            </div>
+            <div class="www">
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="one-put">
+            <div class="death">
+                <div class="eee"><label>交易类型</label></div>
+            </div>
+            <div class="www">
+                <select class="sss" >
+                    <option value = "A">A</option>
+                    <option value = "A">B</option>
+                    <option value = "A">C</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="one-put">
+            <div class="death">
+                <div class="eee"><label>订单类型</label></div>
+            </div>
+            <div class="www">
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="one-put">
+            <div class="death">
+                <div class="eee"><label>预售状态</label></div>
+            </div>
+            <div class="www">
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="serach-final">
+            <div class="final-one">
+               <button>搜索订单</button>
+            </div>
+            <div class="final-two">
+                <button>批量导出</button>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>

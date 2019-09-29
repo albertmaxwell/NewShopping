@@ -725,6 +725,7 @@
                 <div class="happy"><a href="#" class="too"><span>购物车0件</span></a></div>
                 <div class="happy"><a href="#" class="too"><span>收藏夹</span></a></div>
                 <div class="happy"><a href="#" class="too"><span>网站导航</span></a></div>
+                <div class="happy"><a href="/page/web/myshop.html" class="too" ><span>我的店铺</span></a></div>
                 <div class="happy"><a href="#" class="too" onclick="quitSystem()"><span>退出登录</span></a></div>
             </div>
         </div>
@@ -920,16 +921,15 @@
                 success: function (data) {
                     if (data.success){
                         window.location='/page/test/logintest.html'
-
                     }else{
-                    layer.msg(data.msg, { icon: 1, time: 1000 });                    }
+                    layer.msg(data.msg, { icon: 1, time: 3000 });                    }
                     layer.close(index);
                     $(obj).parents("tr").remove();
                     //layer.msg('已退出!', { icon: 1, time: 1000 });
                     layer.close();
                 },
                 error: function (data) {
-                    layer.msg('服务器异常!', { icon: 1, time: 1000 });
+                    layer.msg('服务器异常!', { icon: 1, time: 3000 });
                     layer.close(index);
                 },
             });

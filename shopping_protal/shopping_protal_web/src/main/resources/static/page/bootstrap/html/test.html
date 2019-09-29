@@ -8,8 +8,9 @@
             margin: 0;
             padding: 0;
         }
-        .left{
-
+        .head{
+            position: relative;
+            position: fixed;
         }
 
     </style>
@@ -17,15 +18,13 @@
 <body >
 <div>
     <div class="container">
-        <iframe style="position:fixed"  name="content_frame" marginwidth=0 marginheight=0 width=100% height=100% src="head.html"
+        <iframe   name="content_frame" marginwidth=0 marginheight=0 width=100% height=100% src="head.html"
                 frameborder=0></iframe>
 
         <!-- 中间部分（包括左边栏和员工/部门表单显示部分） -->
         <div class="left" style="position:relative; top:-100px;">
-
             <iframe  name="content_frame" marginwidth=0 marginheight=0 width=100% height=8000px src="left.html"
-                    frameborder=0></iframe>
-
+            frameborder=0></iframe>
         </div>
     </div>
 
