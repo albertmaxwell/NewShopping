@@ -1,4 +1,4 @@
-package com.shopping.shopping_protal_web.controller;
+package com.alibaba.shopping.shopping_bean.bean;
 
 /**
  * 购物车列表
