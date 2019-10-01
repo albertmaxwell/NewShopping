@@ -2,6 +2,8 @@ package com.alibaba.shopping.shopping_protal_dao.jpadao;
 
 
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -73,8 +75,6 @@ public abstract class AbstractBaseDao<T> implements BaseDao<T> {
  
     @Override
     public List<T> findAll() {
-        System.out.println(clazz.getSimpleName());
-
         return em.createQuery("from "+clazz.getSimpleName()).getResultList();
     }
  
@@ -84,11 +84,15 @@ public abstract class AbstractBaseDao<T> implements BaseDao<T> {
             Query query = em.createQuery(jpql);
             if(obj.length > 0){
                 for (int i = 0; i < obj.length; i++) {
+                    System.out.println(i+1);
+                    System.out.println(obj[i]);
                     query.setParameter((i+1),obj[i]);
                 }
             }
+          List ss=query.getResultList();
            return query.getResultList();
         }catch (Exception e){
+            e.printStackTrace();
             return null;
         }
     }

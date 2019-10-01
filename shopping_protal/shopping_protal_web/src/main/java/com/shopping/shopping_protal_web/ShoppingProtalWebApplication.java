@@ -18,7 +18,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @MapperScan({"com.alibaba.shopping.shopping_protal_dao.mapper","com.alibaba.shopping.shoppingcommonutils.common.*"})
 @ServletComponentScan
 @EnableSwagger2
-@EntityScan("com.alibaba.shopping.shopping_bean.bean.shopentity.test")
+@EntityScan("com.alibaba.shopping.shopping_bean.bean.shopentity")
 @EnableJpaRepositories(basePackages = {"com.alibaba.shopping.shopping_protal_dao.jpadao"})
 //@EnableCaching
 public class ShoppingProtalWebApplication {

@@ -11,18 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9386ca-bb6f-46bb-901f-2779732877b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/config/HibernateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/jpadao/GoodsClassDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/jpadao/GoodsClassImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_bean/src/main/java/com/alibaba/shopping/shopping_bean/bean/shopentity/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/dao/CommonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/dao/CommonDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/dao/GenericBaseCommonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/dao/GenericBaseCommonDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/dao/ICommonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/dao/ICommonDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/dao/IGenericBaseCommonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/dao/IGenericBaseCommonDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/CommonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/CommonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/serviceImpl/CommonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/serviceImpl/CommonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/jpadao/AbstractBaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/jpadao/AbstractBaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/Jpaservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/Jpaservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/serviceImpl/JpaserviceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/serviceImpl/JpaserviceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/ShoppingProtalWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/ShoppingProtalWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/ShoppingControllerIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/ShoppingControllerIndex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../api_proxy_plugin/src/main/java/com/api/proxy/plugin/util/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../api_proxy_plugin/src/main/java/com/api/proxy/plugin/util/MD5Util.java" afterDir="false" />
       <change beforePath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application-druid.yml" beforeDir="false" afterPath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application-druid.yml" afterDir="false" />
       <change beforePath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application.yml" beforeDir="false" afterPath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application.yml" afterDir="false" />
@@ -132,11 +128,11 @@
       <recent name="com.alibaba.shopping.shopping_bean.bean.shopentity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.alibaba.shopping.shopping_protal_dao.jpadao" />
       <recent name="com.alibaba.shopping.shopping_protal_dao.dao" />
       <recent name="com.shopping.shopping_protal_service.service" />
       <recent name="com.alibaba.shopping.shopping_protal_dao.mapper" />
       <recent name="com.shopping.shopping_protal_service.service.serviceImpl" />
-      <recent name="com.alibaba.shopping.shopping_bean.bean.shopentity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources" />
@@ -531,7 +527,7 @@
       <workItem from="1569745426952" duration="8014000" />
       <workItem from="1569805263570" duration="25311000" />
       <workItem from="1569887925257" duration="2014000" />
-      <workItem from="1569905533980" duration="9232000" />
+      <workItem from="1569905533980" duration="21632000" />
     </task>
     <servers />
   </component>

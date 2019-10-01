@@ -12,4 +12,8 @@ import java.util.List;
 public interface Jpaservice {
 
 	public List<Test> getOrderByStoreId(String storeId);
+
+	public List<GoodsClass> getGoodsClassById(long storeId);
+
+	public List<GoodsClass> getGoodsClass();
 }

@@ -106,15 +106,16 @@ public class ShoppingControllerIndex {
 	 *
 	 * @return
 	 */
-	@RequestMapping(value = "/jpaGoodClass", method = RequestMethod.POST)
+	@RequestMapping(value = "/jpaGoodClass", method = RequestMethod.GET)
 	@ResponseBody
-	@ApiOperation(value = "JPA商品新增接口", notes = "传入对象数据", produces = "application/json")
+	@ApiOperation(value = "JPA商品新增接口", notes = "传入对象数据")
 	public ResponseMessage<?> jpaGoodClass() {
-		List<Test> testList=null;
+//		List<Test> testList=null;
+		List<GoodsClass> testList=null;
 		try {
 			GoodsClass goodsClass=new GoodsClass();
 			//goodsClass.setClassName("电子产品");
-			testList=sss.getOrderByStoreId("tfdsfg");
+			testList=sss.getGoodsClassById(1);
 		}  catch (Exception e) {
 			e.printStackTrace();
 			return Result.success("添加失败");
