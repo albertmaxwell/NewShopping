@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
  *
  *
  */
-@Repository
+/*@Repository
 public class CommonDao extends GenericBaseCommonDao implements ICommonDao, IGenericBaseCommonDao {
 
 
-}
+}*/

@@ -20,7 +20,7 @@ import java.util.*;
  * 类描述： DAO层泛型基类
  *
  */
-@Repository("commonDao")
+@Repository
 public abstract class GenericBaseCommonDao<T, PK extends Serializable>
 		implements IGenericBaseCommonDao {
 

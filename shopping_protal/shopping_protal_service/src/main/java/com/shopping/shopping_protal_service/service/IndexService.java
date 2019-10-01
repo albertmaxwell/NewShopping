@@ -10,7 +10,7 @@ import java.util.Map;
  * @author 金海洋
  * @date 2019/9/29  -14:35
  */
-public interface IndexService  extends CommonService {
+public interface IndexService   {
 
 	/**
 	 * 获取首页商品分类
@@ -94,8 +94,8 @@ public interface IndexService  extends CommonService {
 	 * @param entity
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
 	public Serializable save(GoodsClass entity) throws Exception;
-
+*/
 
 }

@@ -1,22 +1,20 @@
 package com.shopping.shopping_protal_web.controller;
 
-import com.alibaba.shopping.common.exception.ResultException;
 import com.alibaba.shopping.common.response.ResponseMessage;
 import com.alibaba.shopping.common.response.Result;
-import com.alibaba.shopping.shopping_bean.bean.entity.SysUserEntity;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.*;
+import com.alibaba.shopping.shopping_bean.bean.shopentity.test.Test;
 import com.shopping.shopping_protal_service.service.IndexService;
+import com.shopping.shopping_protal_service.service.Jpaservice;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,6 +32,9 @@ public class ShoppingControllerIndex {
 
 	@Autowired
 	IndexService indexService;
+
+	@Autowired
+	Jpaservice sss;
 
 
 	/**
@@ -86,19 +87,39 @@ public class ShoppingControllerIndex {
 	 *
 	 * @return
 	 */
-	@RequestMapping(value = "/addUser", method = RequestMethod.POST)
+	@RequestMapping(value = "/hibernateGoodClass", method = RequestMethod.POST)
 	@ResponseBody
-	@ApiOperation(value = "商品新增接口", notes = "传入对象数据", produces = "application/json")
-	public ResponseMessage<?> addUser() {
+	@ApiOperation(value = "hibernate商品新增接口", notes = "传入对象数据", produces = "application/json")
+	public ResponseMessage<?> hibernateGoodClass() {
 		try {
 			GoodsClass goodsClass=new GoodsClass();
-			goodsClass.setClassName("电子产品");
-			indexService.save(goodsClass);
+			//goodsClass.setClassName("电子产品");
+			//indexService.save(goodsClass);
 		}  catch (Exception e) {
 			e.printStackTrace();
 			return Result.success("添加失败");
 		}
 		return Result.success("添加成功");
+	}
+
+	/**
+	 *
+	 * @return
+	 */
+	@RequestMapping(value = "/jpaGoodClass", method = RequestMethod.POST)
+	@ResponseBody
+	@ApiOperation(value = "JPA商品新增接口", notes = "传入对象数据", produces = "application/json")
+	public ResponseMessage<?> jpaGoodClass() {
+		List<Test> testList=null;
+		try {
+			GoodsClass goodsClass=new GoodsClass();
+			//goodsClass.setClassName("电子产品");
+			testList=sss.getOrderByStoreId("tfdsfg");
+		}  catch (Exception e) {
+			e.printStackTrace();
+			return Result.success("添加失败");
+		}
+		return Result.success(testList);
 	}
 
 

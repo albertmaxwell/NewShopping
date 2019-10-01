@@ -17,7 +17,7 @@ import java.util.Map;
  */
 @Service("indexService")
 @Transactional
-public class IndexServiceImpl extends CommonServiceImpl implements IndexService {
+public class IndexServiceImpl  implements IndexService {
 
 	@Autowired
 	JdbcTemplate jdbcTemplate;
@@ -71,15 +71,5 @@ public class IndexServiceImpl extends CommonServiceImpl implements IndexService 
 		return null;
 	}
 
-	/**
-	 * 保存实体
-	 * @param entity
-	 * @return
-	 * @throws Exception
-	 */
-	@Override
-	public Serializable save(GoodsClass entity) throws Exception{
-		Serializable t = super.save(entity);
-		return t;
-	}
+
 }
