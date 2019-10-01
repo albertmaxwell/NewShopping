@@ -2,6 +2,7 @@ package com.shopping.shopping_protal_service.service;
 
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.*;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
@@ -9,7 +10,7 @@ import java.util.Map;
  * @author 金海洋
  * @date 2019/9/29  -14:35
  */
-public interface IndexService {
+public interface IndexService  extends CommonService {
 
 	/**
 	 * 获取首页商品分类
@@ -86,5 +87,15 @@ public interface IndexService {
 	 * @throws Exception
 	 */
 	public List<DeliveryGoods> getDeliveryGoodsList(Map<String, Object> map) throws Exception;
+
+
+	/**
+	 * 保存实体
+	 * @param entity
+	 * @return
+	 * @throws Exception
+	 */
+	public Serializable save(GoodsClass entity) throws Exception;
+
 
 }

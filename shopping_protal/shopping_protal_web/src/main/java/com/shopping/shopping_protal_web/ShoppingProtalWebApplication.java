@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
@@ -14,6 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @MapperScan({"com.alibaba.shopping.shopping_protal_dao.*","com.alibaba.shopping.shoppingcommonutils.common.*"})
 @ServletComponentScan
 @EnableSwagger2
+@EnableJpaRepositories(basePackages = "com.alibaba.shopping.shopping_protal_dao.dao")
 //@EnableCaching
 public class ShoppingProtalWebApplication {
 
