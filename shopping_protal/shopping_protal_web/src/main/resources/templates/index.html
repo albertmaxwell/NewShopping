@@ -5,36 +5,158 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Title</title>
     <style>
-        .box{
+        .box {
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+
             width: 100%;
-            height: 80rem;
-            background-color: #b02d34;
+            height: 200rem;
+            background-color: #f5f5f5;
         }
-        .box1{
-            width: 50%;
-            height:20rem;
+
+
+        .box2 {
+            width: 100%;
+            height: 20rem;
             font-size: large;
             font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
             font-weight: bolder;
             color: #3800c0;
             background-color: #3800c0;
         }
+
+        .box3 {
+            width: 100%;
+            height: 20rem;
+            font-size: large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+            color: #3800c0;
+            background-color: #ae11f1;
+        }
+
+        .box4 {
+            width: 100%;
+            height: 20rem;
+            font-size: large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+            color: #3800c0;
+            background-color: #c08027;
+        }
+
+        .box5 {
+            width: 100%;
+            height: 20rem;
+            font-size: large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+            color: #3800c0;
+            background-color: #4260ff;
+        }
+
+        .box6 {
+            width: 100%;
+            height: 20rem;
+            font-size: large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+            color: #3800c0;
+            background-color: #20c03a;
+        }
+
+        .box7 {
+            width: 100%;
+            height: 20rem;
+            font-size: large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+            color: #3800c0;
+            background-color: #b02d34;
+        }
+
+        .box8 {
+            width: 100%;
+            height: 20rem;
+            font-size: large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+            color: #3800c0;
+            background-color: #4642f5;
+        }
+
+        .box9 {
+            width: 100%;
+            height: 20rem;
+            font-size: large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+            color: #3800c0;
+            background-color: #c01c0f;
+        }
     </style>
 </head>
 <body>
+<div class="box">
 
-<!--
-<p th:text="*{message}"></p>
--->
-<!--
-<p th:each="goods_name : ${message}">
-    <div th:src="${goods_name}" style="height:800px;"/>
-</p>-->
+    <div class="bo6x">
 
-<tr th:each=" Goods : ${message}">
-    <th th:text="${Goods.goods_name}"></th>
-</tr>
+        <tr th:each="GoodsClass : ${goodsClassList}">
+            <th th:text="${GoodsClass.seo_keywords}"></th>
+        </tr>
+    </div>
 
+    <div class="box2">
+        <tr th:each=" GoodsBrand : ${goodsBrandList}">
+            <th th:text="${GoodsBrand.name}"></th>
+        </tr>
+    </div>
+    <div class="box3">
+
+        <tr th:each=" Partner : ${partnerList}">
+            <th th:text="${Partner.getUrl()}"></th>
+        </tr>
+    </div>
+    <div class="box4">
+
+        <tr th:each=" ArticleClass : ${articleClassList}">
+            <th th:text="${ArticleClass.mark}"></th>
+        </tr>
+
+    </div>
+    <div class="box5">
+        <tr th:each=" Article : ${articleList}">
+            <th th:text="${Article.getContent()}"></th>
+        </tr>
+    </div>
+    <div class="bo6x">
+
+        <tr th:each=" Goods : ${goodsList}">
+            <th th:text="${Goods.getGoods_name()}"></th>
+        </tr>
+    </div>
+    <div class="box7">
+
+        <tr th:each=" GroupGoods : ${groupGoodsList}">
+            <th th:text="${GroupGoods.getGg_content()}"></th>
+        </tr>
+    </div>
+    <div class="box8">
+
+        <tr th:each=" BargainGoods : ${bargainGoodsList}">
+            <th th:text="${BargainGoods.getBg_price()}"></th>
+        </tr>
+    </div>
+    <div class="box9">
+
+        <tr th:each=" DeliveryGoods : ${deliveryGoodsList}">
+            <th th:text="${DeliveryGoods.d_status}"></th>
+        </tr>
+    </div>
+</div>
 
 </body>
 </html>

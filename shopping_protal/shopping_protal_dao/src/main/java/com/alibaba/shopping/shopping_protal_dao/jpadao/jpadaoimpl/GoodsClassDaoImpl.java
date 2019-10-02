@@ -17,7 +17,7 @@ public class GoodsClassDaoImpl extends AbstractBaseDao<GoodsClass> implements Go
 
 	@Override
 	public List<GoodsClass> findGoodsClassList(Map<String,Object> map){
-		List<GoodsClass> goodsClassList=this.find("a");
+		List<GoodsClass> goodsClassList=this.findPage(0,10,"select obj from GoodsClass obj where obj.parent.id is null and obj.display=?1 order by obj.sequence asc",Boolean.valueOf(true));
 		return  goodsClassList;
 	}
 

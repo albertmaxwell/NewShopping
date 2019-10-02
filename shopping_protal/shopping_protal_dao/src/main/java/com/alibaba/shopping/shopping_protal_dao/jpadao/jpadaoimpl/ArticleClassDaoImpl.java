@@ -21,7 +21,7 @@ public class ArticleClassDaoImpl extends AbstractBaseDao<ArticleClass> implement
 
 		Map params = new HashMap();
 		params.put("mark", "news");
-		List<ArticleClass> goodsClassList=this.find("select obj from ArticleClass obj where obj.parent.id is null and obj.mark!=:mark order by obj.sequence asc", params, 0, 9);
+		List<ArticleClass> goodsClassList=this.findPage(0,10,"select obj from ArticleClass obj where obj.parent.id is null and obj.mark!=?1 order by obj.sequence asc", "news");
 		return  goodsClassList;
 	}
 

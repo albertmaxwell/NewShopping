@@ -21,7 +21,7 @@ public class PartnerDaoImpl extends AbstractBaseDao<Partner> implements PartnerD
 	@Override
 	public List<Partner> findPartnerList(Map<String,Object> map){
 		Map params = new HashMap();
-		List<Partner> goodsClassList=this.find("select obj from Partner obj where obj.image.id is not null order by obj.sequence asc", params, -1, -1);
+		List<Partner> goodsClassList=this.findPage(0,10,"select obj from Partner obj where obj.image.id is not null order by obj.sequence asc");
 		return  goodsClassList;
 	}
 

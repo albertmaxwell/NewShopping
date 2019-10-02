@@ -23,7 +23,7 @@ public class GroupGoodsDaoImpl  extends AbstractBaseDao<GroupGoods> implements G
 		Map params = new HashMap();
 		params.put("gg_status", Integer.valueOf(1));
 		params.put("gg_recommend", Integer.valueOf(1));
-		List<GroupGoods> goodsClassList=this.find("select obj from GroupGoods obj where obj.gg_status=:gg_status and obj.gg_recommend=:gg_recommend and obj.group.id=:group_id order by obj.gg_recommend_time desc", params, 0, 5);
+		List<GroupGoods> goodsClassList=this.findPage(0,10,"select obj from GroupGoods obj where obj.gg_status=?1 and obj.gg_recommend=?2 and obj.group.id=:group_id order by obj.gg_recommend_time desc", Integer.valueOf(1),Integer.valueOf(1));
 		return  goodsClassList;
 	}
 

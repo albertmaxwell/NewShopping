@@ -61,7 +61,7 @@ public class ShoppingControllerIndex {
 			List<DeliveryGoods>  deliveryGoodsList=sss.getDeliveryGoodsList(map);
 			//添加商品分类数据
 			model.addAttribute("goodsClassList", goodsClassList);
-			/*//添加品牌数据
+			//添加品牌数据
 			model.addAttribute("goodsBrandList", goodsBrandList);
 			//底部显示的合作伙伴
 			model.addAttribute("partnerList", partnerList);
@@ -76,12 +76,11 @@ public class ShoppingControllerIndex {
 			//天天特价
 			model.addAttribute("bargainGoodsList", bargainGoodsList);
 			//满送商品
-			model.addAttribute("deliveryGoodsList", deliveryGoodsList);*/
+			model.addAttribute("deliveryGoodsList", deliveryGoodsList);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-         return "hello";
+         return "index";
 	}
 
 
@@ -112,11 +111,11 @@ public class ShoppingControllerIndex {
 	@ApiOperation(value = "JPA商品新增接口", notes = "传入对象数据")
 	public String jpaGoodClass(Model model) {
 		Map<String,Object> map = new HashMap<String, Object>();
-		List<Goods> goods=null;
+		List<Article> goods=null;
 		try {
 			GoodsClass goodsClass=new GoodsClass();
 			//goodsClass.setClassName("电子产品");
-			goods=sss.getGoodsList(map);
+			goods=sss.getArticleList(map);
 			model.addAttribute("message",goods);
 		}  catch (Exception e) {
 			e.printStackTrace();

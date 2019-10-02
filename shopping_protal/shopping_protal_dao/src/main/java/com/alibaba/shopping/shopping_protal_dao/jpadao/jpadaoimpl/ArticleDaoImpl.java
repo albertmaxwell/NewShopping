@@ -27,7 +27,7 @@ public class ArticleDaoImpl extends AbstractBaseDao<Article> implements ArticleD
 		Map params = new HashMap();
 		params.put("class_mark", "news");
 		params.put("display", Boolean.valueOf(true));
-		List<Article> goodsClassList=this.find("select obj from Article obj where obj.articleClass.mark=:class_mark and obj.display=:display order by obj.addTime desc", params, 0, 5);
+		List<Article> goodsClassList=this.findPage(0,5,"select obj from Article obj where obj.articleClass.mark=?1 and obj.display=?2 order by obj.addTime desc", "news",Boolean.valueOf(true));
 		return  goodsClassList;
 	}
 

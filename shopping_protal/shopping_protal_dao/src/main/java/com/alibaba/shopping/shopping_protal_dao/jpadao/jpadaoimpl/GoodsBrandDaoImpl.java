@@ -24,7 +24,7 @@ public class GoodsBrandDaoImpl extends AbstractBaseDao<GoodsBrand> implements Go
 		// 推荐品牌
 		params.put("audit", Integer.valueOf(1));
 		params.put("recommend", Boolean.valueOf(true));
-		List<GoodsBrand> goodsClassList=this.find("select obj from GoodsBrand obj where obj.audit=:audit and obj.recommend=:recommend order by obj.sequence", params, 0, 4);
+		List<GoodsBrand> goodsClassList=this.findPage(0,10,"select obj from GoodsBrand obj where obj.audit=?1 and obj.recommend=?2 order by obj.sequence", Integer.valueOf(1),Boolean.valueOf(true));
 		return  goodsClassList;
 	}
 

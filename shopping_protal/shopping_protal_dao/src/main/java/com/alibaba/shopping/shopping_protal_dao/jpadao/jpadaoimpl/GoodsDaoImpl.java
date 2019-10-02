@@ -23,7 +23,7 @@ public class GoodsDaoImpl extends AbstractBaseDao<Goods> implements GoodsDao {
 		Map params = new HashMap();
 		params.put("store_recommend", Boolean.valueOf(true));
 		params.put("goods_status", Integer.valueOf(0));
-		List<Goods> goodsClassList=this.find("select obj from Goods obj where obj.store_recommend=?1 and obj.goods_status=?2 order by obj.store_recommend_time desc", true,0);
+		List<Goods> goodsClassList=this.findPage(0,10,"select obj from Goods obj where obj.store_recommend=?1 and obj.goods_status=?2 order by obj.store_recommend_time desc", true,0);
 		return  goodsClassList;
 	}
 

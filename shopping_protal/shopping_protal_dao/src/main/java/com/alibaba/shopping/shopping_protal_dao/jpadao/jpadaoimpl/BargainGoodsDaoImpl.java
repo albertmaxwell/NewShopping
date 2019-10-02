@@ -30,7 +30,7 @@ public class BargainGoodsDaoImpl extends AbstractBaseDao<BargainGoods> implement
 		Map params = new HashMap();
 		params.put("bg_time", formatDate(formatShortDate(new Date())));
 		params.put("bg_status", Integer.valueOf(1));
-		List<BargainGoods> goodsClassList=this.find("select obj from BargainGoods obj where obj.bg_time=:bg_time and obj.bg_status=:bg_status", params, 0, 5);
+		List<BargainGoods> goodsClassList=this.findPage(0,10,"select obj from BargainGoods obj where obj.bg_time=:bg_time and obj.bg_status=:bg_status", formatDate(formatShortDate(new Date())),Integer.valueOf(1));
 		return  goodsClassList;
 	}
 
