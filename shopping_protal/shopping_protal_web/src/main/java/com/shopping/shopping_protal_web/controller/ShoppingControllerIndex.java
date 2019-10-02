@@ -80,8 +80,31 @@ public class ShoppingControllerIndex {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-         return "index";
+         return "web/tianmao";
 	}
+
+	/**
+	 * 天猫的登录页面跳转
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping(value = "loginInPage",method = RequestMethod.GET)
+	@ApiOperation(value = "天猫的登录页面跳转", notes = "传入对象数据")
+	public String  loginInPage(Model model){
+		return "test/logintest";
+	}
+
+	/**
+	 * 天猫的登录页面跳转
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping(value = "register",method = RequestMethod.GET)
+	@ApiOperation(value = "天猫的登录页面跳转", notes = "传入对象数据")
+	public String  register(Model model){
+		return "web/register";
+	}
+
 
 
 	/**

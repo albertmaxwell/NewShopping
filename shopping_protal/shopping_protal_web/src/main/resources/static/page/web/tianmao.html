@@ -717,8 +717,8 @@
 
         <div class="head-one">
             <div class="you">
-                <div class="happy"><a href="../test/logintest.html" class="too"><span>请登陆</span></a></div>
-                <div class="happy"><a href="register.html" class="too"><span>免费注册</span></a></div>
+                <div class="happy"><a  class="too" onclick="loginIn()"><span>请登陆</span></a></div>
+                <div class="happy"><a  class="too" onclick="register()"><span>免费注册</span></a></div>
             </div>
             <div class="me">
                 <div class="happy"><a href="#" class="too"><span>我的天猫</span></a></div>
@@ -935,6 +935,30 @@
             });
         });
         layer.close(index);
+    }
+
+    function loginIn() {
+        $.ajax({
+            async: true,
+            type: 'GET',
+            url: '/shoppingControllerIndex/loginInPage',
+            dataType:'html',
+            success: function (data) {
+                window.location='/page/test/logintest.html'
+            }
+        });
+    }
+
+    function register() {
+        $.ajax({
+            async: true,
+            type: 'GET',
+            url: '/shoppingControllerIndex/register',
+            dataType:'html',
+            success: function (data) {
+               window.location='/page/web/register.html'
+            }
+        });
     }
 
 
