@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -48,15 +50,15 @@ public class ShoppingControllerIndex {
 
 		Map<String,Object> map = new HashMap<String, Object>();
 		try {
-			List<GoodsClass> goodsClassList=indexService.getGoodsClassList(map);
-			/*List<GoodsBrand> goodsBrandList=indexService.getGoodsBrandList(map);
-			List<Partner>  partnerList=indexService.getPartnerList(map);
-			List<ArticleClass>  articleClassList=indexService.getArticleClassList(map);
-			List<Article>  articleList=indexService.getArticleList(map);
-			List<Goods>  goodsList=indexService.getGoodsList(map);
-			List<GroupGoods>  groupGoodsList=indexService.getGroupGoodsList(map);
-			List<BargainGoods>  bargainGoodsList=indexService.getBargainGoodsList(map);
-			List<DeliveryGoods>  deliveryGoodsList=indexService.getDeliveryGoodsList(map);*/
+			List<GoodsClass> goodsClassList=sss.getGoodsClassList(map);
+			List<GoodsBrand> goodsBrandList=sss.getGoodsBrandList(map);
+			List<Partner>  partnerList=sss.getPartnerList(map);
+			List<ArticleClass>  articleClassList=sss.getArticleClassList(map);
+			List<Article>  articleList=sss.getArticleList(map);
+			List<Goods>  goodsList=sss.getGoodsList(map);
+			List<GroupGoods>  groupGoodsList=sss.getGroupGoodsList(map);
+			List<BargainGoods>  bargainGoodsList=sss.getBargainGoodsList(map);
+			List<DeliveryGoods>  deliveryGoodsList=sss.getDeliveryGoodsList(map);
 			//添加商品分类数据
 			model.addAttribute("goodsClassList", goodsClassList);
 			/*//添加品牌数据
@@ -107,20 +109,20 @@ public class ShoppingControllerIndex {
 	 * @return
 	 */
 	@RequestMapping(value = "/jpaGoodClass", method = RequestMethod.GET)
-	@ResponseBody
 	@ApiOperation(value = "JPA商品新增接口", notes = "传入对象数据")
-	public ResponseMessage<?> jpaGoodClass() {
-//		List<Test> testList=null;
-		List<GoodsClass> testList=null;
+	public String jpaGoodClass(Model model) {
+		Map<String,Object> map = new HashMap<String, Object>();
+		List<Goods> goods=null;
 		try {
 			GoodsClass goodsClass=new GoodsClass();
 			//goodsClass.setClassName("电子产品");
-			testList=sss.getGoodsClassById(1);
+			goods=sss.getGoodsList(map);
+			model.addAttribute("message",goods);
 		}  catch (Exception e) {
 			e.printStackTrace();
-			return Result.success("添加失败");
+			return "";
 		}
-		return Result.success(testList);
+		return "index";
 	}
 
 

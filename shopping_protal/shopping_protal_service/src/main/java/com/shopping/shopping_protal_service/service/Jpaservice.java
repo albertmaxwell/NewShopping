@@ -1,9 +1,10 @@
 package com.shopping.shopping_protal_service.service;
 
-import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.GoodsClass;
+import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.*;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.test.Test;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author 金海洋
@@ -11,9 +12,21 @@ import java.util.List;
  */
 public interface Jpaservice {
 
-	public List<Test> getOrderByStoreId(String storeId);
+	List<GoodsClass> getGoodsClassList(Map<String, Object> map);
 
-	public List<GoodsClass> getGoodsClassById(long storeId);
+	List<GoodsBrand> getGoodsBrandList(Map<String, Object> map);
 
-	public List<GoodsClass> getGoodsClass();
+	List<Partner> getPartnerList(Map<String, Object> map);
+
+	List<ArticleClass> getArticleClassList(Map<String, Object> map);
+
+	List<Article> getArticleList(Map<String, Object> map);
+
+	List<Goods> getGoodsList(Map<String, Object> map);
+
+	List<GroupGoods> getGroupGoodsList(Map<String, Object> map);
+
+	List<BargainGoods> getBargainGoodsList(Map<String, Object> map);
+
+	List<DeliveryGoods> getDeliveryGoodsList(Map<String, Object> map);
 }

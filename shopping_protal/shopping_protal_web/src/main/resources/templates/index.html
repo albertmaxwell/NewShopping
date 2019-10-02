@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Title</title>
+    <style>
+        .box{
+            width: 100%;
+            height: 80rem;
+            background-color: #b02d34;
+        }
+        .box1{
+            width: 50%;
+            height:20rem;
+            font-size: large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+            color: #3800c0;
+            background-color: #3800c0;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+<p th:text="*{message}"></p>
+-->
+<!--
+<p th:each="goods_name : ${message}">
+    <div th:src="${goods_name}" style="height:800px;"/>
+</p>-->
+
+<tr th:each=" Goods : ${message}">
+    <th th:text="${Goods.goods_name}"></th>
+</tr>
+
+
+</body>
+</html>

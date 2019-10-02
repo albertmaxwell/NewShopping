@@ -4,6 +4,7 @@ import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.GoodsClass;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.test.Test;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author 金海洋
@@ -11,9 +12,6 @@ import java.util.List;
  */
 public interface GoodsClassDao extends BaseDao<GoodsClass> {
 
-	List<GoodsClass> findOrderByStoreId(long storeId);
-
-
-	List<GoodsClass> findGoodsClass();
+	List<GoodsClass> findGoodsClassList(Map<String,Object> map);
 
 }

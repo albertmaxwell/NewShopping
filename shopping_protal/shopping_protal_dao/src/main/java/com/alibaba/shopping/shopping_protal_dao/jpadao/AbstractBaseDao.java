@@ -84,8 +84,6 @@ public abstract class AbstractBaseDao<T> implements BaseDao<T> {
             Query query = em.createQuery(jpql);
             if(obj.length > 0){
                 for (int i = 0; i < obj.length; i++) {
-                    System.out.println(i+1);
-                    System.out.println(obj[i]);
                     query.setParameter((i+1),obj[i]);
                 }
             }
