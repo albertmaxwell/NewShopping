@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品信息</title>
+    <script type="text/javascript" src="../../js/jquery-1.9.1.min.js" ></script>
+
+    <!--导入在线HTML编辑器 -->
+    <script type="text/javascript" src="../../plugin/kindeditor-4.1.11-zh-CN/kindeditor/kindeditor-all.js" ></script>
+    <script type="text/javascript" src="../../plugin/kindeditor-4.1.11-zh-CN/kindeditor/lang/zh-CN.js" ></script>
+    <link rel="stylesheet" href="../../plugin/kindeditor-4.1.11-zh-CN/kindeditor/themes/default/default.css" />
+    <style>
+        .info-center{
+            width: 100%;
+            height: 150rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:flex-start;
+
+        }
+        .title{
+            background-color: #f2141f;
+            width: 100%;
+            height: 3rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:flex-start;
+            justify-content:center;
+        }
+        .title div{
+            margin-left: 1rem;
+
+        }
+        .classedit{
+            width: 100%;
+            height: 5rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+        }
+        .classedit div{
+            margin-left: 3rem;
+
+        }
+        .classedit button{
+            width: 5rem;
+            height: 2rem;
+        }
+        .goodsname{
+            border-top:1px solid #b0b0b0;
+            width: 100%;
+            height: 4rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+        }
+        .goodsname div{
+            margin-left: 3rem;
+
+        }
+
+        .goodsname input{
+            width: 40rem;
+            height: 2rem;
+        }
+
+        .radio{
+            border-top:1px solid #b0b0b0;
+            width: 100%;
+            height: 5rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+        }
+
+        .radio input{
+            width: 1rem;
+            height: 1rem;
+        }
+        .radio div{
+            margin-left: 3rem;
+        }
+        .eee{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .rrr{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .pricename{
+            border-top:1px solid #b0b0b0;
+            width: 100%;
+            height: 5rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+        }
+        .pricename div{
+            margin-left: 3rem;
+
+        }
+        .pricename input{
+            width: 8rem;
+            height: 2rem;
+        }
+
+        .seo{
+            border-top:1px solid #b0b0b0;
+            width: 100%;
+            height: 20rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+        }
+        .seo div{
+            margin-left: 3rem;
+
+        }
+        .seo input{
+            width: 30rem;
+            height: 10rem;
+        }
+
+        .brandname{
+            border-top:1px solid #b0b0b0;
+            width: 100%;
+            height: 5rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+        }
+        .brandname div{
+            margin-left: 3rem;
+
+        }
+        .brandname select{
+            width: 8rem;
+            height: 2rem;
+        }
+
+        .warn{
+            color: #b03b2d;
+        }
+
+        .uploadPic{
+            width: 100%;
+            height: 35rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+        }
+        .what{
+            border-top:1px solid #b0b0b0;
+            width: 20%;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:flex-start;
+            justify-content:center;
+        }
+        .piccontent{
+            background-color: #f1f232;
+            width: 100%;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:flex-start;
+            justify-content:flex-start;
+        }
+
+        .what div{
+            margin-top: 2rem;
+        }
+
+        .yyy{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:flex-start;
+            justify-content:flex-start;
+        }
+        .xxx{
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            margin-left: 2rem;
+            width: 8rem;
+            height: 2.5rem;
+        }
+        .ddd{
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            margin-left: 2rem;
+            width: 5rem;
+            height: 2.5rem;
+        }
+        .ok{
+            background-color: #e52f29;
+            width: 100%;
+            height: 70%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:space-between;
+        }
+        .up{
+            background-color: #3c3be5;
+            width: 16rem;
+            height:16rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+
+        }
+        .down{
+            background-color: #3c3be5;
+            width: 6.5rem;
+            height:6.5rem;
+        }
+        .love{
+            width: 28rem;
+            height:16rem;
+            background-color: #3ce565;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:flex-end;
+            justify-content:space-between;
+        }
+
+        .eat{
+            background-color: #e5701a;
+            width: 12rem;
+            height:12rem;
+        }
+
+        .small{
+            width: 12rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:flex-end;
+            justify-content:space-between;
+        }
+        .small div{
+            margin-top: 0.5rem;
+
+            background-color: #3ce565;
+            width: 2rem;
+            height: 2rem;
+        }
+        .yoona{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+        .jiayou{
+            width: 6rem;
+            height: 2rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:space-between;
+
+        }
+
+        .jiayou div{
+            margin-left: 0.003rem;
+            background-color: #b03b2d;
+            width: 1.2rem;
+            height: 1.5rem;
+        }
+        .get{
+            background-color: #8B008B;
+            width: 100%;
+            height: 5rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .ed{
+            border-top:1px solid #b0b0b0;
+            width: 100%;
+            height: 700px;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+        }
+        .like{
+            width: 20%;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:flex-start;
+            justify-content:center;
+        }
+        .like div{
+            margin-top: 2rem;
+        }
+        .shenqi{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:flex-start;
+            justify-content:center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .submit{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:flex-start;
+            justify-content:flex-start;
+        }
+
+        .submit button{
+            width: 5rem;
+            height: 3rem;
+        }
+
+        .niceform{
+            width: 100%;
+            height: 100%;
+            width: 100%;
+            height: 150rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:flex-start;
+        }
+
+    </style>
+</head>
+<body>
+
+        <div class="info-center">
+            <form  class="niceform" id="formName" type="su" action="/requestGoods/addGoods" method="post" >
+            <div class="title"><div>商品详细信息</div></div>
+            <div class="classedit">
+                <div>商品分类:</div>
+                <div><button>编辑</button></div>
+            </div>
+            <div class="goodsname">
+                <div>商品名称:</div>
+                <div><input name="goodsName" placeholder="商品标题名称长度至少3个字符，最长50个汉字"></div>
+            </div>
+            <div class="goodsname">
+                <div>商品原价:</div>
+                <div><input name="goodsYuanPrice" placeholder="商品原价必须是0.01~1000000之间的数字"></div>
+            </div>
+            <div class="radio">
+                <div >商品类型：	</div>
+                <div class="rrr">
+                    <div class="eee">
+                <div >事务商品:<input name="goodsType"  type="radio" name="sex" value="1"></div>
+                <div >虚拟商品:<input name="goodsType"  type="radio" name="sex" value="1"></div>
+                    </div>
+                    <div>充值卡、消费券等属于虚拟商品</div>
+                </div>
+            </div>
+            <div class="pricename">
+                <div>商品价格:</div>
+                <div ><input name="goodsPrice" ></div>
+                <div class="warn">
+                    备注:   商品原价必须是0.01~1000000之间的数字
+                    若启用了库存配置，请在下方商品库存区域进行管理
+                   </div>
+            </div>
+            <div class="radio">
+                <div >库存配置：	</div>
+                <div class="rrr">
+                    <div class="eee">
+                        <div >全局配置:<input  type="radio" name="goodsConfig" value="1"></div>
+                        <div >规格配置:<input  type="radio" name="goodsConfig" value="2"></div>
+                    </div>
+                    <div>充值卡、消费券等属于虚拟商品</div>
+                </div>
+            </div>
+            <div class="pricename">
+                <div>商品库存:</div>
+                <div ><input input="goodsKuCun" ></div>
+                <div class="warn">
+                    备注:   商铺库存数量必须为1~1000000000之间的整数
+                    若启用了规格配置，则系统自动计算商品的总数，此处无需卖家填写
+                </div>
+            </div>
+            <div class="pricename">
+                <div>商品货号:</div>
+                <div ><input name="goodsHuoHao" ></div>
+                <div class="warn">
+                    备注:   商品货号是指卖家个人管理商品的编号，买家不可见
+                    最多可输入20个字符
+                </div>
+            </div>
+            <div class="uploadPic">
+                <div class="what"><div>商品图片</div></div>
+                <div class="piccontent">
+                    <div class="yyy">
+                        <div><button class="ddd">上传图片</button></div>
+                        <div><button class="xxx">从用户相册中选择</button></div>
+                    </div>
+                    <div class="ok">
+                        <div class="up"></div>
+                        <div class="love">
+
+                            <div class="yoona">
+                                <div class="down"></div>
+                                <div class="jiayou">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                            <div class="yoona">
+                                <div class="down"></div>
+                                <div class="jiayou">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                            <div class="yoona">
+                                <div class="down"></div>
+                                <div class="jiayou">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                            <div class="yoona">
+                                <div class="down"></div>
+                                <div class="jiayou">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="up">
+                            <div class="eat"></div>
+                            <div class="small">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="get"><div>最多可发布5张商品图片
+                        支持多图片同时选取上传。支持*.tbi;*.png;*.bmp;*.jpeg;*.jpg;*.gif格式上传，建议选择尺寸300x300以上、大小2M内的图片。
+                        用户图空间剩余:空间不限制大小，空间不足时将无法上传图片</div></div>
+
+                </div>
+            </div>
+            <div class="pricename">
+                <div>商品重量:</div>
+                <div ><input name="goodsWeight" ></div>
+                <div class="warn">
+                    单位：千克(Kg)
+                </div>
+            </div>
+            <div class="pricename">
+                <div>商品体积:</div>
+                <div ><input name="goodsSpace" ></div>
+                <div class="warn">
+                    单位：立方米(m³)
+                </div>
+            </div>
+            <div class="radio">
+                <div >运费:	</div>
+                <div class="rrr">
+                    <div class="eee">
+                        <div >卖家承担运费:<input  type="radio" name="yunfeiWho" value="sale"></div>
+                        <div >买家承担运费:<input  type="radio" name="yunfeiWho" value="buyer"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="title"><div>商品详细描述</div></div>
+            <div class="brandname">
+                <div>商品品牌:</div>
+                <div ><select name="goodsBrandType">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select></div>
+                <div class="warn">
+                </div>
+            </div>
+            <div class="ed">
+                <div class="like"><div>商品描述:</div></div>
+                <div class="shenqi">
+                    <div>
+                    <textarea id="editor_id" name="content" style="width:1050px;height:450px;">
+                    &lt;strong&gt;HTML内容&lt;/strong&gt;
+                    </textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="title"><div>其他信息</div></div>
+            <div class="brandname">
+                <div>本店分类:</div>
+                <div><button>新增分类</button></div>
+                <div ><select name="newGoodsClass">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select></div>
+                <div class="warn">
+                </div>
+            </div>
+
+            <div class="radio">
+                <div >商品推荐:</div>
+                <div class="rrr">
+                    <div class="eee">
+                        <div >是:<input  type="radio" name="rememed" value="yes"></div>
+                        <div >否:<input  type="radio" name="rememed" value="no"></div>
+                    </div>
+                    <div>被推荐的商品会显示在店铺首页</div>
+                </div>
+            </div>
+
+            <div class="pricename">
+                <div>SEO关键字:</div>
+                <div ><input name="seoKeyWord" ></div>
+                <div class="warn">
+                    备注:   SEO关键字 (keywords) 出现在商品详细页面头部的 Meta 标签中， 用于记录本页面商品的关键字，多个关键字间请用半角逗号 "," 隔开
+                </div>
+            </div>
+
+            <div class="seo">
+                <div>SEO描述:</div>
+                <div ><input name="seoDes" ></div>
+                <div class="warn">
+                    备注:
+                    SEO关键字 (keywords) 出现在商品详细页面头部的 Meta 标签中， 用于记录本页面商品的关键字，多个关键字间请用半角逗号 "," 隔开
+                </div>
+            </div>
+
+            <div class="submit"><div><button>提交</button></div></div>
+
+      </form>
+        </div>
+
+</body>
+<script>
+    KindEditor.ready(function(K) {
+        window.editor = K.create('#editor_id');
+    });
+
+    var options = {
+        cssPath : '/css/index.css',
+        filterMode : true
+    };
+    var editor = K.create('textarea[name="content"]', options);
+
+    // 取得HTML内容
+    html = editor.html();
+
+    // 同步数据后可以直接取得textarea的value
+    editor.sync();
+    html = document.getElementById('editor_id').value; // 原生API
+    html = K('#editor_id').val(); // KindEditor Node API
+    html = $('#editor_id').val(); // jQuery
+
+    // 设置HTML内容
+    editor.html('HTML内容');
+
+  /*  // 关闭过滤模式，保留所有标签
+    KindEditor.options.filterMode = false;
+
+    KindEditor.ready(function(K)) {
+        K.create('#editor_id');
+    }*/
+</script>
+</html>

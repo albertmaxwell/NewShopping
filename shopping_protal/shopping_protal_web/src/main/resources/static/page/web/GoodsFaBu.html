@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品分布</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            width: 90%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            box-shadow:0px 0px 5px 0px #888888;
+        }
+        .jindu{
+            width: 100%;
+            height: 3rem;
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+        }
+        .goodClass{
+            width: 12rem;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .goodInfo{
+            width: 12rem;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .goodsSuccess{
+            width: 12rem;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .serach{
+            background-color: #f2f2f2;
+            width: 100%;
+            height: 5rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .des{
+            width: 6rem;
+            height: 60%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .inputsearch{
+            width: 40rem;
+            height: 60%;
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .inputsearch input{
+            width: 100%;
+            height: 90%;
+        }
+        .btn{
+            width: 6rem;
+            height: 60%;
+        }
+        .nowsearch{
+            width: 100%;
+            height: 3rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .china{
+            width: 15%;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .btn{
+            width: 5rem;
+            height: 100%;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+
+
+        .cool{
+            background-color: #f2f2f2;
+
+            width: 100%;
+            height: 3rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+        }
+        .run{
+            width: 100%;
+            height: 6rem;
+
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .ad{
+            width: 100%;
+            height: 10rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .con{
+            width: 100%;
+            height: 90%;
+        }
+        .btn button{
+            width: 5rem;
+            height: 60%;
+        }
+        .limit{
+            width: 100%;
+            height: 240rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:flex-start;
+        }
+        .sss{
+            background-color: #323ab0;
+            width: 15rem;
+            height: 3rem;
+        }
+        .sss button{
+            width: 100%;
+            height: 100%;
+        }
+        .give{
+            width: 80%;
+            height: 100%;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .give input{
+            width: 100%;
+            height: 80%;
+        }
+
+        .you{
+            margin-left: 3rem;
+        }
+
+        .content-center{
+            width: 100%;
+            height: 30rem;
+        }
+
+        .info-center{
+            width: 100%;
+            height: 150rem;
+        }
+
+    </style>
+</head>
+<body>
+<div class="limit">
+    <div class="box">
+        <div class="jindu">
+            <div class="goodClass">选择商品所在分类</div>
+            <div class="goodInfo">填写商品详细信息</div>
+            <div class="goodsSuccess">商品发布成功</div>
+        </div>
+        <div class="serach">
+            <div class="des">分类搜索:</div>
+            <div class="inputsearch"><input type="text"></div>
+            <div class="btn"><button>搜索</button></div>
+        </div>
+        <div class="nowsearch">
+            <div class="china"><div class="act">您常用的商品分类:</div></div>
+            <div class="give"><input></div>
+        </div>
+
+        <div class="cool"><div class="you">您当前选择的商品类别是：</div></div>
+       <!-- <div class="content-center">
+            <iframe frameborder="0" name="content-right" marginwidth=0 marginheight=0 width=100% height=100%   src="content.html"></iframe>
+        </div> -->
+        <div class="info-center">
+            <iframe frameborder="0" name="content-right" marginwidth=0 marginheight=0 width=100% height=100%   src="GoodsInfo.html"></iframe>
+        </div>
+        <div class="run">
+            <div class="sss">
+                <button>下一步</button>
+            </div>
+        </div>
+        <div class="ad">
+            <div class="con">关于天猫 帮助中心 开放平台 诚聘英才 联系我们 网站合作 法律声明 隐私权政策 知识产权 廉正举报
+                阿里巴巴集团| 淘宝网 | 天猫 | 聚划算 | 全球速卖通 | 阿里巴巴国际交易市场| 1688 | 阿里妈妈 | 飞猪 | 阿里云计算 | AliOS | 阿里通信 | 万网 | 高德 | UC | 友盟 | 虾米 | 钉钉 | 支付宝
+
+                增值电信业务经营许可证： 浙B2-20110446 市场名称登记证：工商网市字3301004119号 出版物网络交易平台服务经营备案证： 新出发浙备字第001号
+                互联网违法和不良信息举报电话：0571-81683755 blxxjb@alibaba-inc.com 互联网药品信息服务资质证书编号：浙-（经营性）-2017-0005  浙公网安备 33010002000120号
+                医疗器械网络交易服务第三方平台备案：（浙）网械平台备字[2018]第00002号 互联网药品交易服务资格证书：国A20150001
+                浙江省网络食品销售第三方平台提供者备案：浙网食A33010002 12318举报
+                © 2003-2019 TMALL.COM 版权所有</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
