@@ -102,4 +102,11 @@ public class JpaserviceImpl implements Jpaservice {
 		List<DeliveryGoods> deliveryGoods=deliverygoodsdao.findDeliveryGoodsList(map);
 		return deliveryGoods;
 	}
+
+	@Override
+	public GoodsClass getGoodsClassById(Map<String, Object> map) {
+
+		GoodsClass goodsClass=goodsclass.findGoodsClass(map);
+		return goodsClass;
+	}
 }

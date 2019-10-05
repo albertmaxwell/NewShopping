@@ -21,5 +21,12 @@ public class GoodsClassDaoImpl extends AbstractBaseDao<GoodsClass> implements Go
 		return  goodsClassList;
 	}
 
+	@Override
+	public GoodsClass findGoodsClass(Map<String, Object> map) {
+
+		GoodsClass goodsClasses=this.load(Long.parseLong(map.get("pid").toString()));
+		return goodsClasses;
+	}
+
 
 }

@@ -14,4 +14,10 @@ public interface GoodsClassDao extends BaseDao<GoodsClass> {
 
 	List<GoodsClass> findGoodsClassList(Map<String,Object> map);
 
+	/**
+	 *
+	 * @param map
+	 * @return
+	 */
+	GoodsClass findGoodsClass(Map<String, Object> map);
 }

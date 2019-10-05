@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>商品分布</title>
+    <script src="../../js/jquery-1.9.1.min.js"></script>
+    <link th:href="@{../../css/content.css}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" th:src="@{../../js/content.js}"></script>
+    <script type="text/javascript" th:src="@{../../js/vue.js}"></script>
     <style>
 
         *{
@@ -207,6 +211,10 @@
             height: 150rem;
         }
 
+
+
+
+
     </style>
 </head>
 <body>
@@ -228,12 +236,20 @@
         </div>
 
         <div class="cool"><div class="you">您当前选择的商品类别是：</div></div>
-       <!-- <div class="content-center">
+        <!--<div class="content-center">
             <iframe frameborder="0" name="content-right" marginwidth=0 marginheight=0 width=100% height=100%   src="content.html"></iframe>
-        </div> -->
-        <div class="info-center">
+        </div>-->
+       <!-- <div class="info-center">
             <iframe frameborder="0" name="content-right" marginwidth=0 marginheight=0 width=100% height=100%   src="GoodsInfo.html"></iframe>
-        </div>
+        </div>-->
+
+
+
+            <div   class="content" th:replace="/web/content :: mycontent"  ></div>
+<!--           <div   class="info-center" th:replace="/web/GoodInfo :: myGoodInfo"  ></div>-->
+
+
+
         <div class="run">
             <div class="sss">
                 <button>下一步</button>
@@ -250,6 +266,10 @@
                 © 2003-2019 TMALL.COM 版权所有</div>
         </div>
     </div>
+
 </div>
 </body>
+<script>
+
+</script>
 </html>

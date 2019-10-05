@@ -1,27 +1,40 @@
 package com.shopping.shopping_protal_web.controller;
 
+import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.GoodsClass;
+import com.shopping.shopping_protal_service.service.Jpaservice;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author 金海洋
  * @date 2019/10/3  -9:24
  */
 @Controller
-@RequestMapping(value = "myShopController")
+@RequestMapping("/myShopController")
 public class MyShopController {
 
+	@Autowired
+	Jpaservice sss;
 
 	/**
 	 * 商品发布
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "addGoods")
+	@RequestMapping(value = "/addGoods",method = RequestMethod.GET)
 	public String addGoods(Model model){
 
-		return "";
+		Map<String,Object> map = new HashMap<String, Object>();
+		List<GoodsClass> goodsClassList=sss.getGoodsClassList(map);
+		model.addAttribute("goodsClassList",goodsClassList);
+		return "web/GoodsFaBu";
 
 	}
 

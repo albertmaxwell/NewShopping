@@ -29,4 +29,11 @@ public interface Jpaservice {
 	List<BargainGoods> getBargainGoodsList(Map<String, Object> map);
 
 	List<DeliveryGoods> getDeliveryGoodsList(Map<String, Object> map);
+
+	/**
+	 *
+	 * @param map
+	 * @return
+	 */
+	GoodsClass getGoodsClassById(Map<String, Object> map);
 }

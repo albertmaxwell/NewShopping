@@ -1,92 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        .fun{
-            box-shadow:0px 0px 5px 0px #888888;
-            margin-left: 4rem;
-            width: 18rem;
-            height: 80%;
-            display:flex;
-            display: -webkit-flex;
-            flex-direction:column;
-            align-items:center;
-            justify-content:flex-start;
-            overflow:auto;
-        }
+    <script src="../../js/jquery-1.9.1.min.js"></script>
 
-        .content{
-            width: 100%;
-            height: 30rem;
-            display:flex;
-            display: -webkit-flex;
-            flex-direction:row;
-            align-items:center;
-            justify-content:flex-start;
-        }
+    <style>
+
     </style>
 </head>
 <body>
 
-<div class="content">
-    <div class="fun">
+<div class="content" th:fragment="mycontent" id="load_dialog">
+
+    <div class="fun" id="class_1">
         <div>
-            <ul>
-                <li onclick="sss()"><a href="#"><span>男裝  时尚女装</span></a></li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="fun">
-        <div>
-            <ul>
-                <li onclick="sss()"><a href="#"><span>男裝  时尚女装</span></a></li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-
+            <ul th:each="GoodsClass : ${goodsClassList}">
+                <li th:id="${GoodsClass.id}" level="1" next="2" th:onclick="getGoodsClass([[${GoodsClass.id}]],this);"  th:text="${GoodsClass.className}"></li>
             </ul>
         </div>
     </div>
 
-    <div class="fun">
+    <div class="fun" id="class_2" style="display:none;">
         <div>
-            <ul>
-                <li onclick="sss()"><a href="#"><span>男裝  时尚女装</span></a></li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
-                <li>男鞋 女鞋  女包</li>
+            <ul id="goodClass2">
+            </ul>
+        </div>
+    </div>
 
+    <div class="fun" id="class_3" style="display:none;">
+        <div>
+            <ul id="goodClass3">
+            </ul>
+        </div>
+    </div>
+
+    <div class="fun" id="class_4" style="display:none;">
+        <div>
+            <ul id="goodClass4">
             </ul>
         </div>
     </div>
@@ -95,5 +46,24 @@
     <div></div>
 </div>
 
+
 </body>
+<script>
+
+
+
+    function getGoodsClass(pid) {
+        var param={'pid':"pid"};
+        $.ajax({
+            async: true,
+            type: 'GET',
+            url: '/requestGoods/loginInPage',
+            dataType:'json',
+            data: param, //请求参数
+            success: function (data) {
+               console.log(data);
+            }
+        });
+    }
+</script>
 </html>

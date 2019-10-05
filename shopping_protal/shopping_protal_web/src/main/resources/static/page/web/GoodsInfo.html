@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>商品信息</title>
@@ -374,7 +374,7 @@
 </head>
 <body>
 
-        <div class="info-center">
+        <div class="info-center" th:fragment="myGoodInfo">
             <form  class="niceform" id="formName" type="su" action="/requestGoods/addGoods" method="post" >
             <div class="title"><div>商品详细信息</div></div>
             <div class="classedit">
