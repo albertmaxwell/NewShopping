@@ -2,7 +2,10 @@ package com.shopping.shopping_protal_web.controller;
 
 import com.alibaba.shopping.common.response.ResponseMessage;
 import com.alibaba.shopping.common.response.Result;
+import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.Goods;
+import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.GoodsBrand;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.GoodsClass;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.shopping.shopping_protal_service.service.Jpaservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,10 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author 金海洋
@@ -80,6 +80,35 @@ public class RequestAddGoods {
 								String seoKeyWord,
 								String seoDes
 								 ){
+		Goods goods = null;
+		goods.setAddTime(new Date());
+//		User user = this.userService.getObjById(SecurityUserHolder.getCurrentUser().getId());
+//		goods.setGoods_store("");
+		goods.setGoods_current_price(goods.getStore_price());
+		goods.setGoods_name(goods.getGoods_name());
+//		GoodsClass gc = this.goodsClassService.getObjById(Long.valueOf(Long.parseLong(goods_class_id)));
+//		goods.setGc(gc);
+
+//		if ((goods_main_img_id != null) && (!goods_main_img_id.equals(""))){
+//			main_img = this.accessoryService.getObjById(Long.valueOf(Long.parseLong(goods_main_img_id)));
+//		}
+//		goods.setGoods_main_photo(main_img);
+
+//		if ((goods_brand_id != null) && (!goods_brand_id.equals(""))){
+//			GoodsBrand goods_brand = this.goodsBrandService.getObjById(Long.valueOf(Long.parseLong(goods_brand_id)));
+//			goods.setGoods_brand(goods_brand);
+//		}
+
+		// 组装商品属性
+//		goods.setGoods_property(Json.toJson(maps, JsonFormat.compact()));
+
+		// 组装商品多规格库存和价格
+//		goods.setGoods_inventory_detail(Json.toJson(maps, JsonFormat.compact()));
+
+		goods.setTransport(null);
+//		this.goodsService.save(goods);
+
+
 
 	}
 
@@ -112,5 +141,7 @@ public class RequestAddGoods {
 		}
 		return Result.success(list);
 	}
+
+
 
 }

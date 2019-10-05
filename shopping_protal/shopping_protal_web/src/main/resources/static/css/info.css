@@ -1,0 +1,359 @@
+.info-center{
+    width: 100%;
+    height: 150rem;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+
+}
+.title{
+    background-color: #f2141f;
+    width: 100%;
+    height: 3rem;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+}
+.title div{
+    margin-left: 1rem;
+
+}
+.classedit{
+    width: 100%;
+    height: 5rem;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+}
+.classedit div{
+    margin-left: 3rem;
+
+}
+.classedit button{
+    width: 5rem;
+    height: 2rem;
+}
+.goodsname{
+    border-top:1px solid #b0b0b0;
+    width: 100%;
+    height: 4rem;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+}
+.goodsname div{
+    margin-left: 3rem;
+
+}
+
+.goodsname input{
+    width: 40rem;
+    height: 2rem;
+}
+
+.radio{
+    border-top:1px solid #b0b0b0;
+    width: 100%;
+    height: 5rem;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+.radio input{
+    width: 1rem;
+    height: 1rem;
+}
+.radio div{
+    margin-left: 3rem;
+}
+.eee{
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+
+.rrr{
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.pricename{
+    border-top:1px solid #b0b0b0;
+    width: 100%;
+    height: 5rem;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+}
+.pricename div{
+    margin-left: 3rem;
+
+}
+.pricename input{
+    width: 8rem;
+    height: 2rem;
+}
+
+.seo{
+    border-top:1px solid #b0b0b0;
+    width: 100%;
+    height: 20rem;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+}
+.seo div{
+    margin-left: 3rem;
+
+}
+.seo input{
+    width: 30rem;
+    height: 10rem;
+}
+
+.brandname{
+    border-top:1px solid #b0b0b0;
+    width: 100%;
+    height: 5rem;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+}
+.brandname div{
+    margin-left: 3rem;
+
+}
+.brandname select{
+    width: 8rem;
+    height: 2rem;
+}
+
+.warn{
+    color: #b03b2d;
+}
+
+.uploadPic{
+    width: 100%;
+    height: 35rem;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+}
+.what{
+    border-top:1px solid #b0b0b0;
+    width: 20%;
+    height: 100%;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:flex-start;
+    justify-content:center;
+}
+.piccontent{
+    background-color: #f1f232;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+}
+
+.what div{
+    margin-top: 2rem;
+}
+
+.yyy{
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:flex-start;
+    justify-content:flex-start;
+}
+.xxx{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 8rem;
+    height: 2.5rem;
+}
+.ddd{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 5rem;
+    height: 2.5rem;
+}
+.ok{
+    background-color: #e52f29;
+    width: 100%;
+    height: 70%;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+}
+.up{
+    background-color: #3c3be5;
+    width: 16rem;
+    height:16rem;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+}
+.down{
+    background-color: #3c3be5;
+    width: 6.5rem;
+    height:6.5rem;
+}
+.love{
+    width: 28rem;
+    height:16rem;
+    background-color: #3ce565;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:flex-end;
+    justify-content:space-between;
+}
+
+.eat{
+    background-color: #e5701a;
+    width: 12rem;
+    height:12rem;
+}
+
+.small{
+    width: 12rem;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:flex-end;
+    justify-content:space-between;
+}
+.small div{
+    margin-top: 0.5rem;
+
+    background-color: #3ce565;
+    width: 2rem;
+    height: 2rem;
+}
+.yoona{
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.jiayou{
+    width: 6rem;
+    height: 2rem;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+
+}
+
+.jiayou div{
+    margin-left: 0.003rem;
+    background-color: #b03b2d;
+    width: 1.2rem;
+    height: 1.5rem;
+}
+.get{
+    background-color: #8B008B;
+    width: 100%;
+    height: 5rem;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+.ed{
+    border-top:1px solid #b0b0b0;
+    width: 100%;
+    height: 700px;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+}
+.like{
+    width: 20%;
+    height: 100%;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:flex-start;
+    justify-content:center;
+}
+.like div{
+    margin-top: 2rem;
+}
+.shenqi{
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items:flex-start;
+    justify-content:center;
+    width: 100%;
+    height: 100%;
+}
+
+.submit{
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+}
+
+.submit button{
+    width: 5rem;
+    height: 3rem;
+}
+
+.niceform{
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    height: 150rem;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+}

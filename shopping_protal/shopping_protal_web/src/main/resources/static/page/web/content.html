@@ -16,7 +16,7 @@
     <div class="fun" id="class_1">
         <div>
             <ul th:each="GoodsClass : ${goodsClassList}">
-                <li th:id="${GoodsClass.id}" level="1" next="2" th:onclick="getGoodsClass([[${GoodsClass.id}]],this);"  th:text="${GoodsClass.className}"></li>
+                <li th:id="${GoodsClass.id}" level="1" next="2" onclick="getGoodsClass(this);"  th:text="${GoodsClass.className}"></li>
             </ul>
         </div>
     </div>
@@ -49,21 +49,5 @@
 
 </body>
 <script>
-
-
-
-    function getGoodsClass(pid) {
-        var param={'pid':"pid"};
-        $.ajax({
-            async: true,
-            type: 'GET',
-            url: '/requestGoods/loginInPage',
-            dataType:'json',
-            data: param, //请求参数
-            success: function (data) {
-               console.log(data);
-            }
-        });
-    }
 </script>
 </html>

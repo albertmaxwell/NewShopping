@@ -1,4 +1,4 @@
-function getGoodsClass(pid,obj) {
+function getGoodsClass(obj) {
     var pid=$(obj).attr("id");
     var level=$(obj).attr("level");
     var next=parseInt($(obj).attr("next"));
@@ -20,8 +20,8 @@ function getGoodsClass(pid,obj) {
             var count=next+1;
             for ( var i = 0; i <data.data.length; i++){
                 console.log(data.data[i].id);
-                var str="<li id='"+data.data[i].id+"'  level='"+next+"' onclick='getGoodsClass(next,this)' name='"+data.data[i].className+"' next='"+count+"'>'"+data.data[i].className+"'</li>";
-                $("#goodClass2").append(str);
+                var str="<li id='"+data.data[i].id+"'  level='"+next+"' onclick='getGoodsClass(this)' name='"+data.data[i].className+"' next='"+count+"'>'"+data.data[i].className+"'</li>";
+                $("#goodClass"+next).append(str);
                 jQuery("#class_"+next).show();
             }
         }

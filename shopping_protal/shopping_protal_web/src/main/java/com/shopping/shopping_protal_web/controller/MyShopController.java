@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +26,7 @@ public class MyShopController {
 	Jpaservice sss;
 
 	/**
-	 * 商品发布
+	 * 商品发布  点击发布商品的时候
 	 * @param model
 	 * @return
 	 */
@@ -37,6 +39,16 @@ public class MyShopController {
 		return "web/GoodsFaBu";
 
 	}
+
+
+	@RequestMapping(value = "/goodsFabBuSecond",method = RequestMethod.GET)
+	public String goodsFabBuSecond(HttpServletRequest request, HttpServletResponse response){
+
+
+
+		return "web/GoodsFaBuSecond";
+	}
+
 
 	/**
 	 * 销售中的商品

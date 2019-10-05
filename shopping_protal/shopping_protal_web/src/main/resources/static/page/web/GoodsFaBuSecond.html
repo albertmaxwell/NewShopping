@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>商品分布</title>
-    <script src="../../js/jquery-1.9.1.min.js"></script>
-    <link th:href="@{../../css/content.css}" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" th:src="@{../../js/content.js}"></script>
-    <script type="text/javascript" th:src="@{../../js/vue.js}"></script>
+    <script type="text/javascript" src="../../js/jquery-1.9.1.min.js" ></script>
+
+    <!--导入在线HTML编辑器 -->
+    <script type="text/javascript" src="../../plugin/kindeditor-4.1.11-zh-CN/kindeditor/kindeditor-all.js" ></script>
+    <script type="text/javascript" src="../../plugin/kindeditor-4.1.11-zh-CN/kindeditor/lang/zh-CN.js" ></script>
+    <link rel="stylesheet" href="../../plugin/kindeditor-4.1.11-zh-CN/kindeditor/themes/default/default.css" />
+    <link th:href="@{../../css/info.css}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" th:src="@{../../js/info.js}"></script>
+
     <style>
 
         *{
@@ -236,23 +241,12 @@
         </div>
 
         <div class="cool"><div class="you">您当前选择的商品类别是：</div></div>
-        <!--<div class="content-center">
-            <iframe frameborder="0" name="content-right" marginwidth=0 marginheight=0 width=100% height=100%   src="content.html"></iframe>
-        </div>-->
-       <!-- <div class="info-center">
-            <iframe frameborder="0" name="content-right" marginwidth=0 marginheight=0 width=100% height=100%   src="GoodsInfo.html"></iframe>
-        </div>-->
 
-
-
-            <div   class="content" th:replace="/web/content :: mycontent"  ></div>
-<!--           <div   class="info-center" th:replace="/web/GoodInfo :: myGoodInfo"  ></div>-->
-
-
+        <div   class="info-center" th:replace="/web/GoodsInfo :: myGoodInfo"  ></div>
 
         <div class="run">
             <div class="sss">
-                <button onclick="window.location.href='goodsFabBuSecond'">下一步</button>
+                <button >下一步</button>
             </div>
         </div>
         <div class="ad">
