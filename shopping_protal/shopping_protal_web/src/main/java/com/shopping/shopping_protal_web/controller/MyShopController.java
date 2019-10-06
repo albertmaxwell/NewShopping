@@ -1,15 +1,22 @@
 package com.shopping.shopping_protal_web.controller;
 
+import com.alibaba.shopping.common.response.ResponseMessage;
+import com.alibaba.shopping.common.response.Result;
+import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.Accessory;
+import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.Album;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.GoodsClass;
 import com.shopping.shopping_protal_service.service.Jpaservice;
+import com.shopping.shopping_protal_web.tools.AlbumViewTools;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +31,8 @@ public class MyShopController {
 
 	@Autowired
 	Jpaservice sss;
+	@Autowired
+	private AlbumViewTools bbb;
 
 	/**
 	 * 商品发布  点击发布商品的时候
@@ -416,11 +425,59 @@ public class MyShopController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "picMsg")
+	@RequestMapping(value = "/picMsg")
 	public String picMsg(Model model){
+		Map<String,Object> map = new HashMap<String, Object>();
+		List<Album> albumList=sss.getAlbumPage(map);
+		model.addAttribute("albumList",albumList);
+		//List<Accessory> s=bbb.query_album("1");
+		model.addAttribute("albumViewTools", this.bbb);
+		return "web/PicMsg";
+	}
 
-		return "";
 
+	/**
+	 * 创建相册
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping(value = "/createAlbum",method = RequestMethod.GET)
+	@ResponseBody
+	public ResponseMessage<?> createAlbum(String bid, String bname){
+		Map<String,Object> map = new HashMap<String, Object>();
+		//Album album = null;
+		//album.setAddTime(new Date());
+		List<Album> albumList=sss.getAlbumPage(map);
+		//model.addAttribute("albumList",albumList);
+		return Result.success("添加成功");
+	}
+
+
+	/**
+	 * 获取相册列表
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping(value = "/getAlbumPage",method = RequestMethod.GET)
+	public String getAlbumPage(Model model,String pid){
+		Map<String,Object> map = new HashMap<String, Object>();
+		List<Album> albumList=sss.getAlbumPage(map);
+		model.addAttribute("albumList",albumList);
+
+		return "web/PicMsg";
+	}
+
+	/**
+	 * 获取相册详情
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping(value = "/getAlbumDetailById",method = RequestMethod.GET)
+	public String getAlbumDetailById(Model model,String id){
+		Map<String,Object> map = new HashMap<String, Object>();
+		List<Album> albumList=sss.getAlbumPage(map);
+		model.addAttribute("albumList",albumList);
+		return "web/PicMsg";
 	}
 
 

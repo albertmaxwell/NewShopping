@@ -36,4 +36,13 @@ public interface Jpaservice {
 	 * @return
 	 */
 	GoodsClass getGoodsClassById(Map<String, Object> map);
+
+	/**
+	 *
+	 * @param map
+	 * @return
+	 */
+	List<Album> getAlbumPage(Map<String, Object> map);
+
+	List<Accessory> getAccessoryList(Map<String,Object> s);
 }

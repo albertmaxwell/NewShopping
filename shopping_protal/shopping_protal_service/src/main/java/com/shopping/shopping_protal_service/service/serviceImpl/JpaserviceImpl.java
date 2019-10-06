@@ -37,6 +37,10 @@ public class JpaserviceImpl implements Jpaservice {
 	private BargainGoodsDao bargaingoodsdao;
 	@Autowired
 	private DeliveryGoodsDao deliverygoodsdao;
+	@Autowired
+	private AlbumDao albumdao;
+	@Autowired
+	private Accessorydao accessorydao;
 
 
 
@@ -108,5 +112,17 @@ public class JpaserviceImpl implements Jpaservice {
 
 		GoodsClass goodsClass=goodsclass.findGoodsClass(map);
 		return goodsClass;
+	}
+
+	@Override
+	public List<Album> getAlbumPage(Map<String, Object> map) {
+		List<Album> albumList =albumdao.findAlbumPage(map);
+		return albumList;
+	}
+
+	@Override
+	public List<Accessory> getAccessoryList(Map<String,Object> s) {
+		List<Accessory> accessoryList =accessorydao.findAccessoryList(s);
+		return accessoryList;
 	}
 }
