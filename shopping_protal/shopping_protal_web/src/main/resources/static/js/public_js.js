@@ -4,3 +4,7 @@ document.writeln("<script type=\'text/javascript\' src=\'/plugin/element-ui/inde
 document.writeln("<script type=\'text/javascript\' src=\'/plugin/layer_v2.1/layer/layer.js\'></script>");
 document.writeln("<script type=\'text/javascript\' src=\'/js/html2canvas.min.js\'></script>");
 document.writeln("<script type=\'text/javascript\' src=\'/plugin/layui-v2.5.5/layui/layui.js\'></script>");
+document.writeln("<script type=\'text/javascript\' src=\'/plugin/SWFUpload/swfupload.js\'></script>");
+document.writeln("<script type=\'text/javascript\' src=\'/plugin/SWFUpload/swfupload.queue.js\'></script>");
+document.writeln("<script type=\'text/javascript\' src=\'/plugin/SWFUpload/swfobject.js\'></script>");
+// document.writeln("<script type=\'text/javascript\' src=\'/plugin/flash/swfupload.swf\'></script>");

@@ -32,7 +32,7 @@ public class MyFilterTwo implements Filter {
 
 	@Override
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-		HttpServletRequest request = (HttpServletRequest)servletRequest;
+		/*HttpServletRequest request = (HttpServletRequest)servletRequest;
 		HttpServletResponse response = (HttpServletResponse)servletResponse;
 		response.setContentType("application/json; charset=utf-8");
 		response.setCharacterEncoding("utf-8");
@@ -55,7 +55,7 @@ public class MyFilterTwo implements Filter {
 					response.sendRedirect(request.getContextPath()+"/page/test/logintest.html");
 				}
 			}
-		}
+		}*/
 		filterChain.doFilter(servletRequest, servletResponse);
 	}
 

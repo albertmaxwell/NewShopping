@@ -11,14 +11,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9386ca-bb6f-46bb-901f-2779732877b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/albumUp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/ok.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/SWFUpload/handlers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/SWFUpload/swfobject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/SWFUpload/swfupload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/SWFUpload/swfupload.queue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/buyswf/XPButtonUploadText_61x22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/buyswf/jquery.swfupload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/buyswf/swfobject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/buyswf/swfupload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/buyswf/swfupload.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/buyswf/upload_my.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/flash/c_upload_multipowupload.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/flash/iskyshop_avatar.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/flash/playerProductInstall.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/flash/soundPlayer.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/flash/swfupload.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/multiimage/images/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/multiimage/images/select-files-en.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/multiimage/images/select-files-zh_CN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/multiimage/images/swfupload.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/multiimage/multiimage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/swfflash/swfupload.swf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/jpadao/AlbumDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/jpadao/AlbumDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/jpadao/jpadaoimpl/AlbumDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_dao/src/main/java/com/alibaba/shopping/shopping_protal_dao/jpadao/jpadaoimpl/AlbumDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/Jpaservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/Jpaservice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/serviceImpl/JpaserviceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_service/src/main/java/com/shopping/shopping_protal_service/service/serviceImpl/JpaserviceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/MyShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/MyShopController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/filter/MyFilterTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/filter/MyFilterTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/js/public_js.js" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/js/public_js.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/PicMsg.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/PicMsg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/albumUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/albumUp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../api_proxy_plugin/src/main/java/com/api/proxy/plugin/util/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../api_proxy_plugin/src/main/java/com/api/proxy/plugin/util/MD5Util.java" afterDir="false" />
       <change beforePath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application-druid.yml" beforeDir="false" afterPath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application-druid.yml" afterDir="false" />
       <change beforePath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application.yml" beforeDir="false" afterPath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application.yml" afterDir="false" />
@@ -114,7 +134,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/SWFUpload" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -135,11 +155,11 @@
       <recent name="com.alibaba.shopping.shopping_protal_dao.mapper" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\static\img" />
+      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\static\plugin\SWFUpload" />
+      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\static\plugin\buyswf" />
+      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\static\plugin\sss" />
       <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\static\plugin" />
-      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\static\js" />
-      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\static\page\web" />
-      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_dao\src\main\java\com\alibaba\shopping\shopping_protal_dao\jpadao\jpadaoimpl" />
+      <recent name="E:\ideaproject\AlibabaShopping\NewShopping\shopping_protal\shopping_protal_web\src\main\resources\static\plugin\flash" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -530,7 +550,10 @@
       <workItem from="1569905533980" duration="21632000" />
       <workItem from="1570065598831" duration="32349000" />
       <workItem from="1570181777105" duration="38423000" />
-      <workItem from="1570327727407" duration="40298000" />
+      <workItem from="1570327727407" duration="41362000" />
+      <workItem from="1570423724420" duration="8173000" />
+      <workItem from="1570436432211" duration="4686000" />
+      <workItem from="1570441152576" duration="5401000" />
     </task>
     <servers />
   </component>
