@@ -442,14 +442,24 @@ public class MyShopController {
 	 * @return
 	 */
 	@RequestMapping(value = "/createAlbum",method = RequestMethod.GET)
-	@ResponseBody
-	public ResponseMessage<?> createAlbum(String bid, String bname){
+	public String createAlbum(Model model){
 		Map<String,Object> map = new HashMap<String, Object>();
-		//Album album = null;
-		//album.setAddTime(new Date());
 		List<Album> albumList=sss.getAlbumPage(map);
-		//model.addAttribute("albumList",albumList);
-		return Result.success("添加成功");
+		model.addAttribute("aaa",albumList);
+		return "web/albumUp";
+	}
+
+	/**
+	 * 查询相册下拉框字典
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping(value = "/albumDic",method = RequestMethod.GET)
+	public String albumDic(Model model){
+		Map<String,Object> map = new HashMap<String, Object>();
+		List<Album> albumList=sss.getAlbumDic(map);
+		model.addAttribute("albumList",albumList);
+		return "web/PicMsg";
 	}
 
 

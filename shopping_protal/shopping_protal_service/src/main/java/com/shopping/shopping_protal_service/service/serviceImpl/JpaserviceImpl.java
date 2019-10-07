@@ -125,4 +125,11 @@ public class JpaserviceImpl implements Jpaservice {
 		List<Accessory> accessoryList =accessorydao.findAccessoryList(s);
 		return accessoryList;
 	}
+
+	@Override
+	public List<Album> getAlbumDic(Map<String, Object> map) {
+
+		List<Album> albumList =albumdao.findAlbumDic(map);
+		return null;
+	}
 }

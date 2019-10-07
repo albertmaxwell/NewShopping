@@ -19,4 +19,10 @@ public interface AlbumDao extends BaseDao<Album> {
 	 */
 	List<Album> findAlbumPage(Map<String,Object> map);
 
+	/**
+	 *
+	 * @param map
+	 * @return
+	 */
+	List<Album> findAlbumDic(Map<String, Object> map);
 }

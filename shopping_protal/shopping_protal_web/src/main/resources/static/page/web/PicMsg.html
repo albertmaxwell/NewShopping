@@ -25,14 +25,40 @@
         .msg-daohang{
             background-color: #f2141f;
             width: 100%;
-            height: 3rem;
+            height: 5rem;
             display:flex;
             display: -webkit-flex;
             flex-direction:row;
             align-items:center;
             justify-content:flex-start;
+            position: relative;
         }
         .msg-daohang div  {
+            margin-left: 5rem;
+            width: 10rem;
+            height: 5rem;
+            outline: none;
+            color: #f7f7f7;
+            text-decoration:none;
+        }
+        .msg-daohang a{
+            font-size: large;
+            font-family: "微软雅黑", "宋体", Arial, "Times New Roman", Times, serif;
+            font-weight: bolder;
+        }
+
+        .sb{
+            background-color:#1d2cb0;
+            width: 100%;
+            height: 5rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:flex-start;
+            position: relative;
+        }
+        .sb div  {
             margin-left: 5rem;
             width: 5rem;
             height: 3rem;
@@ -46,7 +72,7 @@
 
 
         .msg-creat{
-            background-color: #1d2cb0;
+            background-color: #393D49;
             width: 100%;
             height: 4rem;
             display:flex;
@@ -99,6 +125,7 @@
         }
 
         .number{
+            background-color: #FF5722;
             width: 100%;
             height: 15%;
             display:flex;
@@ -133,29 +160,29 @@
 <body>
   <div class="box">
       <div class="msg-daohang">
-          <div >
-              <a href="#">卖家中心</a>
+          <div>
+              <a href="#"><i class="layui-icon layui-icon-username" style="font-size: 30px; color: #1E9FFF;"></i> 卖家中心</a>
           </div>
           <div>
-              <a href="#">我的相册</a>
+              <a href="#"><i class="layui-icon layui-icon-camera-fill" style="font-size: 30px; color: #1E9FFF;"></i>我的相册</a>
           </div>
       </div>
 
-      <div class="msg-daohang">
+      <div class="sb">
           <div>
-              <button class="layui-btn" lay-submit="" lay-filter="pageSubmit" onclick="creatForm()" >卖家中心</button>
+              <button class="layui-btn layui-btn-lg layui-btn-normal" lay-submit="" lay-filter="pageSubmit" onclick="creatForm()" >卖家中心</button>
           </div>
           <div>
-              <button class="layui-btn" lay-submit="" lay-filter="pageSubmit" onclick="creatForm()" >我的相册</button>
+              <button class="layui-btn layui-btn-warm" lay-submit="" lay-filter="pageSubmit" onclick="creatForm()" >我的相册</button>
           </div>
       </div>
 
       <div class="msg-creat">
           <div >
-              <button class="layui-btn" lay-submit="" lay-filter="pageSubmit" onclick="creatForm()" href="#">创建相册</button>
+              <button class="layui-btn layui-btn-radius layui-btn-danger" lay-submit="" lay-filter="pageSubmit" onclick="creatForm()" href="#">创建相册</button>
           </div>
           <div>
-              <button id="add" class="layui-btn" lay-submit="" lay-filter="pageSubmit" onclick="uploadPic()">上传图片</button>
+              <button id="add" class="layui-btn layui-btn-radius layui-btn-danger" lay-submit="" lay-filter="pageSubmit" onclick="uploadPic()">上传图片</button>
           </div>
       </div>
 
@@ -178,27 +205,10 @@
       </form>
   </div>
 
-  <div class="site-text" style="margin: 5%; display: none" id="uploadPicPage"  target="test123">
-      <form class="layui-form" id="upPic" method="post" lay-filter="example">
-          <div class="layui-form-item">
-              <label class="layui-form-label">上传至:</label>
-             <!-- <div class="layui-input-block">
-                  <input type="checkbox" name="CSDN" lay-filter="like" title="复选框一" value="dongsir">
-                  <input type="checkbox" name="CSDN" lay-filter="like" title="复选框二" value="董先生">
-              </div>-->
-              <div class="layui-input-block">
-                  <select name="city" lay-verify="">
-                      <option value="">请选择一个城市</option>
-                      <option value="010">北京</option>
-                      <option value="021">上海</option>
-                      <option value="0571">杭州</option>
-                  </select>
-              </div>
 
-          </div>
 
-      </form>
-  </div>
+<!--    <div  th:replace="/web/albumUp :: albumUp"  ></div>-->
+
 
   <!--介绍下th：href在项目中的使用。
 
@@ -231,7 +241,7 @@
         </div>
         <div class="number">
             <div ><a>默认相册</a></div>
-            <div >共<span th:text="${albumViewTools.query_album(Album.getId()).size()}" th:remove="tag"></span>张</div>
+            <div >共<span th:text="${albumViewTools.query_album(Album.getId().toString()).size()}" th:remove="tag"></span>张</div>
         </div>
     </div>
 </div>
@@ -245,6 +255,75 @@
     layui.use('form', function(){
         var form = layui.form;
     });
+
+    function clickPic() {
+
+    }
+
+
+   /* $(function(){
+        $(":button").click(function() {
+            var str = $("#iq option").map(function(){return $(this).val();}).get().join(", ")
+            alert(str);
+        });
+    });*/
+
+
+
+
+    function uploadPic() {
+
+        $.ajax({
+            async: false,
+            type: 'GET',
+            url: '/myShopController/createAlbum',
+            dataType:'html',
+            success: function (html) {
+                $("body").append(html);
+                layui.use('form', function(){
+                    var form = layui.form;
+                    //只有执行了这一步，部分表单元素才会自动修饰成功
+                    //但是，如果你的HTML是动态生成的，自动渲染就会失效
+                    //因此你需要在相应的地方，执行下述方法来手动渲染，跟这类似的还有 element.init();
+                    form.render();
+                });
+            }
+        });
+
+        //页面层
+        layer.open({
+            title:"上传图片",
+            //type:layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）,你用哪种，那么你想对应的内容的路径也要符合那种的格式，比如如果你用页面层你就不能用id去取你的弹出层，而必须定义一个页面
+            type: 1,
+            shadeClose: true,
+            // area: ['350px', '360px'], //宽高
+            area:['50%','50%'],
+            btn: ['上传', '取消'],
+            maxmin: true ,//允许全
+            skin: 'layui-layer-molv',
+            shadeClose: true,// 屏最小化
+            //content: "@Url.Action("AddUser", "UserInfo")"  //调到新增页面
+            content:$("#uploadPicPage"),  //弹窗路径
+            yes:function(index,layero){
+                $.getJSON('/myShopController/createAlbum',{
+                    bid: $('#bid').val(),
+                    bname: $('#bname').val(),
+                },function(data){
+                    console.log(data.ok);
+                    //根据后台返回的参数，来进行判断
+                    if(data.ok){
+                        layer.alert('增加成功',{icon:1,title:'提示'},function(i){
+                            layer.close(i);
+                            layer.close(index);//关闭弹出层
+                            $("#upPic")[0].reset()//重置form
+                        })
+                        resPicPage(1);
+                    }
+                });
+            }
+
+        });
+    }
 
 
     function creatForm() {
@@ -283,41 +362,7 @@
         });
     }
 
-    function uploadPic() {
-        //页面层
-        layer.open({
-            title:"上传图片",
-            //type:layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）,你用哪种，那么你想对应的内容的路径也要符合那种的格式，比如如果你用页面层你就不能用id去取你的弹出层，而必须定义一个页面
-            type: 1,
-            shadeClose: true,
-            // area: ['350px', '360px'], //宽高
-            area:['50%','50%'],
-            btn: ['上传', '取消'],
-            maxmin: true ,//允许全
-            skin: 'layui-layer-molv',
-            shadeClose: true,// 屏最小化
-            //content: "@Url.Action("AddUser", "UserInfo")"  //调到新增页面
-            content:$("#uploadPicPage"),  //弹窗路径
-            yes:function(index,layero){
-                $.getJSON('/myShopController/createAlbum',{
-                    bid: $('#bid').val(),
-                    bname: $('#bname').val(),
-                },function(data){
-                    console.log(data.ok);
-                    //根据后台返回的参数，来进行判断
-                    if(data.ok){
-                        layer.alert('增加成功',{icon:1,title:'提示'},function(i){
-                            layer.close(i);
-                            layer.close(index);//关闭弹出层
-                            $("#upPic")[0].reset()//重置form
-                        })
-                        resPicPage(1);
-                    }
-                });
-            }
 
-        });
-    }
 
     $(function(){
         resPicPage();

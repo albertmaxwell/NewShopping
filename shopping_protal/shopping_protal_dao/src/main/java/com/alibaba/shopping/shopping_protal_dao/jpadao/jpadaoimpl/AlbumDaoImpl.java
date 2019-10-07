@@ -28,5 +28,11 @@ public class AlbumDaoImpl extends AbstractBaseDao<Album> implements AlbumDao {
 		return  goodsClassList;
 	}
 
+	@Override
+	public List<Album> findAlbumDic(Map<String, Object> map) {
+		List<Album> goodsClassList=this.find("select obj from Album obj where obj.user.id=?1 order by obj.album_sequence asc","32768");
+		return  goodsClassList;
+	}
+
 
 }

@@ -1,0 +1,30 @@
+
+
+<!--弹出框控件-->
+<div   class="site-text" style="margin: 5%; display: none" id="uploadPicPage"  target="test123">
+    <form  class="layui-form layui-form-pane" id="upPic" method="post" lay-filter="example">
+        <div class="layui-form-item" pane>
+            <label class="layui-form-label layui-bg-orange" >上传至:</label>
+            <div  class="layui-input-block">
+                <select name="city" lay-verify="" >
+                    <option th:each="Album : ${aaa}" th:value="${Album.getId()}" > <td th:text="${Album.getAlbum_name()}"></td></option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item" >
+            <label class="layui-form-label layui-bg-red">选择图片:</label>
+            <div class="layui-input-block">
+                <button class="layui-btn layui-btn-radius layui-btn-danger" lay-submit lay-filter="*">选择上传相册图片</button>
+            </div>
+        </div>
+
+        <div class="layui-form-item" >
+            <label class="layui-form-label layui-bg-black">点击上传:</label>
+            <div class="layui-input-block">
+                <button class="layui-btn layui-btn-radius layui-btn-danger" lay-submit lay-filter="*">上传</button>
+            </div>
+        </div>
+
+    </form>
+</div>
