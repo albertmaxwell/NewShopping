@@ -11,32 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9386ca-bb6f-46bb-901f-2779732877b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/ok.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/SWFUpload/handlers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/SWFUpload/swfobject.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/SWFUpload/swfupload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/SWFUpload/swfupload.queue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/buyswf/XPButtonUploadText_61x22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/buyswf/jquery.swfupload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/buyswf/swfobject.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/buyswf/swfupload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/buyswf/swfupload.swf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/buyswf/upload_my.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/flash/c_upload_multipowupload.swf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/flash/iskyshop_avatar.swf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/flash/playerProductInstall.swf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/flash/soundPlayer.swf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/flash/swfupload.swf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/multiimage/images/image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/multiimage/images/select-files-en.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/multiimage/images/select-files-zh_CN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/multiimage/images/swfupload.swf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/multiimage/multiimage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/plugin/swfflash/swfupload.swf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/filter/MyFilterTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/filter/MyFilterTwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/js/public_js.js" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/js/public_js.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/PicMsg.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/PicMsg.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/albumUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/albumUp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../api_proxy_plugin/src/main/java/com/api/proxy/plugin/util/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../api_proxy_plugin/src/main/java/com/api/proxy/plugin/util/MD5Util.java" afterDir="false" />
@@ -553,7 +529,9 @@
       <workItem from="1570327727407" duration="41362000" />
       <workItem from="1570423724420" duration="8173000" />
       <workItem from="1570436432211" duration="4686000" />
-      <workItem from="1570441152576" duration="5401000" />
+      <workItem from="1570441152576" duration="7570000" />
+      <workItem from="1570496277248" duration="53000" />
+      <workItem from="1570498099506" duration="2770000" />
     </task>
     <servers />
   </component>

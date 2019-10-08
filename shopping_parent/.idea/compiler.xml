@@ -10,7 +10,6 @@
         <module name="ruoyi-generator" />
         <module name="target-web" />
         <module name="shopping_back_web" />
-        <module name="ruoyi-system" />
         <module name="origin-web" />
         <module name="shopping_protal_service" />
         <module name="ruoyi-admin" />
@@ -20,6 +19,7 @@
         <module name="shopping_back_dao" />
         <module name="shopping_back_service" />
         <module name="shopping-files" />
+        <module name="shopping-service-util" />
         <module name="shopping-web-util" />
         <module name="ruoyi-quartz" />
         <module name="shopping_back_bean" />
@@ -32,7 +32,7 @@
         <module name="ruoyi-framework" />
         <module name="ruoyi-common" />
         <module name="shopping_common" />
-        <module name="shopping-service-util" />
+        <module name="ruoyi-system" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
