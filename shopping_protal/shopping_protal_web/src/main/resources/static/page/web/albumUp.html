@@ -1,11 +1,11 @@
 <script>
     //swfupload神
-
+    var index
     var swfu;
 
     jQuery(document).ready(function(){
         var settings_object = {//定义参数配置对象
-            upload_url : "http://localhost:8056/file_plugin/swfUploads",
+            upload_url : "http://localhost:8056/myShopController/swfUploads",
             flash_url : "http://localhost:8056/plugin/swfflash/swfupload.swf",
             file_post_name : "Filedata",
             post_params : {
@@ -73,6 +73,10 @@
 
     }
     function upload_start_function(){
+        index = layer.load(1, {
+            shade: [0.1,'#fff'] //0.1透明度的白色背景
+        });
+         //index = layer.load(0, {shade: false});
 
     }
     function upload_progress_function(){
@@ -82,10 +86,12 @@
 
     }
     function upload_success_function(){
-
+        layer.close(index);
+        layer.alert("单个图片上传完成！", {icon:2});
     }
     function upload_complete_function(){
-
+        layer.close(index);
+        layer.alert("图片上传完成！", {icon:2});
     }
     function debug_function(){
 
@@ -95,7 +101,6 @@
         swfu.addPostParam("album_id",upload_album_id);
         jQuery("#img_desc_info").text("正在上传第1张,还剩下"+(swfu .getStats().files_queued-1)+"张等待上传");
         swfu.startUpload();
-
     }
 </script>
 

@@ -11,19 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9386ca-bb6f-46bb-901f-2779732877b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/mapper/AreaMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/controller/CommonUtilsFileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/listenter/ApplyRunListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/listenter/ApplyRunListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-files-plugin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-files-plugin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-files-plugin/src/main/java/com/shoppingfilesplugin/shoppingfilesplugin/plugin/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-files-plugin/src/main/java/com/shoppingfilesplugin/shoppingfilesplugin/plugin/config/WebConfigPluginFiles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-common-utils/src/main/java/com/alibaba/shopping/shoppingcommonutils/common/controller/FileUtilsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping-files-plugin/src/main/java/com/shoppingfilesplugin/shoppingfilesplugin/plugin/controller/FileNewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-files-plugin/src/main/java/com/shoppingfilesplugin/shoppingfilesplugin/plugin/controller/FileNewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-files-plugin/src/main/java/com/shoppingfilesplugin/shoppingfilesplugin/plugin/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-files-plugin/src/main/java/com/shoppingfilesplugin/shoppingfilesplugin/plugin/service/FileServicePluginFiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-files/src/main/java/com/shopping/files/shoppingfiles/ShoppingFilesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-files/src/main/java/com/shopping/files/shoppingfiles/ShoppingFilesApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/logger.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/logger.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/ShoppingProtalWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/ShoppingProtalWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/listener/ApplyUpLoadListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/listener/ApplyUpLoadListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/MyShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/java/com/shopping/shopping_protal_web/controller/MyShopController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/albumUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/albumUp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../api_proxy_plugin/src/main/java/com/api/proxy/plugin/util/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../api_proxy_plugin/src/main/java/com/api/proxy/plugin/util/MD5Util.java" afterDir="false" />
       <change beforePath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application-druid.yml" beforeDir="false" afterPath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application-druid.yml" afterDir="false" />
       <change beforePath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application.yml" beforeDir="false" afterPath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application.yml" afterDir="false" />
@@ -75,8 +68,8 @@
         <option value="JavaScript File" />
         <option value="FxmlFile" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -543,7 +536,7 @@
       <workItem from="1570498099506" duration="6153000" />
       <workItem from="1570583409750" duration="24000" />
       <workItem from="1571187994065" duration="681000" />
-      <workItem from="1571537770551" duration="26044000" />
+      <workItem from="1571537770551" duration="36325000" />
     </task>
     <servers />
   </component>

@@ -191,6 +191,7 @@ public class FileNewController {
 			}
 		}
 		resultVo.setData(ids);
+
 		return resultVo;
 
 	}

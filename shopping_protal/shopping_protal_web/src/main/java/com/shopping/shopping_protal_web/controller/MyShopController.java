@@ -1,25 +1,35 @@
 package com.shopping.shopping_protal_web.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.shopping.common.common.enums.ErrorCode;
+import com.alibaba.shopping.common.common.exception.ResultException;
+import com.alibaba.shopping.common.common.vo.ResultVo;
 import com.alibaba.shopping.common.response.ResponseMessage;
 import com.alibaba.shopping.common.response.Result;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.Accessory;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.Album;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.GoodsClass;
+import com.google.gson.Gson;
 import com.shopping.shopping_protal_service.service.Jpaservice;
 import com.shopping.shopping_protal_web.tools.AlbumViewTools;
+import com.shoppingfilesplugin.shoppingfilesplugin.plugin.runner.FilePluginConfig;
+import com.shoppingfilesplugin.shoppingfilesplugin.plugin.service.FileServicePluginFiles;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author 金海洋
@@ -33,6 +43,13 @@ public class MyShopController {
 	Jpaservice sss;
 	@Autowired
 	private AlbumViewTools bbb;
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+
+	@Autowired
+	private FileServicePluginFiles fileServicePluginFiles;
+	@Value("${files.controller.enable:false}")
+	private boolean controllerEnable;
 
 	/**
 	 * 商品发布  点击发布商品的时候
@@ -501,6 +518,119 @@ public class MyShopController {
 		List<Album> albumList=sss.getAlbumPage(map);
 		model.addAttribute("albumList",albumList);
 		return "web/PicMsg";
+	}
+
+	/**
+	 * 文件上传
+	 * @param file
+	 * @param suffix
+	 * @return
+	 */
+	@RequestMapping(value="upload", method=RequestMethod.POST)
+	public ResultVo upload(@RequestParam("file") MultipartFile file
+			, @RequestParam("suffix") String suffix
+			, @RequestParam(value = "busName", required = false) String busName //业务名
+			, HttpServletRequest request) {
+		ResultVo resultVo = null;
+
+		if(!controllerEnable) {
+			resultVo = new ResultVo();
+			resultVo.setCode(ErrorCode.ERROR.getCode());
+			resultVo.setMessage("文件服务未开启");
+			return resultVo;
+		}
+
+		String path = request.getContextPath();
+		FilePluginConfig fpc = FilePluginConfig.getInstance();
+		String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+"/" + fpc.getFileWebPrefix() + "/";
+		try {
+			if(file == null || StringUtils.isEmpty(suffix)) {
+				throw new ResultException(ErrorCode.PARAM_ERROR.getCode(), "参数错误");
+			}
+			resultVo = fileServicePluginFiles.upload(file, suffix, basePath, busName);
+		} catch (ResultException e) {
+			e.printStackTrace();
+			resultVo = e.getResultVO();
+		}
+		return resultVo;
+	}
+
+
+	/**
+	 * 多文件上传
+	 * @param file
+	 * @param suffix
+	 * @return
+	 */
+	@RequestMapping(value="/swfUploads", method=RequestMethod.POST)
+	public ResultVo swfUploads(MultipartFile Filedata, HttpServletRequest request,
+							   HttpServletResponse response, String ID,
+							   String Filename , String album_id) {
+		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+		//MultipartFile multipartFile = (MultipartFile) request;
+
+		List<MultipartFile> file=new ArrayList<>();
+		file.add(Filedata);
+		String suffix="png";
+		String busName="1111";
+		ResultVo resultVo = new ResultVo<>();
+		resultVo.setOk(true);
+		if(!controllerEnable) {
+			resultVo = new ResultVo();
+			resultVo.setCode(ErrorCode.ERROR.getCode());
+			resultVo.setMessage("文件服务未开启");
+			resultVo.setOk(false);
+			return resultVo;
+		}
+		String[] s = suffix.split(",");
+		if(file.size() != s.length) {
+			resultVo = new ResultVo();
+			resultVo.setCode(ErrorCode.ERROR.getCode());
+			resultVo.setMessage("文件与后缀不对应");
+			resultVo.setOk(false);
+			return resultVo;
+		}
+
+		//传输文件
+		List<String> ids = new ArrayList<>();
+		for(int i=0; i<file.size(); i++) {
+			ResultVo<String> temp = upload(file.get(i), s[i], busName, request);
+			if(10000 == temp.getCode()) {
+				ids.add(temp.getData());
+			} else {
+				resultVo.setMessage("部分文件未上传");
+			}
+		}
+		resultVo.setData(ids);
+		Map result = null;
+		try {
+			/*result = fileServicePluginFiles.find(ids.get(0));
+			System.out.println(result.get("data"));
+			Map jjj=(Map)result.get("data");
+			String jsonStr=result.get("data").toString().replaceAll("=",":");
+			Map maps = (Map) JSON.parse(jsonStr);
+			String url=maps.get("url").toString();*/
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		Map<String,Object> map=jdbcTemplate.queryForMap("select * from file_upload  where id='"+ids+"'");
+        StringBuffer reo=null;
+		reo.append("http://localhost:8056/");
+		reo.append(map.get("url"));
+		String url=reo.toString();
+		/*Accessory image = new Accessory();
+		image.setAddTime(new Date());
+		image.setExt((String) map.get("mime"));
+		image.setPath(url);
+		image.setWidth();
+		image.setHeight();
+		image.setName();
+		image.setUser();*/
+
+
+		return resultVo;
+
 	}
 
 
