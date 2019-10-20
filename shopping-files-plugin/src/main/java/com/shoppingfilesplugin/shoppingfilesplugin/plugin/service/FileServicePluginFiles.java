@@ -30,9 +30,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class FileService {
+public class FileServicePluginFiles {
 
-	private Logger logger = LoggerFactory.getLogger(FileService.class); 
+	private Logger logger = LoggerFactory.getLogger(FileServicePluginFiles.class);
 	
 	@Value("${files.server.url}")
 	private String fileServerUrl;

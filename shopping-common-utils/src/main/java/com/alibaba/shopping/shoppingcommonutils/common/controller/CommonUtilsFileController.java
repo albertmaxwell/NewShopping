@@ -3,7 +3,6 @@ package com.alibaba.shopping.shoppingcommonutils.common.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,9 +27,9 @@ import java.net.URLEncoder;
 @RequestMapping("/upload")
 @Controller
 //@CrossOrigin
-public class FileController {
+public class CommonUtilsFileController {
 
-	private Logger logger = LoggerFactory.getLogger(FileController.class);
+	private Logger logger = LoggerFactory.getLogger(CommonUtilsFileController.class);
 
 
 	@RequestMapping(value = "/test", method = RequestMethod.POST)

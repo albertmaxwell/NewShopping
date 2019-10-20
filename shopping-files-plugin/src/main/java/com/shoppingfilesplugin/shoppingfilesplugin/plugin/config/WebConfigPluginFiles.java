@@ -9,9 +9,9 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class WebConfig implements WebMvcConfigurer {
+public class WebConfigPluginFiles implements WebMvcConfigurer {
 	
-	private Logger logger = LoggerFactory.getLogger(WebConfig.class);
+	private Logger logger = LoggerFactory.getLogger(WebConfigPluginFiles.class);
 	
 	@Value("${files.path}")
 	private String filesPath;

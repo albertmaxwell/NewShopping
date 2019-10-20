@@ -5,7 +5,7 @@ import com.alibaba.shopping.common.common.enums.ErrorCode;
 import com.alibaba.shopping.common.common.exception.ResultException;
 import com.alibaba.shopping.common.common.vo.ResultVo;
 import com.shoppingfilesplugin.shoppingfilesplugin.plugin.runner.FilePluginConfig;
-import com.shoppingfilesplugin.shoppingfilesplugin.plugin.service.FileService;
+import com.shoppingfilesplugin.shoppingfilesplugin.plugin.service.FileServicePluginFiles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.util.StringUtils;
@@ -32,7 +32,7 @@ import java.util.Map;
 public class FileNewController {
 	
 	@Autowired
-	private FileService fileService;
+	private FileServicePluginFiles fileServicePluginFiles;
 	@Value("${files.controller.enable:false}")
 	private boolean controllerEnable;
 	
@@ -63,7 +63,7 @@ public class FileNewController {
 			if(file == null || StringUtils.isEmpty(suffix)) {
 				throw new ResultException(ErrorCode.PARAM_ERROR.getCode(), "参数错误");
 			}
-			resultVo = fileService.upload(file, suffix, basePath, busName);
+			resultVo = fileServicePluginFiles.upload(file, suffix, basePath, busName);
 		} catch (ResultException e) {
 			e.printStackTrace();
 			resultVo = e.getResultVO();
@@ -75,7 +75,7 @@ public class FileNewController {
 	public Map find(@RequestParam(value="id", required=true) String id) {
 		Map result = null;
 		try {
-			result = fileService.find(id);
+			result = fileServicePluginFiles.find(id);
 		} catch (Exception e) {
 			e.printStackTrace();
 //			result.put("code", 500);
@@ -90,7 +90,7 @@ public class FileNewController {
 	public Map finds(@RequestParam(value="ids", required=true) String ids) {
 		Map result = null;
 		try {
-			result = fileService.finds(ids);
+			result = fileServicePluginFiles.finds(ids);
 		} catch (Exception e) {
 			e.printStackTrace();
 //			result.put("code", 500);
