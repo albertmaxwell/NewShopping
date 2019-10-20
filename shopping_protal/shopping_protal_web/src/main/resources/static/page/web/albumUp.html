@@ -5,13 +5,11 @@
 
     jQuery(document).ready(function(){
         var settings_object = {//定义参数配置对象
-            upload_url : "http://localhost:8056/myShopController/picMsg#",
+            upload_url : "http://localhost:8056/file_plugin/swfUploads",
             flash_url : "http://localhost:8056/plugin/swfflash/swfupload.swf",
             file_post_name : "Filedata",
             post_params : {
-                "post_param_name_1" : "post_param_value_1",
-                "post_param_name_2" : "post_param_value_2",
-                "post_param_name_n" : "post_param_value_n"
+                "ID" : "123456",
             },
             use_query_string : false,
             requeue_on_error : false,
@@ -29,7 +27,7 @@
             preserve_relative_urls : false,
 
             button_placeholder_id : "element_id",
-            button_image_url : "http://localhost:8056/myShopController/picMsg#",
+            button_image_url : "http://localhost:8056/myShopController/upload#",
             button_width : 150,
             button_height : 20,
             button_text : "<b style='color: #FF0000; font-weight: bolder;font-size: larger;'>点击上传:</b> <span class='redText'>选择上传图片</span>",
@@ -95,9 +93,9 @@
     function upload_img(){
         var upload_album_id=jQuery("#upload_album_id").val();
         swfu.addPostParam("album_id",upload_album_id);
-        jQuery("#img_desc_info").text("正在上传第1张,还剩下"+(swf_upload.getStats().files_queued-1)+"张等待上传");
+        jQuery("#img_desc_info").text("正在上传第1张,还剩下"+(swfu .getStats().files_queued-1)+"张等待上传");
         swfu.startUpload();
-        alert("vvvv");
+
     }
 </script>
 
@@ -116,29 +114,22 @@
         <div class="layui-form-item" >
             <label class="layui-form-label layui-bg-red">选择图片:</label>
             <div class="layui-input-block">
-                <button id="upload_imgs" class="layui-btn layui-btn-radius layui-btn-danger" lay-submit lay-filter="*">选择上传相册图片</button>
+                <button id="element_id" class="layui-btn layui-btn-radius layui-btn-danger" lay-submit lay-filter="*">选择上传相册图片</button>
             </div>
         </div>
-
-        <div class="layui-form-item" >
-            <label class="layui-form-label layui-bg-black">点击上传:</label>
-            <div class="layui-input-block">
-                <button class="layui-btn layui-btn-radius layui-btn-danger" lay-submit lay-filter="*">上传</button>
-            </div>
-        </div>
-
-        <div class="layui-form-item" >
-            <label id="element_id"  class="layui-form-label layui-bg-black">选择上传相册图片</label>
-            <div class="layui-input-block">
-            </div>
-        </div>
-
 
 
         <div class="layui-form-item" style="display: none" id="upPicContent" >
             <label class="layui-form-label layui-bg-black">上传进度</label>
             <div class="layui-input-block" >
                 <button class="layui-btn layui-btn-radius layui-btn-danger" id="upPicImg"  >上传</button>
+            </div>
+        </div>
+
+        <div class="layui-form-item" >
+            <label class="layui-form-label layui-bg-black">点击上传:</label>
+            <div class="layui-input-block">
+                <button type="button" onclick="upload_img();" class="layui-btn layui-btn-radius layui-btn-danger" lay-submit lay-filter="*">上传</button>
             </div>
         </div>
 

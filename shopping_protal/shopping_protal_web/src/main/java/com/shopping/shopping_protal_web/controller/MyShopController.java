@@ -478,6 +478,19 @@ public class MyShopController {
 	}
 
 	/**
+	 * 上传文件
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping(value = "/swfUpload",method = RequestMethod.GET)
+	public void swfUpload(Model model,String pid){
+
+
+	}
+
+
+
+	/**
 	 * 获取相册详情
 	 * @param model
 	 * @return
