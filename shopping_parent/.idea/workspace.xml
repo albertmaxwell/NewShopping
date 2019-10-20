@@ -11,8 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e9386ca-bb6f-46bb-901f-2779732877b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/PicMsg.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/PicMsg.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/albumUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping_protal/shopping_protal_web/src/main/resources/static/page/web/albumUp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../api_proxy_plugin/src/main/java/com/api/proxy/plugin/util/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../api_proxy_plugin/src/main/java/com/api/proxy/plugin/util/MD5Util.java" afterDir="false" />
       <change beforePath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application-druid.yml" beforeDir="false" afterPath="E:/mayun/RuoYi/ruoyi-admin/src/main/resources/application-druid.yml" afterDir="false" />
@@ -116,7 +116,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.48965517" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="DestinationChooserDialog.Package.RECENTS_KEY">
@@ -530,7 +530,10 @@
       <workItem from="1570436432211" duration="4686000" />
       <workItem from="1570441152576" duration="7570000" />
       <workItem from="1570496277248" duration="53000" />
-      <workItem from="1570498099506" duration="4124000" />
+      <workItem from="1570498099506" duration="6153000" />
+      <workItem from="1570583409750" duration="24000" />
+      <workItem from="1571187994065" duration="681000" />
+      <workItem from="1571537770551" duration="3990000" />
     </task>
     <servers />
   </component>
