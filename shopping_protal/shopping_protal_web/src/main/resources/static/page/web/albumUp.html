@@ -32,7 +32,7 @@
             button_image_url : "http://localhost:8056/myShopController/picMsg#",
             button_width : 150,
             button_height : 20,
-            button_text : "<b style='color: #FF0000; font-weight: bolder;font-size: larger;'>点击上传:</b> <span class='redText'>选择dddddd上传图片</span>",
+            button_text : "<b style='color: #FF0000; font-weight: bolder;font-size: larger;'>点击上传:</b> <span class='redText'>选择上传图片</span>",
             button_text_style : ".redText { color: #FF0000; font-weight: bolder;font-size: larger;}",
             button_text_left_padding : 3,
             button_text_top_padding : 2,
@@ -94,9 +94,10 @@
     }
     function upload_img(){
         var upload_album_id=jQuery("#upload_album_id").val();
-        swf_upload.addPostParam("album_id",upload_album_id);
+        swfu.addPostParam("album_id",upload_album_id);
         jQuery("#img_desc_info").text("正在上传第1张,还剩下"+(swf_upload.getStats().files_queued-1)+"张等待上传");
-        swf_upload.startUpload();
+        swfu.startUpload();
+        alert("vvvv");
     }
 </script>
 
@@ -129,14 +130,15 @@
         <div class="layui-form-item" >
             <label id="element_id"  class="layui-form-label layui-bg-black">选择上传相册图片</label>
             <div class="layui-input-block">
-                <button style="width: 3rem;" id="sss"  ></button>
             </div>
         </div>
+
+
 
         <div class="layui-form-item" style="display: none" id="upPicContent" >
             <label class="layui-form-label layui-bg-black">上传进度</label>
             <div class="layui-input-block" >
-                <button class="layui-btn layui-btn-radius layui-btn-danger" id="upPicImg" >上传</button>
+                <button class="layui-btn layui-btn-radius layui-btn-danger" id="upPicImg"  >上传</button>
             </div>
         </div>
 
