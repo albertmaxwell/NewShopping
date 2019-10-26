@@ -14,4 +14,6 @@ public interface Accessorydao  extends BaseDao<Accessory> {
 
 	List<Accessory> findAccessoryList(Map<String,Object> s);
 
+	void save(Accessory accessory);
+
 }

@@ -9,6 +9,7 @@ import com.alibaba.shopping.common.response.Result;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.Accessory;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.Album;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.GoodsClass;
+import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.User;
 import com.google.gson.Gson;
 import com.shopping.shopping_protal_service.service.Jpaservice;
 import com.shopping.shopping_protal_web.tools.AlbumViewTools;
@@ -27,8 +28,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -562,6 +566,7 @@ public class MyShopController {
 	 * @param suffix
 	 * @return
 	 */
+	@ResponseBody
 	@RequestMapping(value="/swfUploads", method=RequestMethod.POST)
 	public ResultVo swfUploads(MultipartFile Filedata, HttpServletRequest request,
 							   HttpServletResponse response, String ID,
@@ -602,32 +607,18 @@ public class MyShopController {
 			}
 		}
 		resultVo.setData(ids);
-		Map result = null;
-		try {
-			/*result = fileServicePluginFiles.find(ids.get(0));
-			System.out.println(result.get("data"));
-			Map jjj=(Map)result.get("data");
-			String jsonStr=result.get("data").toString().replaceAll("=",":");
-			Map maps = (Map) JSON.parse(jsonStr);
-			String url=maps.get("url").toString();*/
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 
-		Map<String,Object> map=jdbcTemplate.queryForMap("select * from file_upload  where id='"+ids+"'");
-        StringBuffer reo=null;
-		reo.append("http://localhost:8056/");
-		reo.append(map.get("url"));
-		String url=reo.toString();
-		/*Accessory image = new Accessory();
+		//User user=new User();
+
+		Accessory image = new Accessory();
 		image.setAddTime(new Date());
-		image.setExt((String) map.get("mime"));
-		image.setPath(url);
-		image.setWidth();
-		image.setHeight();
-		image.setName();
-		image.setUser();*/
-
+		image.setExt("fff");
+		image.setPath(ids.get(0));
+		image.setWidth(233);
+		image.setHeight(233);
+		image.setName(Filename);
+		//image.setUser(user);
+		sss.save(image);
 
 		return resultVo;
 

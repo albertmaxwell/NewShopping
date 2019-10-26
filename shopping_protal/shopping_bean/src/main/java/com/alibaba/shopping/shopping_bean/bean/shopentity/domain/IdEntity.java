@@ -9,7 +9,8 @@ import java.util.Date;
 @MappedSuperclass
 public class IdEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     @Column(unique = true, nullable = false)
     private Long id;
     private Date addTime;

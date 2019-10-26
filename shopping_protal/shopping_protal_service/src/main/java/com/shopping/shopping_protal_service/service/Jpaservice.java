@@ -12,22 +12,67 @@ import java.util.Map;
  */
 public interface Jpaservice {
 
+	/**
+	 *
+	 * @param map
+	 * @return
+	 */
 	List<GoodsClass> getGoodsClassList(Map<String, Object> map);
 
+	/**
+	 *
+	 * @param map
+	 * @return
+	 */
 	List<GoodsBrand> getGoodsBrandList(Map<String, Object> map);
 
+	/**
+	 *
+	 * @param map
+	 * @return
+	 */
 	List<Partner> getPartnerList(Map<String, Object> map);
 
+	/**
+	 *
+	 * @param map
+	 * @return
+	 */
 	List<ArticleClass> getArticleClassList(Map<String, Object> map);
 
+	/**
+	 *
+	 * @param map
+	 * @return
+	 */
 	List<Article> getArticleList(Map<String, Object> map);
 
+	/**
+	 *
+	 * @param map
+	 * @return
+	 */
 	List<Goods> getGoodsList(Map<String, Object> map);
 
+	/**
+	 *
+	 * @param map
+	 * @return
+	 */
 	List<GroupGoods> getGroupGoodsList(Map<String, Object> map);
 
+	/**
+	 *
+	 * @param map
+	 * @return
+	 */
 	List<BargainGoods> getBargainGoodsList(Map<String, Object> map);
 
+	/**
+	 *
+	 * @param map
+	 * @return
+	 */
 	List<DeliveryGoods> getDeliveryGoodsList(Map<String, Object> map);
 
 	/**
@@ -52,4 +97,10 @@ public interface Jpaservice {
 	 * @return
 	 */
 	List<Album> getAlbumDic(Map<String, Object> map);
+
+	/**
+	 *
+	 * @param accessory
+	 */
+	public void save(Accessory accessory);
 }

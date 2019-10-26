@@ -26,6 +26,12 @@ public class AccessoryDaoImpl extends AbstractBaseDao<Accessory> implements Acce
 		return  goodsClassList;
 	}
 
+	@Override
+	public void save(Accessory accessory){
+
+		this.add(accessory);
+	}
+
 
 }
 
