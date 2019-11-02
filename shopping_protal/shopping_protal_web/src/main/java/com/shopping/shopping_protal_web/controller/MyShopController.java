@@ -25,10 +25,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
@@ -38,6 +35,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -530,12 +530,19 @@ public class MyShopController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/getAccessoryList",method = RequestMethod.GET)
-	public String getAlbumList(Model model,String id){
+	@RequestMapping(value = "/getAccessoryList/{pageSize}/{pageNum}",method = RequestMethod.GET)
+	public String getAlbumList(Model model, String id, @PathVariable("pageSize") int pageSize,
+							                           @PathVariable("pageNum") int pageNum){
 		// TODO: 2019/11/2 没有人员权限的相册
 		List<PictureVo> pictureVos=new ArrayList<>();
 		Map<String,Object> map = new HashMap<String, Object>();
+		int currData=((pageNum-1)*pageSize)+1;
+		int overData=pageNum*pageSize;
 		map.put("id",id);
+		map.put("currData",currData+1);
+		map.put("overData",overData);
+		map.put("pageSize",pageSize);
+		map.put("pageNum",pageNum);
 		List<Accessory> picList= accessorydao.findPicList(map);
 		for (int i = 0; i <picList.size() ; i++) {
 			PictureVo pictureVo=new PictureVo();
@@ -543,6 +550,9 @@ public class MyShopController {
 				Map<String, Object> pic=jdbcTemplate.queryForMap("select * from file_upload where id='"+picList.get(i).getPath()+"'");
 				String ss="http://localhost:8056/"+pic.get("url").toString();
 				pictureVo.setUrl(ss);
+				SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+				String date=pic.get("create_time").toString();
+				pictureVo.setCreateDate(date.substring(0,10));
 				pictureVos.add(pictureVo);
 			}
 		}

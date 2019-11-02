@@ -3,25 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <title>图片列表</title>
+    <script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
     <style>
         .box{
+            height: 100rem;
             width: 100%;
-            background-color: #f2141f;
+
             display:flex;
             display: -webkit-flex;
             flex-direction:row;
+            flex-wrap: wrap;
             align-items:center;
             justify-content:space-between;
         }
         .picList{
-            background-color: #3c3be5;
-            width: 5rem;
-            height: 5rem;
+            margin-top: 8rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            width: 15rem;
+            height: 15rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            align-items:center;
+            justify-content:space-between;
         }
         .picList img{
             width: 100%;
             height: 100%;
             background-size: 100% 100%;
+        }
+        .index{
+            margin-top: 1rem;
+            width: 100%;
+            height: 4rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:column;
+            align-items:self-start;
+            justify-content:space-between;
+        }
+        .one{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:self-start;
+            justify-content:space-between;
+        }
+        .page{
+            width: auto;
+            display:inline-block
+            !important;
+            height: auto;
+        }
+        .fenye{
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            width: 100%;
+            height: 5rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .fenye a {
+            font-weight: bolder;
+            font-family: Arial;
+          margin-left: 3rem;
+        }
+        .page span{
+            font-weight: bolder;
+            margin-left: 3rem;
+        }
+        a{
+            text-decoration:none;
         }
     </style>
 </head>
@@ -31,8 +88,105 @@
 <div class="box">
     <div th:each="PictureVo : ${pictureVos}" class="picList">
         <img th:src="${PictureVo.getUrl()}">
+        <div class="index">
+            <div class="one">
+                <div>上传时间:</div>
+                <div th:text="${PictureVo.getCreateDate()}"></div>
+            </div>
+            <div class="one">
+                <div>删除图片:</div>
+                <div></div>
+            </div>
+        </div>
     </div>
+
+<!--    https://www.cnblogs.com/w-yong/p/6255444.html-->
+    <div class="fenye">
+        <div id="pageBtn" class="page" ></div>
+    </div>
+
 </div>
 
 </body>
+<script>
+    $(function(){
+            alert("www");
+      //f();
+    },
+
+   function f() {
+       alert("www");
+        var dqPage = 6;//得到当前页数
+        dqPage = parseInt(dqPage);//得到的文本转成int
+        indexPage = parseInt(10);//得到的文本转成int
+        var pageCount = 35;//得到总页数
+        pageCount = parseInt(pageCount);
+        var i = 1;
+        i = parseInt(i);
+        var item="";
+        var href = "/getAccessoryList/0/20";
+        if (pageCount <= indexPage ) {//总页数小于indexPage页，则加载所有页
+
+            for (i; i <= pageCount; i++) {
+                if (i == dqPage) {
+                    item += "<span class='disabled'>"+i+"</span>";
+                }else{
+                    item += "<a href='"+href+i+"' >"+i+"</a>";
+                }
+            };
+            $('#pageBtn').append(item);
+            return;
+        }else if (pageCount > 10) {//总页数大于indexPage页，则加载indexPage页
+            if (dqPage < indexPage) {//当前页小于indexPage，加载1-indexPage页
+                for (i; i <= indexPage; i++) {
+                    if (i == dqPage) {
+                        item += "<span class='disabled'>"+i+"</span>";
+                    }else{
+                        item += "<a href='"+href+i+"' >"+i+"</a>";
+                    }
+                };
+                if (dqPage <= pageCount-2) {//最后一页追加“...”代表省略的页
+                    item += "<span> . . . </span>";
+                }
+                $('#pageBtn').append(item);
+                return;
+            }else if (dqPage >= indexPage) {//当前页大于indexPage页
+                for (i; i <= 2; i++) {//1,2页码始终显示
+                    item += "<a href='"+href+i+"' >"+i+"</a>";
+                }
+                item += "<span> . . . </span>";//2页码后面用...代替部分未显示的页码
+                if (dqPage+1 == pageCount) {//当前页+1等于总页码
+                    for(i = dqPage-1; i <= pageCount; i++){//“...”后面跟三个页码当前页居中显示
+                        if (i == dqPage) {
+                            item += "<span class='disabled'>"+i+"</span>";
+                        }else{
+                            item += "<a href='"+href+i+"' >"+i+"</a>";
+                        }
+                    }
+                }else if (dqPage == pageCount) {//当前页数等于总页数则是最后一页页码显示在最后
+                    for(i = dqPage-2; i <= pageCount; i++){//...后面跟三个页码当前页居中显示
+                        if (i == dqPage) {
+                            item += "<span class='disabled'>"+i+"</span>";
+                        }else{
+                            item += "<a href='"+href+i+"' >"+i+"</a>";
+                        }
+                    }
+                }else{//当前页小于总页数，则最后一页后面跟...
+                    for(i = dqPage-1; i <= dqPage+1; i++){//dqPage+1页后面...
+                        if (i == dqPage) {
+                            item += "<span class='disabled'>"+i+"</span>";
+                        }else{
+                            item += "<a href='"+href+i+"' >"+i+"</a>";
+                        }
+                    }
+                    item += "<span> . . . </span>";
+                }
+                $('#pageBtn').append(item);
+                return;
+            }
+        }
+
+
+    });
+</script>
 </html>

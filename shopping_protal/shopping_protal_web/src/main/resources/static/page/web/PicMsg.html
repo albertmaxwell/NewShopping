@@ -235,7 +235,7 @@
 <div class="piclist"  >
     <div th:each="Album : ${albumList}" class="onepic">
         <div class="imm" th:onclick="getPic(this)" th:id="${Album.getId()}">
-            <a href="/myShopController/getAccessoryList">
+            <a href="/myShopController/getAccessoryList/20/1">
             <div class="sd">
                 <img src="" th:id="${Album.getAlbum_name()}" onerror="this.src='../../img/album.png';">
             </div>
