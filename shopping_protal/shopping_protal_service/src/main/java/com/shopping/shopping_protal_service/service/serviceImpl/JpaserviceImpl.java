@@ -121,6 +121,12 @@ public class JpaserviceImpl implements Jpaservice {
 	}
 
 	@Override
+	public List<Album> findAlbumBySomeThing(String sql,Object... obj) {
+		List<Album> albumList =albumdao.findAlbumBySomeThing(sql,obj);
+		return albumList;
+	}
+
+	@Override
 	public List<Accessory> getAccessoryList(Map<String,Object> s) {
 		List<Accessory> accessoryList =accessorydao.findAccessoryList(s);
 		return accessoryList;
@@ -137,6 +143,11 @@ public class JpaserviceImpl implements Jpaservice {
 	public void save(Accessory accessory){
 
 		accessorydao.save(accessory);
+	}
+	@Override
+	public void saveAlbum(Album album){
+
+		albumdao.saveAlbum(album);
 	}
 
 }

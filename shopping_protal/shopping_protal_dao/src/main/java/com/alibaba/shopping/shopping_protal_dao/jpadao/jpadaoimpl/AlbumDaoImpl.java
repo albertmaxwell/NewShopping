@@ -34,5 +34,17 @@ public class AlbumDaoImpl extends AbstractBaseDao<Album> implements AlbumDao {
 		return  goodsClassList;
 	}
 
+	@Override
+	public List<Album> findAlbumBySomeThing(String sql,Object... obj) {
+		List<Album> goodsClassList=this.find(sql,obj);
+		return  goodsClassList;
+	}
+	@Override
+	public void saveAlbum(Album album) {
+		this.add(album);
+	}
+
+
+
 
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>图片列表</title>
+    <style>
+        .box{
+            width: 100%;
+            background-color: #f2141f;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:space-between;
+        }
+        .picList{
+            background-color: #3c3be5;
+            width: 5rem;
+            height: 5rem;
+        }
+        .picList img{
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="box">
+    <div th:each="PictureVo : ${pictureVos}" class="picList">
+        <img th:src="${PictureVo.getUrl()}">
+    </div>
+</div>
+
+</body>
+</html>

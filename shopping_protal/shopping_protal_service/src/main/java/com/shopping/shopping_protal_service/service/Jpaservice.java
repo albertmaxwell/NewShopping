@@ -89,6 +89,13 @@ public interface Jpaservice {
 	 */
 	List<Album> getAlbumPage(Map<String, Object> map);
 
+	/**
+	 *
+	 * @param map
+	 * @return
+	 */
+	List<Album> findAlbumBySomeThing(String sql,Object... obj);
+
 	List<Accessory> getAccessoryList(Map<String,Object> s);
 
 	/**
@@ -103,4 +110,10 @@ public interface Jpaservice {
 	 * @param accessory
 	 */
 	public void save(Accessory accessory);
+
+	/**
+	 *
+	 * @param accessory
+	 */
+	public void saveAlbum(Album album);
 }

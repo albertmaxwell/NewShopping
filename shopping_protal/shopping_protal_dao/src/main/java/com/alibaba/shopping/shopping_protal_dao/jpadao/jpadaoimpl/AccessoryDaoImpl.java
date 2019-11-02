@@ -32,6 +32,15 @@ public class AccessoryDaoImpl extends AbstractBaseDao<Accessory> implements Acce
 		this.add(accessory);
 	}
 
+	@Override
+	public List<Accessory> findPicList(Map<String,Object> map){
+
+		Map params = new HashMap();
+		//params.put("user_id", map.get("id").toString());
+		List<Accessory> goodsClassList=this.findPage(0,100,"select obj from Accessory obj  where ext='fff'  ");
+		return  goodsClassList;
+	}
+
 
 }
 

@@ -4,15 +4,19 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.shopping.common.common.enums.ErrorCode;
 import com.alibaba.shopping.common.common.exception.ResultException;
 import com.alibaba.shopping.common.common.vo.ResultVo;
+import com.alibaba.shopping.common.json.AjaxJson;
 import com.alibaba.shopping.common.response.ResponseMessage;
 import com.alibaba.shopping.common.response.Result;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.Accessory;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.Album;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.GoodsClass;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.User;
+import com.alibaba.shopping.shopping_protal_dao.jpadao.Accessorydao;
+import com.alibaba.shopping.shopping_protal_dao.jpadao.AlbumDao;
 import com.google.gson.Gson;
 import com.shopping.shopping_protal_service.service.Jpaservice;
 import com.shopping.shopping_protal_web.tools.AlbumViewTools;
+import com.shopping.shopping_protal_web.vo.PictureVo;
 import com.shoppingfilesplugin.shoppingfilesplugin.plugin.runner.FilePluginConfig;
 import com.shoppingfilesplugin.shoppingfilesplugin.plugin.service.FileServicePluginFiles;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +33,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.imageio.ImageIO;
+import javax.management.openmbean.ArrayType;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
@@ -47,6 +52,8 @@ public class MyShopController {
 	Jpaservice sss;
 	@Autowired
 	private AlbumViewTools bbb;
+	@Autowired
+	private Accessorydao accessorydao;
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
@@ -470,6 +477,26 @@ public class MyShopController {
 		return "web/albumUp";
 	}
 
+
+	/**
+	 * 创建相册
+	 * @param model
+	 * @return
+	 */
+	/*@ResponseBody
+	@RequestMapping(value = "/createAlbum",method = RequestMethod.GET)
+	public AjaxJson createAlbum(String bid, String bname){
+		AjaxJson ajaxJson=new AjaxJson();
+		Album album=new Album();
+		album.setAlbum_name(bname);
+		album.setAlbum_sequence(Integer.parseInt(bid));
+		sss.saveAlbum(album);
+		ajaxJson.setMsg("相册添加成功");
+		ajaxJson.setObj("ok");
+		ajaxJson.setSuccess(true);
+		return ajaxJson;
+	}*/
+
 	/**
 	 * 查询相册下拉框字典
 	 * @param model
@@ -499,6 +526,32 @@ public class MyShopController {
 	}
 
 	/**
+	 * 获取图片列表
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping(value = "/getAccessoryList",method = RequestMethod.GET)
+	public String getAlbumList(Model model,String id){
+		// TODO: 2019/11/2 没有人员权限的相册
+		List<PictureVo> pictureVos=new ArrayList<>();
+		Map<String,Object> map = new HashMap<String, Object>();
+		map.put("id",id);
+		List<Accessory> picList= accessorydao.findPicList(map);
+		for (int i = 0; i <picList.size() ; i++) {
+			PictureVo pictureVo=new PictureVo();
+			if(null!=picList.get(i).getPath()){
+				Map<String, Object> pic=jdbcTemplate.queryForMap("select * from file_upload where id='"+picList.get(i).getPath()+"'");
+				String ss="http://localhost:8056/"+pic.get("url").toString();
+				pictureVo.setUrl(ss);
+				pictureVos.add(pictureVo);
+			}
+		}
+		model.addAttribute("pictureVos",pictureVos);
+
+		return "web/picList";
+	}
+
+	/**
 	 * 上传文件
 	 * @param model
 	 * @return
@@ -523,6 +576,10 @@ public class MyShopController {
 		model.addAttribute("albumList",albumList);
 		return "web/PicMsg";
 	}
+
+
+
+
 
 	/**
 	 * 文件上传
@@ -611,11 +668,13 @@ public class MyShopController {
 		//User user=new User();
 
 		Accessory image = new Accessory();
+		List<Album> album=sss.findAlbumBySomeThing("select obj from Album obj where obj.id=?1",Long.parseLong(album_id));
 		image.setAddTime(new Date());
 		image.setExt("fff");
 		image.setPath(ids.get(0));
 		image.setWidth(233);
 		image.setHeight(233);
+		image.setAlbum(album.get(0));
 		image.setName(Filename);
 		//image.setUser(user);
 		sss.save(image);
