@@ -103,19 +103,22 @@
 <!--    https://www.cnblogs.com/w-yong/p/6255444.html-->
     <div class="fenye">
         <div id="pageBtn" class="page" ></div>
+        <input id="niubi" th:text="${dataGrid.getTotal()}" style="display: none">
     </div>
 
 </div>
 
 </body>
 <script>
+
     $(function(){
-            alert("www");
-      //f();
-    },
+        var result=document.getElementById("niubi").getAttribute("text");
+        console.log(result);
+        f();
+    });
 
    function f() {
-       alert("www");
+
         var dqPage = 6;//得到当前页数
         dqPage = parseInt(dqPage);//得到的文本转成int
         indexPage = parseInt(10);//得到的文本转成int
@@ -124,14 +127,14 @@
         var i = 1;
         i = parseInt(i);
         var item="";
-        var href = "/getAccessoryList/0/20";
+        var href = "/myShopController/getAccessoryList/";
         if (pageCount <= indexPage ) {//总页数小于indexPage页，则加载所有页
 
             for (i; i <= pageCount; i++) {
                 if (i == dqPage) {
                     item += "<span class='disabled'>"+i+"</span>";
                 }else{
-                    item += "<a href='"+href+i+"' >"+i+"</a>";
+                    item += "<a href='"+href+"?pageNum="+i+"' >"+i+"</a>";
                 }
             };
             $('#pageBtn').append(item);
@@ -142,7 +145,7 @@
                     if (i == dqPage) {
                         item += "<span class='disabled'>"+i+"</span>";
                     }else{
-                        item += "<a href='"+href+i+"' >"+i+"</a>";
+                        item += "<a href='"+href+"?pageNum="+i+"' >"+i+"</a>";
                     }
                 };
                 if (dqPage <= pageCount-2) {//最后一页追加“...”代表省略的页
@@ -152,7 +155,7 @@
                 return;
             }else if (dqPage >= indexPage) {//当前页大于indexPage页
                 for (i; i <= 2; i++) {//1,2页码始终显示
-                    item += "<a href='"+href+i+"' >"+i+"</a>";
+                    item += "<a href='"+href+"?pageNum="+i+"' >"+i+"</a>";
                 }
                 item += "<span> . . . </span>";//2页码后面用...代替部分未显示的页码
                 if (dqPage+1 == pageCount) {//当前页+1等于总页码
@@ -160,7 +163,7 @@
                         if (i == dqPage) {
                             item += "<span class='disabled'>"+i+"</span>";
                         }else{
-                            item += "<a href='"+href+i+"' >"+i+"</a>";
+                            item += "<a href='"+href+"?pageNum="+i+"' >"+i+"</a>";
                         }
                     }
                 }else if (dqPage == pageCount) {//当前页数等于总页数则是最后一页页码显示在最后
@@ -168,7 +171,7 @@
                         if (i == dqPage) {
                             item += "<span class='disabled'>"+i+"</span>";
                         }else{
-                            item += "<a href='"+href+i+"' >"+i+"</a>";
+                            item += "<a href='"+href+"?pageNum="+i+"' >"+i+"</a>";
                         }
                     }
                 }else{//当前页小于总页数，则最后一页后面跟...
@@ -176,7 +179,7 @@
                         if (i == dqPage) {
                             item += "<span class='disabled'>"+i+"</span>";
                         }else{
-                            item += "<a href='"+href+i+"' >"+i+"</a>";
+                            item += "<a href='"+href+"?pageNum="+i+"' >"+i+"</a>";
                         }
                     }
                     item += "<span> . . . </span>";
@@ -185,8 +188,8 @@
                 return;
             }
         }
+    };
 
 
-    });
 </script>
 </html>

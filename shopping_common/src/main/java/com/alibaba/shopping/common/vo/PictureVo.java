@@ -1,8 +1,6 @@
-package com.shopping.shopping_protal_web.vo;
+package com.alibaba.shopping.common.vo;
 
 import lombok.Data;
-
-import java.util.Date;
 
 /**
  * @author 金海洋

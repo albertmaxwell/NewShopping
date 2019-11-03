@@ -1,26 +1,25 @@
 package com.shopping.shopping_protal_web.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.shopping.common.common.enums.ErrorCode;
 import com.alibaba.shopping.common.common.exception.ResultException;
 import com.alibaba.shopping.common.common.vo.ResultVo;
-import com.alibaba.shopping.common.json.AjaxJson;
 import com.alibaba.shopping.common.response.ResponseMessage;
 import com.alibaba.shopping.common.response.Result;
+import com.alibaba.shopping.common.vo.PictureVo;
+import com.alibaba.shopping.common.vo.ResultVoFactory.DataGrid;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.Accessory;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.Album;
 import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.GoodsClass;
-import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.User;
 import com.alibaba.shopping.shopping_protal_dao.jpadao.Accessorydao;
-import com.alibaba.shopping.shopping_protal_dao.jpadao.AlbumDao;
-import com.google.gson.Gson;
 import com.shopping.shopping_protal_service.service.Jpaservice;
 import com.shopping.shopping_protal_web.tools.AlbumViewTools;
-import com.shopping.shopping_protal_web.vo.PictureVo;
 import com.shoppingfilesplugin.shoppingfilesplugin.plugin.runner.FilePluginConfig;
 import com.shoppingfilesplugin.shoppingfilesplugin.plugin.service.FileServicePluginFiles;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,14 +28,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import javax.imageio.ImageIO;
-import javax.management.openmbean.ArrayType;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.text.ParseException;
-import java.text.ParsePosition;
+import java.awt.print.Book;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -530,20 +524,23 @@ public class MyShopController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/getAccessoryList/{pageSize}/{pageNum}",method = RequestMethod.GET)
-	public String getAlbumList(Model model, String id, @PathVariable("pageSize") int pageSize,
-							                           @PathVariable("pageNum") int pageNum){
+	@RequestMapping(value = "/getAccessoryList",method = RequestMethod.GET)
+	public String getAlbumList(Model model, String id,HttpServletRequest request){
+		int pageNum=Integer.parseInt(request.getParameter("pageNum"));
 		// TODO: 2019/11/2 没有人员权限的相册
 		List<PictureVo> pictureVos=new ArrayList<>();
 		Map<String,Object> map = new HashMap<String, Object>();
-		int currData=((pageNum-1)*pageSize)+1;
-		int overData=pageNum*pageSize;
+		int currData=((pageNum-1)*20)+1;
+		int overData=pageNum*20;
 		map.put("id",id);
 		map.put("currData",currData+1);
 		map.put("overData",overData);
-		map.put("pageSize",pageSize);
+		map.put("pageSize",20);
 		map.put("pageNum",pageNum);
-		List<Accessory> picList= accessorydao.findPicList(map);
+		DataGrid dataGrid= accessorydao.findPicList(map);
+		List<Map<String, Object>>  total=jdbcTemplate.queryForList("select * from wemall_accessory  where ext='fff'");
+		dataGrid.setTotal(total.size());
+		List<Accessory> picList=dataGrid.getResults();
 		for (int i = 0; i <picList.size() ; i++) {
 			PictureVo pictureVo=new PictureVo();
 			if(null!=picList.get(i).getPath()){
@@ -557,9 +554,26 @@ public class MyShopController {
 			}
 		}
 		model.addAttribute("pictureVos",pictureVos);
+		model.addAttribute("dataGrid",dataGrid);
 
 		return "web/picList";
 	}
+
+	/**
+	 *
+	 * 图片列表配置分页
+	 * @param pageable
+	 * @return
+	 */
+	/*@RequestMapping(value = "/getPicturePage", method = RequestMethod.GET)
+	@ResponseBody
+	@ApiOperation(value = "图片列表接口", notes = "传入对象数据", produces = "application/json")
+	public ResponseMessage<?> getPicturePage(@RequestParam(value = "page", defaultValue = "0") Integer page,
+												@RequestParam(value = "size", defaultValue = "3") Integer size,@ApiParam(name = "查询字段对象")  PictureVo pictureVo){
+		Page<Book> datas = accessorydao.findPictureCriteria(page, size, pictureVo);
+
+		return Result.success(datas);
+	}*/
 
 	/**
 	 * 上传文件
