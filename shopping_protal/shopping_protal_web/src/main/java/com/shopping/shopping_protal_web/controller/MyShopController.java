@@ -528,18 +528,25 @@ public class MyShopController {
 	public String getAlbumList(Model model, String id,HttpServletRequest request){
 		int pageNum=Integer.parseInt(request.getParameter("pageNum"));
 		// TODO: 2019/11/2 没有人员权限的相册
+		int everyPage=12;
 		List<PictureVo> pictureVos=new ArrayList<>();
 		Map<String,Object> map = new HashMap<String, Object>();
-		int currData=((pageNum-1)*20)+1;
-		int overData=pageNum*20;
+		int currData=pageNum;
+		int overData=everyPage;
 		map.put("id",id);
 		map.put("currData",currData+1);
 		map.put("overData",overData);
-		map.put("pageSize",20);
+		map.put("pageSize",everyPage);
 		map.put("pageNum",pageNum);
 		DataGrid dataGrid= accessorydao.findPicList(map);
 		List<Map<String, Object>>  total=jdbcTemplate.queryForList("select * from wemall_accessory  where ext='fff'");
+		double ds=total.size();
+		double page=everyPage;
+		double er=ds/page;
+		int dt=(int)Math.ceil(er);
+		dataGrid.setTotalPage(dt);
 		dataGrid.setTotal(total.size());
+		dataGrid.setPage(pageNum);
 		List<Accessory> picList=dataGrid.getResults();
 		for (int i = 0; i <picList.size() ; i++) {
 			PictureVo pictureVo=new PictureVo();

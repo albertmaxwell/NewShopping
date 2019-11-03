@@ -80,6 +80,34 @@
         a{
             text-decoration:none;
         }
+        .pageCode{
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .pageNums{
+            margin-left: 2rem;
+            display:flex;
+            display: -webkit-flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:center;
+        }
+        .lead{
+            margin-left: 1rem;
+        }
+        .later{
+            margin-right: 1rem;
+        }
+        .searchpage{
+            width: 2rem;
+            margin-left: 1rem;
+        }
+        .fly{
+            margin-left: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -102,27 +130,54 @@
 
 <!--    https://www.cnblogs.com/w-yong/p/6255444.html-->
     <div class="fenye">
+        <div class="pageCode">
+            <div><button class="later">首  页</button></div>
+            <div><button class="later" onclick="laterPage">上一页</button></div>
         <div id="pageBtn" class="page" ></div>
-        <input id="niubi" th:text="${dataGrid.getTotal()}" style="display: none">
+            <div><button class="lead">下一页</button></div>
+            <div><button class="lead">尾页</button></div>
+            <div class="pageNums">
+                <div>共</div>
+                <div th:text="${dataGrid.getTotalPage()}"></div>
+                <div>页/</div>
+                <div th:text="${dataGrid.getTotal()}"></div>
+                <div>条数据</div>
+                <div>跳转到</div>
+                <input class="searchpage">
+                <div class="fly">页</div>
+                <button class="fly">确定</button>
+            </div>
+        </div>
+        <input id="niubi" th:class="${dataGrid.getTotalPage()}" style="display: none">
+        <input id="cs" th:class="${dataGrid.getPage()}" style="display: none">
     </div>
 
 </div>
 
 </body>
 <script>
-
+    var pageAllPage;
+    var currPage;
     $(function(){
-        var result=document.getElementById("niubi").getAttribute("text");
-        console.log(result);
+       pageAllPage=document.getElementById("niubi").getAttribute("class");
+       currPage=document.getElementById("cs").getAttribute("class");
+
         f();
     });
 
+    function laterPage() {
+        var page=currPage-1;
+        if (page!=0){
+
+        }
+    }
+
    function f() {
 
-        var dqPage = 6;//得到当前页数
+        var dqPage = parseInt(currPage);//得到当前页数
         dqPage = parseInt(dqPage);//得到的文本转成int
         indexPage = parseInt(10);//得到的文本转成int
-        var pageCount = 35;//得到总页数
+        var pageCount =parseInt(pageAllPage) ;//得到总页数
         pageCount = parseInt(pageCount);
         var i = 1;
         i = parseInt(i);

@@ -17,6 +17,16 @@ public class DataGrid {
 	private List results;// 结果集
 	private int total;//总记录数
 
+	private int totalPage;//总页数
+
+	public int getTotalPage() {
+		return totalPage;
+	}
+
+	public void setTotalPage(int totalPage) {
+		this.totalPage = totalPage;
+	}
+
 	public int getPage() {
 		return page;
 	}
