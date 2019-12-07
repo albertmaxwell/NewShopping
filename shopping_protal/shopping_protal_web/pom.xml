@@ -49,7 +49,7 @@
             <url>http://localhost:8081/repository/shopping/</url>
         </repository>
     </distributionManagement>-->
-   <repositories>
+  <!-- <repositories>
     <repository>
         <id>shopping</id>
         <name>shopping</name>
@@ -62,7 +62,7 @@
         </releases>
     </repository>
 
-</repositories>
+</repositories>-->
 
     <dependencies>
 

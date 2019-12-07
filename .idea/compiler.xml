@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="shopping_protal_service" />
+        <module name="shopping_bean" />
+        <module name="shopping_protal_web" />
+        <module name="shopping_back_dao" />
+        <module name="shopping_back_service" />
+        <module name="shopping-files" />
+        <module name="shopping-service-util" />
+        <module name="shopping_back_bean" />
+        <module name="shopping-files-plugin" />
+        <module name="shopping_protal_dao" />
+        <module name="shopping-web-util" />
+        <module name="shopping-common-utils" />
+        <module name="api_proxy_plugin" />
+        <module name="shopping_back_web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api_proxy_plugin" target="1.8" />
+      <module name="com.shopping" target="1.8" />
+      <module name="monitor-service" target="1.8" />
+      <module name="shopping-common-utils" target="1.8" />
+      <module name="shopping-files" target="1.8" />
+      <module name="shopping-files-plugin" target="1.8" />
+      <module name="shopping-service-util" target="1.8" />
+      <module name="shopping-web-util" target="1.8" />
+      <module name="shopping_back" target="1.8" />
+      <module name="shopping_back_bean" target="1.8" />
+      <module name="shopping_back_dao" target="1.8" />
+      <module name="shopping_back_service" target="1.8" />
+      <module name="shopping_back_web" target="1.8" />
+      <module name="shopping_bean" target="1.8" />
+      <module name="shopping_parent" target="1.8" />
+      <module name="shopping_protal" target="1.8" />
+      <module name="shopping_protal_dao" target="1.8" />
+      <module name="shopping_protal_service" target="1.8" />
+      <module name="shopping_protal_web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api_proxy_plugin" options="-parameters" />
+      <module name="com.shopping" options="-parameters" />
+      <module name="monitor-service" options="-parameters" />
+      <module name="shopping-common-utils" options="-parameters" />
+      <module name="shopping-files" options="-parameters" />
+      <module name="shopping-files-plugin" options="-parameters" />
+      <module name="shopping-service-util" options="-parameters" />
+      <module name="shopping-web-util" options="-parameters" />
+      <module name="shopping_back_bean" options="-parameters" />
+      <module name="shopping_back_dao" options="-parameters" />
+      <module name="shopping_back_service" options="-parameters" />
+      <module name="shopping_back_web" options="-parameters" />
+      <module name="shopping_bean" options="-parameters" />
+      <module name="shopping_protal_dao" options="-parameters" />
+      <module name="shopping_protal_service" options="-parameters" />
+      <module name="shopping_protal_web" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -6,6 +6,7 @@ import com.alibaba.shopping.common.exception.ResultException;
 import com.alibaba.shopping.common.utils.ContextHolderUtils;
 import com.alibaba.shopping.shopping_bean.bean.entity.SysUserEntity;
 import com.alibaba.shopping.shopping_protal_dao.mapper.UserMapper;
+
 import com.alibaba.shopping.shoppingcommonutils.common.service.ClientManager;
 import com.alibaba.shopping.shoppingcommonutils.common.utils.Client;
 import com.shopping.shopping_protal_service.service.UserService;

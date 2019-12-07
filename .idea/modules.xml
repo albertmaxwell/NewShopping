@@ -3,6 +3,23 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/NewShopping.iml" filepath="$PROJECT_DIR$/.idea/NewShopping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../prox/api_proxy_plugin/api_proxy_plugin/api_proxy_plugin.iml" filepath="$PROJECT_DIR$/../prox/api_proxy_plugin/api_proxy_plugin/api_proxy_plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping-common-utils/shopping-common-utils.iml" filepath="$PROJECT_DIR$/shopping-common-utils/shopping-common-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping-files/shopping-files.iml" filepath="$PROJECT_DIR$/shopping-files/shopping-files.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping-files-plugin/shopping-files-plugin.iml" filepath="$PROJECT_DIR$/shopping-files-plugin/shopping-files-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping-service-util/shopping-service-util.iml" filepath="$PROJECT_DIR$/shopping-service-util/shopping-service-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping-web-util/shopping-web-util.iml" filepath="$PROJECT_DIR$/shopping-web-util/shopping-web-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping_back/shopping_back.iml" filepath="$PROJECT_DIR$/shopping_back/shopping_back.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping_back/shopping_back_bean/shopping_back_bean.iml" filepath="$PROJECT_DIR$/shopping_back/shopping_back_bean/shopping_back_bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping_back/shopping_back_dao/shopping_back_dao.iml" filepath="$PROJECT_DIR$/shopping_back/shopping_back_dao/shopping_back_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping_back/shopping_back_service/shopping_back_service.iml" filepath="$PROJECT_DIR$/shopping_back/shopping_back_service/shopping_back_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping_back/shopping_back_web/shopping_back_web.iml" filepath="$PROJECT_DIR$/shopping_back/shopping_back_web/shopping_back_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping_protal/shopping_bean/shopping_bean.iml" filepath="$PROJECT_DIR$/shopping_protal/shopping_bean/shopping_bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping_parent/shopping_parent.iml" filepath="$PROJECT_DIR$/shopping_parent/shopping_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping_protal/shopping_protal.iml" filepath="$PROJECT_DIR$/shopping_protal/shopping_protal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping_protal/shopping_protal_dao/shopping_protal_dao.iml" filepath="$PROJECT_DIR$/shopping_protal/shopping_protal_dao/shopping_protal_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping_protal/shopping_protal_service/shopping_protal_service.iml" filepath="$PROJECT_DIR$/shopping_protal/shopping_protal_service/shopping_protal_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping_protal/shopping_protal_web/shopping_protal_web.iml" filepath="$PROJECT_DIR$/shopping_protal/shopping_protal_web/shopping_protal_web.iml" />
     </modules>
   </component>
 </project>

@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/shopping_back/shopping_back_web" />
+    <file type="web" url="file://$PROJECT_DIR$/shopping_protal/shopping_protal_web" />
+  </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/shopping-files/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping-service-util/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping-web-util/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping_back/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping_protal/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping_back/shopping_back_bean/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping_protal/shopping_bean/pom.xml" />
+        <option value="$PROJECT_DIR$/../prox/api_proxy_plugin/api_proxy_plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping-common-utils/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping-files-plugin/pom.xml" />
+      </list>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

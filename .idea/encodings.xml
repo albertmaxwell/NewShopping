@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/monitor-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping-common-utils" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping-files" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping-files-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping-service-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping-web-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping_back" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping_back/shopping_back_bean" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping_back/shopping_back_dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping_back/shopping_back_service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping_back/shopping_back_web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping_common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping_parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping_protal" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping_protal/shopping_bean" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping_protal/shopping_protal_dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping_protal/shopping_protal_service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping_protal/shopping_protal_web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../prox/api_proxy_plugin/api_proxy_plugin" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

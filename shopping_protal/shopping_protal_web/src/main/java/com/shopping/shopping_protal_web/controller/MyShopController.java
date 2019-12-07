@@ -13,10 +13,9 @@ import com.alibaba.shopping.shopping_bean.bean.shopentity.domain.GoodsClass;
 import com.alibaba.shopping.shopping_protal_dao.jpadao.Accessorydao;
 import com.shopping.shopping_protal_service.service.Jpaservice;
 import com.shopping.shopping_protal_web.tools.AlbumViewTools;
+
 import com.shoppingfilesplugin.shoppingfilesplugin.plugin.runner.FilePluginConfig;
 import com.shoppingfilesplugin.shoppingfilesplugin.plugin.service.FileServicePluginFiles;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
