@@ -31,13 +31,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
-        <dependency>
-            <groupId>com.shopping.files</groupId>
-            <artifactId>shopping-files</artifactId>
-            <version>0.0.1</version>
-        </dependency>
-
+        
     </dependencies>
 
     <build>
