@@ -63,7 +63,9 @@
             <element id="module-output" name="shopping-common-utils" />
           </element>
           <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.39" />
-          <element id="library" level="project" name="Maven: shopping_common:com.shopping:0.0.1-SNAPSHOT" />
+          <element id="archive" name="com.shopping-0.0.1-SNAPSHOT.jar">
+            <element id="module-output" name="com.shopping" />
+          </element>
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-mail:2.1.7.RELEASE" />
           <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.6.2" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
@@ -87,9 +89,7 @@
           <element id="archive" name="shopping-files-plugin-0.0.1-SNAPSHOT.jar">
             <element id="module-output" name="shopping-files-plugin" />
           </element>
-          <element id="archive" name="shopping-files-0.0.1-SNAPSHOT.jar">
-            <element id="module-output" name="shopping-files" />
-          </element>
+          <element id="library" level="project" name="Maven: com.shopping.files:shopping-files:0.0.1" />
           <element id="archive" name="api_proxy_plugin-1.1.2.jar">
             <element id="module-output" name="api_proxy_plugin" />
           </element>

@@ -4,9 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/NewShopping.iml" filepath="$PROJECT_DIR$/.idea/NewShopping.iml" />
       <module fileurl="file://$PROJECT_DIR$/../prox/api_proxy_plugin/api_proxy_plugin/api_proxy_plugin.iml" filepath="$PROJECT_DIR$/../prox/api_proxy_plugin/api_proxy_plugin/api_proxy_plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping_common/com.shopping.iml" filepath="$PROJECT_DIR$/shopping_common/com.shopping.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-common-utils/shopping-common-utils.iml" filepath="$PROJECT_DIR$/shopping-common-utils/shopping-common-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-files/shopping-files.iml" filepath="$PROJECT_DIR$/shopping-files/shopping-files.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-files-plugin/shopping-files-plugin.iml" filepath="$PROJECT_DIR$/shopping-files-plugin/shopping-files-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopping-jdt/shopping-jdt.iml" filepath="$PROJECT_DIR$/shopping-jdt/shopping-jdt.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-service-util/shopping-service-util.iml" filepath="$PROJECT_DIR$/shopping-service-util/shopping-service-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-web-util/shopping-web-util.iml" filepath="$PROJECT_DIR$/shopping-web-util/shopping-web-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping_back/shopping_back.iml" filepath="$PROJECT_DIR$/shopping_back/shopping_back.iml" />
