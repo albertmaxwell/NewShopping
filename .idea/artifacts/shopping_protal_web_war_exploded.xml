@@ -84,7 +84,9 @@
           <element id="archive" name="shopping-files-plugin-0.0.1-SNAPSHOT.jar">
             <element id="module-output" name="shopping-files-plugin" />
           </element>
-          <element id="library" level="project" name="Maven: com.shopping.files:shopping-files:0.0.1" />
+          <element id="archive" name="shopping-files-0.0.1-SNAPSHOT.jar">
+            <element id="module-output" name="shopping-files" />
+          </element>
           <element id="archive" name="api_proxy_plugin-1.1.2.jar">
             <element id="module-output" name="api_proxy_plugin" />
           </element>

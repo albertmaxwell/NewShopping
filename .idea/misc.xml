@@ -10,7 +10,6 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/shopping-files/pom.xml" />
         <option value="$PROJECT_DIR$/shopping-service-util/pom.xml" />
         <option value="$PROJECT_DIR$/shopping-web-util/pom.xml" />
         <option value="$PROJECT_DIR$/shopping_back/pom.xml" />
@@ -23,6 +22,7 @@
         <option value="$PROJECT_DIR$/shopping-files-plugin/pom.xml" />
         <option value="$PROJECT_DIR$/shopping_common/pom.xml" />
         <option value="$PROJECT_DIR$/shopping-jdt/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping-files/pom.xml" />
       </list>
     </option>
   </component>
